@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.16)  22 JUL 2025 17:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.16)  3 AUG 2025 01:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1788,8 +1788,8 @@ el .ind directamente de Principal.idx
 ) ) 
 Here is how much of TeX's memory you used:
  23933 strings out of 468149
- 461388 string characters out of 5431082
- 882086 words of memory out of 5000000
+ 460821 string characters out of 5431082
+ 882088 words of memory out of 5000000
  51871 multiletter control sequences out of 15000+600000
  774585 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1818,9 +1818,9 @@ ts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/chris/AppData/Local/Programs/M
 iKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/chris/AppData/Local/Pr
 ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/chris/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/fourier/fourier-orns.pfb>
-Output written on Principal.pdf (56 pages, 410412 bytes).
+Output written on Principal.pdf (56 pages, 410016 bytes).
 PDF statistics:
- 1032 PDF objects out of 1200 (max. 8388607)
+ 1031 PDF objects out of 1200 (max. 8388607)
  135 named destinations out of 1000 (max. 500000)
  651 words of extra memory for PDF output out of 10000 (max. 10000000)
 
