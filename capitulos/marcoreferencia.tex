@@ -63,6 +63,138 @@ En proyectos de diseño digital con arquitectura RTL (Register Transfer Level), 
 
 \chapter{Antecedentes System Verilog}
 
+\section{Evolución del diseño digital y el surgimiento de SystemVerilog}
+El desarrollo del diseño digital ha experimentado transformaciones significativas desde sus inicios, comenzando con el prototipado físico mediante placas de pruebas (protoboards) hasta llegar a sofisticadas plataformas de simulación y modelado asistido por computadora. Herramientas CAD (Computer-Aided Design) permitieron simular circuitos electrónicos con mayor precisión y eficiencia, aunque su uso inicial requería superar ciertas barreras de complejidad técnica.
+
+Estas herramientas facilitaron la implementación de esquemas eléctricos y permitieron definir señales de entrada coherentes con la lógica del sistema, generando salidas fácilmente interpretables. Simuladores como SPICE se convirtieron en referentes dentro del ámbito académico e industrial, al ofrecer una modelación precisa del comportamiento eléctrico. Una vez validados los resultados, se procedía al diseño del circuito físico mediante herramientas especializadas en tarjetas de circuito impreso (PCB), como el entorno OrCAD, particularmente en su módulo PCB Layout.
+
+Durante esta etapa, el Laboratorio de Computación Adaptable comenzó a implementar modelos de circuitos neuronales electrónicos mediante estas plataformas (Padrón, 1997). Posteriormente, ante el incremento en la complejidad de los modelos de redes neuronales, se incorporaron herramientas como MATLAB y su entorno gráfico SIMULINK, permitiendo una representación matemática directa de sistemas dinámicos. Esta evolución posibilitó una interpretación más eficaz de los resultados, tanto cuantitativa como cualitativamente (Padrón et al., 2000, pp. 338–349).
+
+De forma paralela, la industria del hardware reconfigurable, especialmente a través de las tarjetas FPGA manufacturadas por Xilinx, permitió abordar problemas específicos mediante interfaces programables. Cada tarjeta está diseñada para ofrecer flexibilidad al usuario, quien puede programar sus componentes en lenguajes de descripción de hardware como Verilog o VHDL, e integrar diversas interfaces en función de la disponibilidad física o lógica del sistema. Esta versatilidad convirtió a los kits de desarrollo en herramientas fundamentales para el diseño de soluciones a medida, especialmente en contextos de prototipado rápido y validación funcional.
+
+Conforme se incrementaron las necesidades de diseño a nivel de sistemas y la verificación se volvió una etapa crítica, surgió SystemVerilog como una extensión y evolución del lenguaje Verilog. SystemVerilog no solo incorporó mejoras en la descripción estructural y comportamental del hardware, sino que integró capacidades orientadas a la verificación funcional, programación orientada a objetos y modelado de sistemas complejos. Esta evolución respondió a la necesidad de unificar el flujo de diseño y verificación bajo un mismo lenguaje, facilitando la implementación de testbenches avanzados, interfaces reutilizables y entornos de verificación compatibles con metodologías modernas como UVM (Universal Verification Methodology).
+
+En este sentido, el uso de tarjetas FPGA programadas con SystemVerilog permite combinar la precisión del diseño RTL con capacidades avanzadas de verificación, lo cual resulta esencial en entornos de desarrollo donde se busca garantizar funcionalidad, rendimiento y confiabilidad desde las etapas tempranas del proyecto. La historia y evolución de este lenguaje refleja una tendencia hacia la consolidación de herramientas que integren diseño, simulación, verificación y síntesis dentro de un mismo entorno de desarrollo.
+
+Cronología relevante del desarrollo de SystemVerilog 
+\begin{itemize}
+\item 1984: Se introduce el lenguaje Verilog como herramienta para descripción de hardware por Gateway Design Automation, posteriormente adquirido por Cadence (IEEE, 2008).
+\item 1990s: Verilog se convierte en uno de los estándares principales para diseño digital, ampliamente utilizado en la industria electrónica.
+\item 1999: Se inicia el desarrollo de SystemVerilog como una extensión de Verilog para abordar las limitaciones en verificación y modelado (Accellera Systems Initiative, 2002).
+\item 2002: SystemVerilog es adoptado formalmente por Accellera como estándar para diseño y verificación.
+\item 2005: SystemVerilog es estandarizado por IEEE como el estándar IEEE 1800-2005, consolidando su uso en la industria (IEEE, 2005).
+\item 2012: Se publica la revisión IEEE 1800-2012, incorporando mejoras en síntesis y verificación.
+\item 2017: Nueva revisión IEEE 1800-2017 con ampliaciones en características para diseño y verificación de sistemas complejos.
+\end{itemize}
+
+\section{Lenguajes de Descripción de Hardware (HDL) y su Aplicación en el Diseño Digital}
+
+Los lenguajes de descripción de hardware (HDL, por sus siglas en inglés) surgieron como respuesta a la necesidad de los diseñadores digitales de contar con herramientas formales que permitieran especificar, modelar y verificar sistemas digitales de forma estructurada y en distintos niveles de abstracción. Estos lenguajes no solo facilitan la comunicación entre diseñadores, sino que también permiten una interacción fluida entre las herramientas de diseño asistido por computadora (CAD) y los propios modelos digitales (Terés et al., 1998).
+
+Los entornos de desarrollo basados en HDL integran herramientas de compilación, simulación y síntesis, lo que permite validar el comportamiento funcional de un diseño antes de su implementación física. En la actualidad, los lenguajes HDL más utilizados son VHDL y Verilog, ambos estandarizados por el IEEE (Institute of Electrical and Electronics Engineers), y ampliamente adoptados en la industria del diseño digital.
+
+VHDL: Descripción, Aplicación y Estructura
+VHDL (VHSIC Hardware Description Language) fue desarrollado originalmente para documentar y verificar circuitos integrados de alta velocidad dentro del programa VHSIC del Departamento de Defensa de los EE.UU. Su sintaxis y semántica están basadas en el lenguaje ADA, lo cual le proporciona una estructura sólida, orientada a sistemas críticos y de tiempo real.
+
+VHDL permite modelar un sistema digital a través de diferentes niveles de descripción: comportamiento, transferencia de registros (RTL) y nivel lógico estructural. Esto permite abarcar prácticamente todo el ciclo de desarrollo digital, desde las especificaciones funcionales hasta la generación del prototipo, excluyendo únicamente el trazado físico o layout.
+
+La correcta elección del nivel de abstracción en la descripción depende del objetivo de diseño. Por ejemplo, si se busca generar una implementación física mediante herramientas de síntesis, es preferible utilizar el nivel RTL. En cambio, para validar la funcionalidad de algoritmos complejos mediante simulación, el nivel algorítmico es más adecuado (Baena, 2010).
+
+
+\section{SystemVerilog: Lenguaje de Descripción y Verificación de Hardware }
+
+SystemVerilog es un lenguaje de descripción de hardware (HDL) y verificación funcional desarrollado como una extensión del lenguaje Verilog, con el objetivo de unificar el modelado estructural, la verificación orientada a objetos y la abstracción de sistemas en un solo entorno. Su aparición responde a la necesidad creciente de los diseñadores digitales de contar con herramientas capaces de describir, validar y verificar sistemas digitales complejos, como SoCs (System-on-Chip), en múltiples niveles de abstracción.
+
+A diferencia de VHDL, SystemVerilog incorpora elementos sintácticos y semánticos tanto de lenguajes de descripción como de programación (inspirado en C y C++), lo que lo convierte en un lenguaje híbrido y altamente expresivo. Fue estandarizado por el IEEE como el estándar IEEE 1800, inicialmente en 2005, y ha sido adoptado ampliamente en la industria por su compatibilidad con flujos de diseño RTL y metodologías de verificación como UVM (Universal Verification Methodology).
+
+Enfoque de Verificación en SystemVerilog
+Una de las mayores fortalezas de SystemVerilog es su orientación a la verificación, lo que lo diferencia fundamentalmente de lenguajes como VHDL o Verilog puro. 
+
+\section{Comparativa entre Lenguajes de Descripción de Hardware y Desarrollo de Software}
+Desde sus orígenes, las distintas herramientas y entornos de diseño asistido por computadora (CAD) han empleado lenguajes y formatos específicos para representar y gestionar los diversos elementos involucrados en el diseño electrónico. Algunos de estos lenguajes consistían en notaciones explícitas utilizadas por el usuario para describir entradas a determinadas herramientas, mientras que otros correspondían a formatos intermedios internos, optimizados para el procesamiento automatizado dentro del entorno CAD y generalmente ocultos al diseñador.
+
+Sin embargo, estas descripciones se encontraban limitadas al ecosistema particular de cada herramienta, sin ofrecer portabilidad ni estandarización. La aparición de los lenguajes de descripción de hardware (HDL, por sus siglas en inglés) supuso un avance significativo al introducir un mayor grado de estandarización y al incorporar principios propios de la ingeniería de software en la especificación y modelado de hardware digital.
+
+Desde el punto de vista sintáctico, los HDL presentan similitudes con los lenguajes de programación de alto nivel (HLL), lo cual facilita su aprendizaje por parte de ingenieros con experiencia previa en desarrollo de software. Por ejemplo, Verilog comparte muchas características con el lenguaje C, mientras que VHDL hereda su estructura y semántica del lenguaje ADA. Estas semejanzas, si bien pueden acelerar la adopción de HDL, pueden también inducir errores conceptuales si se emplean estrategias propias del software en contextos donde se requiere una representación precisa del comportamiento físico del hardware.
+
+Es fundamental que, cuando un modelo HDL esté destinado a la síntesis e implementación física (por ejemplo, en FPGAs o ASICs), el diseñador adopte una mentalidad orientada al hardware, describiendo la lógica con un enfoque estructural o de transferencia de registros (RTL), y no meramente algorítmico. Por otro lado, el uso de estructuras típicas del software puede ser apropiado cuando el objetivo sea únicamente la simulación funcional del sistema, permitiendo optimizar el rendimiento en las etapas de verificación y análisis temporal.
+
+En resumen, los HDL son lenguajes formales de alto nivel, diseñados específicamente para representar circuitos electrónicos a diversos niveles de abstracción —desde compuertas lógicas básicas hasta sistemas digitales completos— y permiten un modelado flexible, estructurado y preciso del hardware, aprovechando conceptos tanto del diseño electrónico como del desarrollo de software, tal y como se muestran en la Figura \ref{fig:imagen1}. 
+\begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
+    \centering % Centra la imagen
+     \includegraphics[width=0.5\textwidth, height=6cm]{imagenes/img1} % Reemplaza con el nombre de tu archivo de imagen
+    \caption{Niveles de abstracción/precisión y estilos de modelado VHDL.}
+    \label{fig:imagen1} % Etiqueta para referenciar la figura
+\end{figure} 
+%\clearpage
+
+Los lenguajes de descripción de hardware (HDL) fueron desarrollados inicialmente con el propósito de modelar el comportamiento funcional de los componentes electrónicos, permitiendo su simulación previa a la implementación física. No obstante, también son ampliamente utilizados para la descripción estructural de circuitos digitales, facilitando su posterior síntesis y verificación mediante procesos de simulación validados \ref{fig:imagen2}.
+\begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
+    \centering % Centra la imagen
+     \includegraphics[width=0.8\textwidth, height=6cm]{imagenes/img2} % Reemplaza con el nombre de tu archivo de imagen
+    \caption{Desarrollo en software versus hardware: (a) niveles de abstracción y lenguajes de alto nivel y (b) esquema básico del diseño descendente con HDL.  .}
+    \label{fig:imagen2} % Etiqueta para referenciar la figura
+\end{figure} 
+
+A partir de las descripciones iniciales, los enfoques de diseño descendente (top-down) permiten aplicar procesos progresivos de síntesis que conducen gradualmente a niveles más detallados de implementación, hasta alcanzar una descripción física específica y dependiente de la tecnología utilizada. La validación en cada etapa del diseño se lleva a cabo mediante simulaciones y análisis funcionales, permitiendo iteraciones sucesivas de verificación y corrección hasta lograr un comportamiento conforme a los requisitos especificados \ref{fig:imagen2}(b).
+
+
+\section{Descripción de la tarjeta de desarollo Altera DE2-115 }
+
+La tarjeta Altera DE2-115, desarrollada por Terasic Technologies, es una plataforma de prototipado basada en la FPGA Cyclone IV EP4CE115F29C7N de Altera (ahora Intel), orientada a entornos educativos, de investigación y desarrollo de sistemas digitales avanzados. Esta tarjeta ofrece una arquitectura versátil que permite implementar desde diseños lógicos básicos hasta sistemas digitales complejos, incluyendo sistemas embebidos, controladores personalizados, procesamiento de señales digitales (DSP) y prototipos de SoC (System-on-Chip).
+
+Entre sus características principales se destaca la presencia de 114,480 elementos lógicos (LEs), 3.888 Kbits de memoria RAM embebida, y 528 pines de entrada/salida de propósito general (GPIO), lo que proporciona una gran flexibilidad para interactuar con múltiples dispositivos periféricos. La tarjeta también incluye memorias externas como SDRAM de 128 MB, SRAM de 2 MB, y Flash NOR de 2 MB, además de soporte para almacenamiento mediante tarjeta SD.
+
+La DE2-115 incorpora interfaces esenciales para el desarrollo de sistemas interactivos, tales como puertos USB, Ethernet Gigabit, salida VGA, entradas y salidas de audio, además de un conjunto de dispositivos de entrada/salida integrados como interruptores, botones, LEDs y displays de siete segmentos. Adicionalmente, cuenta con un oscilador de cristal de 50 MHz y conectores de expansión compatibles con módulos adicionales.
+
+Esta plataforma es ampliamente utilizada en laboratorios académicos y en entornos de investigación aplicada debido a su compatibilidad con herramientas de desarrollo como Quartus Prime, facilitando la implementación de diseños en lenguajes HDL como VHDL y SystemVerilog. Su capacidad para realizar simulación, verificación y síntesis de diseños en una sola herramienta la hace ideal para proyectos de educación superior en ingeniería electrónica, mecatrónica y sistemas digitales. 
+
+Características técnicas destacadas:
+
+FPGA: Altera Cyclone IV EP4CE115F29C7N con 114,480 elementos lógicos (LEs)
+
+\begin{itemize}
+	\item Memoria:
+		\begin{itemize}
+			\item 2 MB SRAM
+			\item 128 MB SDRAM
+			\item 2 MB Flash NOR
+			\item Tarjeta SD para almacenamiento externo
+		\end{itemize}
+	\item Interfaces de usuario:
+		\begin{itemize}
+			\item 18 interruptores (switches) y 18 botones pulsadores
+			\item 18 LEDs rojos y 9 LEDs verdes
+			\item 8 displays de 7 segmentos
+		\end{itemize}
+	\item Conectividad:
+		\begin{itemize}
+			\item Puertos USB tipo A y B
+			\item Puerto Ethernet 10/100/1000 Mbps (Gigabit)
+			\item Entrada/salida VGA
+			\item Conectores de expansión GPIO de 40 pines
+		\end{itemize}
+	\item Audio y Video:
+		\begin{itemize}
+			\item Entrada y salida de audio (jack de 3.5 mm)
+			\item Entrada de señal VGA (con ADC) y salida VGA
+		\end{itemize}
+	\item Reloj: oscilador de cristal de 50 MHz
+	\item Programación y depuración: Soporte JTAG, compatible con Quartus II
+\end{itemize}
+ 
+\begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
+    \centering % Centra la imagen
+     \includegraphics[width=1\textwidth, height=13cm]{imagenes/img3} % Reemplaza con el nombre de tu archivo de imagen
+    \caption{Tarjeta de desarollo Altera DE2-115.}
+    \label{fig:imagen3} % Etiqueta para referenciar la figura
+\end{figure}
+
+
+
+
+
+\clearpage
 
 \section{UART (Universal Asynchronous Receiver-Transmitter)}
 El UART es un protocolo de comunicación serie asíncrono ampliamente utilizado en sistemas embebidos por su simplicidad y bajo costo. Permite la transmisión de datos entre dispositivos mediante el envío de bits secuenciales. Aunque eficiente, UART no incluye mecanismos de seguridad nativos, lo que lo hace susceptible a ataques como sniffing, inyectado de datos, y suplantación de dispositivos.

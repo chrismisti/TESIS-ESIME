@@ -1,14 +1,15 @@
 \babel@toc {spanish}{}\relax 
 \contentsline {chapter}{Resumen}{xiii}{chapter*.2}%
 \contentsline {chapter}{Abstract}{xv}{chapter*.3}%
-\contentsline {chapter}{Introducción}{1}{chapter*.4}%
-\contentsline {section}{Definición del problema}{3}{section*.5}%
-\contentsline {section}{Justificación}{4}{section*.6}%
-\contentsline {section}{Objetivo}{5}{section*.7}%
-\contentsline {section}{Objetivo General}{5}{section*.8}%
-\contentsline {section}{Objetivos Específicos}{5}{section*.9}%
-\contentsline {section}{Enfoque en Seguridad de la informaci\'on}{6}{section*.10}%
-\contentsline {section}{Antecedentes}{6}{section*.11}%
+\contentsline {chapter}{\listfigurename }{xvii}{chapter*.4}%
+\contentsline {chapter}{Introducción}{1}{chapter*.7}%
+\contentsline {section}{Definición del problema}{3}{section*.8}%
+\contentsline {section}{Justificación}{4}{section*.9}%
+\contentsline {section}{Objetivo}{5}{section*.10}%
+\contentsline {section}{Objetivo General}{5}{section*.11}%
+\contentsline {section}{Objetivos Específicos}{5}{section*.12}%
+\contentsline {section}{Enfoque en Seguridad de la informaci\'on}{6}{section*.13}%
+\contentsline {section}{Antecedentes}{6}{section*.14}%
 \contentsline {chapter}{\numberline {1}Marco Teórico Contextual}{7}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Marco Teórico Contextual}{7}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Fundamentos de la Criptografía clasica}{8}{section.1.2}%
@@ -17,60 +18,65 @@
 \contentsline {section}{\numberline {1.5}Seguridad y Vulnerabilidades}{9}{section.1.5}%
 \contentsline {section}{\numberline {1.6}Utilidad en el Diseño de Sistemas Criptográficos}{9}{section.1.6}%
 \contentsline {chapter}{\numberline {2}Antecedentes System Verilog}{11}{chapter.2}%
-\contentsline {section}{\numberline {2.1}UART (Universal Asynchronous Receiver-Transmitter)}{11}{section.2.1}%
-\contentsline {section}{\numberline {2.2}FPGA (Field-Programmable Gate Array)}{11}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Diseño RTL (Register Transfer Level)}{12}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Seguridad en Sistemas Embebidos}{12}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Trabajos Relacionados}{12}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Metodología}{13}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Enfoque Metodol\'ogico}{13}{subsection.2.6.1}%
-\contentsline {section}{\numberline {2.7}Marco procedimental/ Etapas de Desarollo}{13}{section.2.7}%
-\contentsline {subsection}{\numberline {2.7.1}Análisis del protocolo UART }{13}{subsection.2.7.1}%
-\contentsline {subsection}{\numberline {2.7.2}Diseño de la capa criptogr\'afica }{13}{subsection.2.7.2}%
-\contentsline {subsection}{\numberline {2.7.3}Integración con el protocolo UART }{13}{subsection.2.7.3}%
-\contentsline {subsection}{\numberline {2.7.4}Implementación en FPGA}{14}{subsection.2.7.4}%
-\contentsline {subsection}{\numberline {2.7.5} Validación y pruebas}{14}{subsection.2.7.5}%
-\contentsline {subsection}{\numberline {2.7.6} }{14}{subsection.2.7.6}%
-\contentsline {chapter}{\numberline {3}Diseño del sistema}{15}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Diseño Conceptual}{15}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Necesidades - Requerimientos}{15}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Arquitectura funcional (funciones)}{15}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Arquitectura física (módulos)}{15}{subsection.3.1.3}%
-\contentsline {subsection}{\numberline {3.1.4}Propuestas de solución}{15}{subsection.3.1.4}%
-\contentsline {subsubsection}{\numberline {3.1.4.1}Módulos (M$\textsubscript {1}$ \dots M$\textsubscript {n}$)}{15}{subsubsection.3.1.4.1}%
-\contentsline {subsubsection}{\numberline {3.1.4.2}Integración (sistema)}{15}{subsubsection.3.1.4.2}%
-\contentsline {subsection}{\numberline {3.1.5}Validación}{15}{subsection.3.1.5}%
-\contentsline {subsection}{\numberline {3.1.6}Selección diseño conceptual}{15}{subsection.3.1.6}%
-\contentsline {section}{\numberline {3.2}Diseño Detallado}{16}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Detalle módulo 1 (M{l})}{16}{subsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.1.1}Validación (M{l})}{16}{subsubsection.3.2.1.1}%
-\contentsline {subsection}{\numberline {3.2.2}Detalle módulo 2 (M{2})}{16}{subsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.2.1}Validación (M{2})}{16}{subsubsection.3.2.2.1}%
-\contentsline {subsection}{\numberline {3.2.3}Detalle módulo n (M{n})}{16}{subsection.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.3.1}Validación (M{n})}{16}{subsubsection.3.2.3.1}%
-\contentsline {subsection}{\numberline {3.2.4}Integración sistema mecatrónico}{16}{subsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.2.5}Validación sistema mecatrónico}{16}{subsection.3.2.5}%
-\contentsline {chapter}{\numberline {4}Implementación del sistema}{17}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Implementación módulo 1 (M{l})}{17}{section.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.0.1}Verificación (M{l})}{17}{subsubsection.4.1.0.1}%
-\contentsline {section}{\numberline {4.2}Implementación módulo 2 (M{2})}{17}{section.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.0.1}Verificación (M{2})}{17}{subsubsection.4.2.0.1}%
-\contentsline {section}{\numberline {4.3}Implementación módulo 2 (M{n})}{18}{section.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.0.1}Verificación (M{n}}{18}{subsubsection.4.3.0.1}%
-\contentsline {section}{\numberline {4.4}Implementación módulo 1 (M{l})}{18}{section.4.4}%
-\contentsline {subsubsection}{\numberline {4.4.0.1}Verificación (M{l})}{18}{subsubsection.4.4.0.1}%
-\contentsline {chapter}{\numberline {5}Discusión / Análisis de resultados}{19}{chapter.5}%
-\contentsline {subsection}{\numberline {5.0.1}Análisis de ingeniería}{19}{subsection.5.0.1}%
-\contentsline {subsection}{\numberline {5.0.2}Análisis de costos}{19}{subsection.5.0.2}%
-\contentsline {subsection}{\numberline {5.0.3}Análisis de valor}{19}{subsection.5.0.3}%
-\contentsline {chapter}{Conclusiones}{21}{chapter*.12}%
-\contentsline {section}{Recomendaciones y trabajo futuro}{21}{section*.13}%
-\contentsline {chapter}{Referencias Bibliográficas}{23}{chapter*.14}%
-\contentsline {part}{Apéndices}{25}{part.1}%
-\contentsline {chapter}{Ap\'endice 1}{27}{appendix*.16}%
-\contentsline {chapter}{Der Zweite Anhang (Ap\'endice 2)}{29}{appendix*.17}%
-\contentsline {chapter}{Der dritte Anhang (Ap\'endice 3)}{31}{appendix*.18}%
-\contentsline {part}{Anexos}{33}{part.2}%
-\contentsline {chapter}{Anexo 1. Hoja de datos}{35}{appendix*.19}%
-\contentsline {chapter}{Anexo 2. Hoja de datos}{37}{appendix*.20}%
-\contentsline {chapter}{Anexo 3 (Anexo título 3)}{39}{appendix*.21}%
+\contentsline {section}{\numberline {2.1}Evolución del diseño digital y el surgimiento de SystemVerilog}{11}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Lenguajes de Descripción de Hardware (HDL) y su Aplicación en el Diseño Digital}{13}{section.2.2}%
+\contentsline {section}{\numberline {2.3}SystemVerilog: Lenguaje de Descripción y Verificación de Hardware }{14}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Comparativa entre Lenguajes de Descripción de Hardware y Desarrollo de Software}{15}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Descripción de la tarjeta de desarollo Altera DE2-115 }{17}{section.2.5}%
+\contentsline {section}{\numberline {2.6}UART (Universal Asynchronous Receiver-Transmitter)}{21}{section.2.6}%
+\contentsline {section}{\numberline {2.7}FPGA (Field-Programmable Gate Array)}{21}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Diseño RTL (Register Transfer Level)}{21}{section.2.8}%
+\contentsline {section}{\numberline {2.9}Seguridad en Sistemas Embebidos}{21}{section.2.9}%
+\contentsline {section}{\numberline {2.10}Trabajos Relacionados}{22}{section.2.10}%
+\contentsline {section}{\numberline {2.11}Metodología}{22}{section.2.11}%
+\contentsline {subsection}{\numberline {2.11.1}Enfoque Metodol\'ogico}{22}{subsection.2.11.1}%
+\contentsline {section}{\numberline {2.12}Marco procedimental/ Etapas de Desarollo}{22}{section.2.12}%
+\contentsline {subsection}{\numberline {2.12.1}Análisis del protocolo UART }{22}{subsection.2.12.1}%
+\contentsline {subsection}{\numberline {2.12.2}Diseño de la capa criptogr\'afica }{23}{subsection.2.12.2}%
+\contentsline {subsection}{\numberline {2.12.3}Integración con el protocolo UART }{23}{subsection.2.12.3}%
+\contentsline {subsection}{\numberline {2.12.4}Implementación en FPGA}{23}{subsection.2.12.4}%
+\contentsline {subsection}{\numberline {2.12.5} Validación y pruebas}{23}{subsection.2.12.5}%
+\contentsline {subsection}{\numberline {2.12.6} }{23}{subsection.2.12.6}%
+\contentsline {chapter}{\numberline {3}Diseño del sistema}{25}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Diseño Conceptual}{25}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Necesidades - Requerimientos}{25}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Arquitectura funcional (funciones)}{25}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Arquitectura física (módulos)}{25}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Propuestas de solución}{25}{subsection.3.1.4}%
+\contentsline {subsubsection}{\numberline {3.1.4.1}Módulos (M$\textsubscript {1}$ \dots M$\textsubscript {n}$)}{25}{subsubsection.3.1.4.1}%
+\contentsline {subsubsection}{\numberline {3.1.4.2}Integración (sistema)}{25}{subsubsection.3.1.4.2}%
+\contentsline {subsection}{\numberline {3.1.5}Validación}{25}{subsection.3.1.5}%
+\contentsline {subsection}{\numberline {3.1.6}Selección diseño conceptual}{25}{subsection.3.1.6}%
+\contentsline {section}{\numberline {3.2}Diseño Detallado}{26}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Detalle módulo 1 (M{l})}{26}{subsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.1.1}Validación (M{l})}{26}{subsubsection.3.2.1.1}%
+\contentsline {subsection}{\numberline {3.2.2}Detalle módulo 2 (M{2})}{26}{subsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.1}Validación (M{2})}{26}{subsubsection.3.2.2.1}%
+\contentsline {subsection}{\numberline {3.2.3}Detalle módulo n (M{n})}{26}{subsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.3.1}Validación (M{n})}{26}{subsubsection.3.2.3.1}%
+\contentsline {subsection}{\numberline {3.2.4}Integración sistema mecatrónico}{26}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Validación sistema mecatrónico}{26}{subsection.3.2.5}%
+\contentsline {chapter}{\numberline {4}Implementación del sistema}{27}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Implementación módulo 1 (M{l})}{27}{section.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.0.1}Verificación (M{l})}{27}{subsubsection.4.1.0.1}%
+\contentsline {section}{\numberline {4.2}Implementación módulo 2 (M{2})}{27}{section.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.0.1}Verificación (M{2})}{27}{subsubsection.4.2.0.1}%
+\contentsline {section}{\numberline {4.3}Implementación módulo 2 (M{n})}{28}{section.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.0.1}Verificación (M{n}}{28}{subsubsection.4.3.0.1}%
+\contentsline {section}{\numberline {4.4}Implementación módulo 1 (M{l})}{28}{section.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.0.1}Verificación (M{l})}{28}{subsubsection.4.4.0.1}%
+\contentsline {chapter}{\numberline {5}Discusión / Análisis de resultados}{29}{chapter.5}%
+\contentsline {subsection}{\numberline {5.0.1}Análisis de ingeniería}{29}{subsection.5.0.1}%
+\contentsline {subsection}{\numberline {5.0.2}Análisis de costos}{29}{subsection.5.0.2}%
+\contentsline {subsection}{\numberline {5.0.3}Análisis de valor}{29}{subsection.5.0.3}%
+\contentsline {chapter}{Conclusiones}{31}{chapter*.15}%
+\contentsline {section}{Recomendaciones y trabajo futuro}{31}{section*.16}%
+\contentsline {chapter}{Referencias Bibliográficas}{33}{chapter*.17}%
+\contentsline {part}{Apéndices}{35}{part.1}%
+\contentsline {chapter}{Ap\'endice 1}{37}{appendix*.19}%
+\contentsline {chapter}{Der Zweite Anhang (Ap\'endice 2)}{39}{appendix*.20}%
+\contentsline {chapter}{Der dritte Anhang (Ap\'endice 3)}{41}{appendix*.21}%
+\contentsline {part}{Anexos}{43}{part.2}%
+\contentsline {chapter}{Anexo 1. Hoja de datos}{45}{appendix*.22}%
+\contentsline {chapter}{Anexo 2. Hoja de datos}{47}{appendix*.23}%
+\contentsline {chapter}{Anexo 3 (Anexo título 3)}{49}{appendix*.24}%

@@ -4,6 +4,9 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Niveles de abstracción/precisión y estilos de modelado VHDL.}}{16}{figure.2.1}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Desarrollo en software versus hardware: (a) niveles de abstracción y lenguajes de alto nivel y (b) esquema básico del diseño descendente con HDL. .}}{17}{figure.2.2}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Tarjeta de desarollo Altera DE2-115.}}{20}{figure.2.3}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
