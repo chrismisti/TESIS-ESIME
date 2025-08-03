@@ -1,0 +1,151 @@
+\chapter{Marco Teórico Contextual}
+
+\section{Marco Teórico Contextual}
+Para contextualizar adecuadamente el presente trabajo de tesis dentro del marco teórico, es necesario abordar el origen del algoritmo criptográfico estándar César, así como su evolución y aplicaciones a lo largo del tiempo. Asimismo, se explorarán las condiciones en las que surgieron los servicios y mecanismos de seguridad informática, y las formas en que estos han sido implementados en distintos entornos. Este análisis permite delimitar la problemática que se busca atender mediante la propuesta de implementación en hardware presentada en esta investigación. En consecuencia, se realiza una revisión del estado del arte en la disciplina, con especial énfasis en los sistemas embebidos que incorporan mecanismos de seguridad.
+
+A través de esta revisión se busca comprender las bases que fundamentan el diseño de soluciones criptográficas en plataformas reconfigurables, como las FPGAs, y su relevancia en escenarios donde la protección de la información es crítica. Este marco teórico sienta las bases para el desarrollo metodológico y experimental abordado en los siguientes capítulos.
+
+\section{Fundamentos de la Criptografía clasica}
+La criptografía es la ciencia y arte de proteger la información mediante técnicas que transforman datos legibles (texto plano) en datos ininteligibles (texto cifrado), de modo que sólo las personas autorizadas puedan acceder a su contenido (Stallings, 2017). A lo largo de la historia, la criptografía ha evolucionado desde métodos simples de sustitución y transposición hasta complejos algoritmos basados en teoría matemática, álgebra moderna y teoría de números.
+
+Los métodos clásicos, aunque hoy son inseguros frente a los ataques modernos, permiten comprender los conceptos fundamentales sobre el uso de claves, cifrado simétrico y análisis criptográfico. Uno de los algoritmos más representativos de la criptografía clásica es el cifrado César, también conocido como cifrado por desplazamiento.
+
+\section{El Cifrado César: Origen Histórico}
+El cifrado César recibe su nombre de Julio César, quien lo empleaba para cifrar mensajes militares. Según registros históricos, César utilizaba un desplazamiento de tres posiciones para codificar sus mensajes (Kahn, 1996). Aunque su simplicidad hoy lo convierte en un cifrado trivial, en su época ofrecía una protección básica frente a lectores no entrenados o no alfabetizados.
+
+Este cifrado pertenece a la familia de los cifrados monoalfabéticos por sustitución, donde cada letra del alfabeto es reemplazada por otra, según una regla fija determinada por una clave de desplazamiento.
+
+\section{Funcionamiento del Algoritmo}
+
+Desde un punto de vista matemátoco, el cifrado César puede representarse mediante la siguiente función:
+
+\centerline{\(C(x) = ( x + k ) mod n \)}
+
+Donde:
+
+\begin{itemize}
+\item \(C(x)\) es el carácter cifrado.
+\item \(x\) es el índice del carácter en el alfabeto \( A = 0, B = 1, ...., Z = 25\)
+\item \(k \) es la clave de desplazamiento.
+\item \(n\) el es número total de caracteres del alfabeto, usualmente  \(n = 26 \) en el alfabeto latino.
+\end{itemize}
+
+El descifrado consiste en aplicar la operación inversa 
+
+\centerline{\(P(x) = ( x - k ) mod n \)}
+
+Por ejemplo, si se cifra la palabra \textbf{\textit{''HOLA''}} con un desplazamiento de \(k = 3\) se obtiene \textbf{\textit{''KROD''}} . Para descifrar, se aplica el desplazamiento inverso. 
+
+\section{Seguridad y Vulnerabilidades}
+
+El cifrado César es vulnerable a varios tipos de ataques criptográficos:
+
+\begin{itemize}
+\item Ataque por fuerza bruta: Dado que existen solamente 25 posibles claves (excluyendo el desplazamiento nulo), un atacante puede probar todas las combinaciones en poco tiempo.
+\item Análisis de frecuencia: Cada idioma tiene una distribución característica de letras. En español, por   las letras ''E'', ''A'' y ''O'' son las más comunes. Si se cifra un texto suficientemente largo, estas frecuencias se preservan, permitiendo identificar el desplazamiento utilizado.
+\end{itemize}
+
+Estas debilidades lo hacen inapropiado para cualquier uso moderno que requiera confidencialidad real, pero útil como herramienta de desarrollo.
+
+\section{Utilidad en el Diseño de Sistemas Criptográficos}
+A pesar de sus limitaciones, el cifrado César es frecuentemente utilizado en el diseño de sistemas criptográficos hardware/software con fines educativos y experimentales. Su estructura simple lo convierte en una opción ideal para:
+
+\begin{itemize}
+\item Introducir técnicas de procesamiento secuencial de datos.
+\item Implementar máquinas de estados finitos para codificación y decodificación.
+\item Evaluar el consumo de recursos lógicos y tiempos de propagación en plataformas como FPGAs.
+\item Comparar el comportamiento de cifrados más complejos respecto a algoritmos básicos en entornos de bajo nivel (VHDL, Verilog).
+\end{itemize}
+
+En proyectos de diseño digital con arquitectura RTL (Register Transfer Level), el cifrado César se utiliza como caso de estudio para optimizar operaciones de desplazamiento modular, codificación de caracteres ASCII y generación de claves.
+
+
+
+\chapter{Antecedentes System Verilog}
+
+
+\section{UART (Universal Asynchronous Receiver-Transmitter)}
+El UART es un protocolo de comunicación serie asíncrono ampliamente utilizado en sistemas embebidos por su simplicidad y bajo costo. Permite la transmisión de datos entre dispositivos mediante el envío de bits secuenciales. Aunque eficiente, UART no incluye mecanismos de seguridad nativos, lo que lo hace susceptible a ataques como sniffing, inyectado de datos, y suplantación de dispositivos.
+
+\section{FPGA (Field-Programmable Gate Array)}
+Las FPGAs son dispositivos semiconductores programables que permiten implementar circuitos digitales personalizados. Se utilizan en múltiples aplicaciones donde se requiere alta flexibilidad, paralelismo y velocidad. Las FPGAs son ideales para:
+
+Implementar algoritmos criptográficos en hardware.
+
+Realizar prototipos rápidos.
+
+Diseños de sistemas de comunicación personalizados.
+
+\section{Diseño RTL (Register Transfer Level)}
+El diseño a nivel de transferencia de registros (RTL) es una metodología de modelado de hardware digital que describe cómo los datos se mueven entre registros y qué operaciones lógicas se aplican. Este nivel de abstracción permite desarrollar arquitecturas eficientes en FPGAs para tareas como cifrado, descifrado y control de flujos de datos.
+
+\section{Seguridad en Sistemas Embebidos}
+Los sistemas embebidos, al estar presentes en dispositivos IoT, sensores, sistemas médicos y automotrices, requieren niveles crecientes de seguridad. Las amenazas comunes incluyen acceso físico, clonación, manipulación de firmware y espionaje de datos. El uso de hardware criptográfico integrado es una de las soluciones más efectivas para mitigar estos riesgos, sobre todo en dispositivos con recursos limitados.
+
+\section{Trabajos Relacionados}
+En investigaciones previas se han propuesto mecanismos de seguridad sobre UART, pero en su mayoría dependen de software, lo que limita la eficiencia y vulnerabilidad ante ataques. Otros estudios han demostrado que la implementación de algoritmos criptográficos en FPGA, como AES en modo CTR, es factible y efectiva para mejorar la seguridad sin afectar el rendimiento significativamente.
+
+
+
+\section{Metodología}
+\subsection{Enfoque Metodol\'ogico}
+
+Este trabajo de investigación sigue una metodología de tipo experimental y aplicada, con enfoque cuantitativo, ya que se propone diseñar, implementar y evaluar un sistema de comunicación seguro basado en el protocolo UART, incorporando funciones criptográficas mediante diseño RTL en una FPGA.
+
+
+
+
+\section{Marco procedimental/ Etapas de Desarollo}
+La metodología se estructura en las siguientes etapas:
+
+
+
+\subsection{Análisis del protocolo UART }
+
+\begin{itemize}
+\item Estudio de la estructura y funcionamiento del protocolo UART.
+\item Identificación de vulnerabilidades y limitaciones en cuanto a seguridad.
+\end{itemize}
+
+\subsection{Diseño de la capa criptogr\'afica }
+
+\begin{itemize}
+\item Selección de un algoritmo de cifrado simétrico adecuado (por ejemplo, AES o XOR extendido para propósitos didácticos).
+\item Modelado de módulos de cifrado y descifrado a nivel RTL (Register Transfer Level).
+\end{itemize}
+
+\subsection{Integración con el protocolo UART }
+
+\begin{itemize}
+\item Modificación del módulo UART para incluir la capa criptográfica sin alterar su estructura base.
+\item Definición de flujos de datos seguros: entrada cifrada, salida descifrada.
+\end{itemize}
+
+\subsection{Implementación en FPGA}
+
+\begin{itemize}
+\item Codificación en Verilog.
+\item Síntesis, simulación y verificación funcional utilizando herramientas CAD (Quartus de Intel).
+\item Implementación física en una FPGA (por ejemplo, una placa DE10-Lite, Nexys A7 o similar).
+\end{itemize}
+
+\subsection{ Validación y pruebas}
+
+\begin{itemize}
+\item Pruebas funcionales de transmisión segura UART en hardware.
+\item Medición de rendimiento: latencia, velocidad de transmisión, utilización de recursos.
+\item Comparación con versiones sin seguridad o implementaciones en software.
+\end{itemize}
+
+\subsection{ }
+
+
+%\newgeometry{margin=1cm,includefoot}
+%\layout
+%\printinunitsof{cm}
+%\pagevalues
+
+
+
+%%%%%%fin del archivo
+\endinput 

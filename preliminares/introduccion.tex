@@ -1,0 +1,57 @@
+
+\chapter{Introducción} 
+%\section{Introducción}
+En la actualidad, la seguridad de la información se ha convertido en un pilar fundamental para el desarrollo de sistemas digitales confiables. La creciente sofisticación de las amenazas cibernéticas, sumada al incremento exponencial en la generación y transmisión de datos, exige soluciones cada vez más robustas y eficientes. En este contexto, el uso de hardware especializado para operaciones criptográficas ha emergido como una alternativa eficaz frente a las limitaciones del procesamiento criptográfico basado exclusivamente en software.
+El hardware criptográfico ofrece ventajas significativas, como mayor rendimiento, menor latencia, menor consumo energético y una mayor resistencia a ataques físicos y lógicos. Estas características lo convierten en una solución ideal para sistemas embebidos, dispositivos IoT, aplicaciones industriales y entornos donde la seguridad y la eficiencia operativa son prioritarias.
+Los arreglos de compuertas programables en campo, conocidos como FPGAs (Field Programmable Gate Arrays), se han convertido en una de las tecnologías más versátiles para el diseño de sistemas electrónicos. Estos dispositivos ofrecen una solución rentable especialmente para producciones de bajo volumen, ya que el costo inicial para obtener un prototipo es considerablemente menor que el de los circuitos integrados de aplicación específica, conocidos como ASIC (Application-Specific Integrated Circuit). Además, una ventaja significativa es su capacidad de reconfiguración durante la operación, lo cual permite que un solo dispositivo pueda desempeñar diversas funciones definidas previamente, optimizando espacio y reduciendo costos.
+Hoy en día, los sistemas electrónicos están presentes en casi todos los aspectos de la vida cotidiana, desde productos de consumo hasta sistemas de control industrial, aplicaciones automotrices, de seguridad, y muchas más. La tendencia actual en diseño electrónico se caracteriza por la creciente complejidad de sus componentes, lo que demanda soluciones que sean fáciles de usar, versátiles, de bajo consumo y que lleguen rápidamente al mercado. La tecnología moderna en circuitos integrados hace posible integrar estos sistemas complejos en dimensiones muy reducidas; a estos se les denomina sistemas embebidos o "System on Chip" (SoC, por sus siglas en inglés). Dichos sistemas, diseñados para cumplir funciones específicas, combinan hardware y software creados específicamente para cada tarea. En este contexto, las FPGAs, gracias a su capacidad de reconfiguración, son herramientas valiosas para el desarrollo de prototipos o series pequeñas a costos accesibles.
+Entre los protocolos de comunicación más utilizados en sistemas embebidos se encuentra el UART (Universal Asynchronous Receiver-Transmitter), gracias a su simplicidad, bajo costo de implementación y amplia compatibilidad. Sin embargo, dicho protocolo carece de mecanismos nativos de seguridad, lo que lo hace vulnerable a interceptaciones, manipulaciones y accesos no autorizados.
+En este trabajo de tesis se propone el diseño e implementación de una capa de seguridad criptográfica sobre el protocolo UART, utilizando un enfoque a nivel de transferencia de registros (RTL) en una plataforma FPGA implementando un lenguaje de descripción de hardware por sus siglas en Ingles (HDL) utilizado para modelar y diseñar circuitos digitales. La modificación del protocolo permite no solo asegurar la transmisión de datos, sino también integrar técnicas de cifrado y descifrado directamente en el hardware. Esta solución busca demostrar la viabilidad de incorporar seguridad criptográfica eficiente en sistemas de comunicación embebidos, sin comprometer el rendimiento ni la escalabilidad.
+\\
+\section{Definición del problema}
+En la actualidad, la transmisión de datos en sistemas embebidos se realiza, en gran medida, a través de protocolos de comunicación simples y eficientes como el UART (Universal Asynchronous Receiver-Transmitter). Sin embargo, uno de los principales inconvenientes de este protocolo es la ausencia de mecanismos nativos de seguridad, lo que lo expone a una variedad de ataques como la intercepción de datos (sniffing), la manipulación de tramas, la inyección de comandos maliciosos y la suplantación de dispositivos.
+Este problema se agrava en aplicaciones donde el UART se emplea en contextos críticos, tales como sistemas industriales, redes de sensores, dispositivos médicos o entornos IoT, en los que la confidencialidad y la integridad de los datos son fundamentales. Aunque existen soluciones basadas en software para implementar cifrado, estas suelen generar una sobrecarga computacional considerable en microcontroladores de recursos limitados, afectando el rendimiento y la eficiencia del sistema.
+Por tanto, se identifica la necesidad de una solución que permita asegurar la transmisión de datos a través del protocolo UART sin comprometer el rendimiento, preferentemente mediante una implementación en hardware que garantice mayor robustez y eficiencia.
+\newpage
+%%%%%%%%%%%%%%%
+\section{Justificación} 
+%\section{Justificación}
+El avance acelerado de la tecnología ha incrementado la interconexión entre dispositivos, especialmente en sistemas embebidos e infraestructura crítica. Esta conectividad expone a los sistemas a múltiples vectores de ataque que pueden comprometer la integridad, confidencialidad y disponibilidad de la información. Dado que UART es un protocolo ampliamente utilizado en microcontroladores, sensores y módulos de comunicación, fortalecer su seguridad representa una mejora significativa en la protección de sistemas donde el reemplazo por protocolos más complejos no es viable por razones de costo o recursos.
+El uso de FPGAs como plataforma de implementación permite un diseño flexible, reconfigurable y altamente optimizado. Además, al integrar funciones criptográficas directamente en el hardware, se reduce la dependencia del software y se incrementa la resistencia a ataques de canal lateral, lo que incrementa el nivel de seguridad general del sistema.
+Esta tesis, por tanto, contribuye con una propuesta de solución viable, eficiente y escalable para la seguridad de comunicaciones en sistemas embebidos, atendiendo a una necesidad real en la industria tecnológica actual.
+\newpage
+%\section{Objetivos}
+\section{Objetivo}
+\section{Objetivo General}
+Diseñar e implementar una capa de seguridad criptográfica en el protocolo UART mediante un diseño a nivel RTL en FPGA, que integre técnicas de cifrado y descifrado para mejorar la seguridad en la transmisión de datos en sistemas embebidos.
+\\
+\section{Objetivos Específicos}
+
+\begin{itemize}
+\item Analizar las vulnerabilidades del protocolo UART en contextos de comunicación embebida.
+\item Diseñar un módulo RTL que modifique el protocolo UART para incorporar una capa de seguridad.
+\item Integrar algoritmos de cifrado y descifrado simétrico en el diseño propuesto.
+\item Implementar el sistema en una FPGA para validar su funcionamiento y rendimiento.
+\item Evaluar la eficiencia y robustez del diseño frente a posibles ataques o vulnerabilidades.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%
+\newpage
+\section{Enfoque en Seguridad de la informaci\'on}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%
+\section{Antecedentes}
+En investigaciones previas se han propuesto mecanismos de seguridad sobre UART, pero en su mayoría dependen de software, lo que limita la eficiencia y vulnerabilidad ante ataques. Otros estudios han demostrado que la implementación de algoritmos criptográficos en FPGA, como AES en modo CTR, es factible y efectiva para mejorar la seguridad sin afectar el rendimiento significativamente.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Capitulado}    %%  descripción general del documento mencionando contenidos de cada capitulo
+
+
+
+
+%%%%%%fin del archivo
+\endinput 
