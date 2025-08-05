@@ -190,29 +190,73 @@ FPGA: Altera Cyclone IV EP4CE115F29C7N con 114,480 elementos lógicos (LEs)
     \label{fig:imagen3} % Etiqueta para referenciar la figura
 \end{figure}
 
+%\clearpage
+
+
+\chapter{Diseño de Plataforma para Transmisión Serial de Datos}
+
+\section{Plataforma de Comunicación Serial para el Cifrado y Descifrado }
+La seguridad de la información, especialmente en lo que respecta a la confidencialidad, representa una de las principales preocupaciones en el ámbito de las comunicaciones. Para mitigar los riesgos de acceso no autorizado, es común la implementación de algoritmos criptográficos que aseguren que solo el receptor legítimo pueda interpretar los datos transmitidos.
+
+Uno de los principales objetivos de este trabajo es desarrollar una plataforma basada en FPGA que permita integrar mecanismos de codificación de flujo para proteger la transmisión de datos entre dos dispositivos que se comunican mediante el protocolo UART. En lugar de utilizar UART en su forma tradicional, este protocolo es modificado y ampliado para incorporar una capa de seguridad directamente a nivel de hardware, mejorando así la confidencialidad de la información transmitida.
+
+Para ello, se diseñó una plataforma base que incluye los módulos necesarios para enviar y recibir datos, realizar la codificación y decodificación de los mensajes, y establecer la comunicación segura entre ambos extremos. Esta arquitectura ha sido planteada de forma flexible, permitiendo que el proceso de codificación se defina de manera genérica. De este modo, es posible integrar diferentes algoritmos criptográficos sin necesidad de rediseñar por completo el sistema, lo que facilita su adaptación a distintos niveles de seguridad o aplicaciones específicas.
+
+Un aspecto fundamental para el desempeño de un codificador de flujo es que su velocidad de operación no afecte la eficiencia de la comunicación. Por esta razón, la plataforma está implementada en una FPGA, lo que permite ampliar y modificar el protocolo de comunicación para incluir una capa de seguridad directamente a nivel hardware. Así, el proceso de cifrado se realiza en tiempo real, garantizando que la protección de los datos no genere retrasos ni impacte negativamente en la velocidad de transmisión.
+
+Se realiza la prueba y validación del desempeño de la plataforma mediante la comparación de su funcionamiento al implementar un protocolo personalizado de comunicacion para incrementar el grado de seguridad.
+
+\section{Protocolo Seguro para Comunicación Serial}
+Como parte del desarrollo de esta tesis, se aborda el diseño de un sistema de comunicación seguro, iniciando con el análisis de las características fundamentales de los sistemas de comunicación digital y los mecanismos para garantizar que la información transmitida sea recibida y correctamente interpretada únicamente por el destinatario autorizado. Durante este proceso analítico se identifican múltiples criterios que definen las propiedades esenciales para un algoritmo criptográfico eficiente, los cuales serán abordados detalladamente en este capítulo.
+
+En el proceso de establecer los parámetros para una comunicación segura, se busca lograr este objetivo minimizando el impacto sobre los sistemas de comunicación existentes. Cualquier mecanismo implementado para garantizar la seguridad debe ser transparente para el usuario y operar en tiempo real, sin afectar las características esenciales de la comunicación, tales como la calidad y la velocidad de transmisión.
+
+Actualmente, la mayoría de los sistemas de comunicación emplean transmisión de datos serial, generalmente en modo full-duplex, para el intercambio de información. En la búsqueda de sistemas de comunicación seguros, funcionales y eficientes, es necesario analizar y evaluar en tiempo real la ejecución de un algoritmo criptográfico estándar. Posteriormente, será posible implementar y evaluar otros algoritmos conforme a las necesidades del sistema.
+
+A partir de los lineamientos previamente establecidos, se definen las características fundamentales para el diseño de la plataforma de comunicación criptográfica, las cuales son:
+
+
+
+\begin{enumerate}
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{{\theenumi})}
+\item Integración transparente: El sistema de cifrado debe ser incorporado en la línea de comunicación sin necesidad de modificar el equipo de comunicaciones existente, manteniendo así la compatibilidad con la infraestructura actual.
+
+\item Compatibilidad con comunicación serial full-duplex asíncrona: La plataforma debe ser capaz de manejar flujos de datos bidireccionales simultáneos (full-duplex) en modo asíncrono, soportando múltiples velocidades de transmisión comúnmente utilizadas en entornos industriales o embebidos.
+
+\item Flexibilidad criptográfica: Debe ofrecer la posibilidad de cambiar el algoritmo de cifrado de manera sencilla, permitiendo al usuario seleccionar entre distintas opciones según los requerimientos de seguridad del sistema.
+
+\item Procesamiento en tiempo real: Las operaciones de cifrado y descifrado deben ejecutarse de forma continua y en tiempo real, sin interrupciones en el flujo de información, garantizando la integridad y la eficiencia de la comunicación.
+\end{enumerate} 
+
+Para alcanzar el primer objetivo —la integración transparente del sistema de seguridad— se diseñaron módulos hardware que pueden ser instalados en ambos extremos de la línea de comunicación. Estos dispositivos pueden colocarse directamente en los puntos finales del canal de transmisión, o bien actuar como una interfaz entre el usuario y el equipo de comunicación. La ubicación óptima dependerá del contexto de uso, de las características del equipo involucrado y del medio físico de transmisión utilizado.
+
+La Figura \ref{fig:imagen4} muestra un diagrama de bloques que ilustra cómo puede integrarse el sistema de seguridad dentro de una arquitectura de comunicación serial, permitiendo el cifrado de los datos sin alterar la funcionalidad básica del canal.
+
+\begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
+    \centering % Centra la imagen
+     \includegraphics[width=1\textwidth, height=8cm]{imagenes/img4} % Reemplaza con el nombre de tu archivo de imagen
+    \caption{Diagrama de bloques de un sistema de comunicación simplificado. a) Sistema Inseguro. 
+b) Sistema con el cifrado en los extremos de la línea de la transmisión. c) Sistema con el cifrado 
+como interfaz entre el usuario y el  equipo de comunicación. }
+    \label{fig:imagen4} % Etiqueta para referenciar la figura
+\end{figure} 
+
+El mecanismo encargado del cifrado debe incluir, en términos generales, un módulo central de control responsable de coordinar todo el proceso de cifrado y descifrado. Este módulo gestiona el flujo de datos entre dos interfaces de comunicación serial, actuando como intermediario entre el transmisor y el receptor. Su funcionamiento se basa en controlar la entrada y salida de datos cifrados y descifrados de acuerdo con la lógica definida por el algoritmo criptográfico. La Figura \ref{fig:imagen5} ilustra la estructura general del sistema, destacando el papel del controlador central dentro del esquema de comunicación segura.
+
+\begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
+    \centering % Centra la imagen
+     \includegraphics[width=0.8\textwidth, height=3cm]{imagenes/img5} % Reemplaza con el nombre de tu archivo de imagen
+    \caption{Diagrama de bloques del dispositivo de cifrado y Descifrado.}
+    \label{fig:imagen5} % Etiqueta para referenciar la figura
+\end{figure} 
+
+Con el objetivo de garantizar que el proceso de cifrado y descifrado se ejecute de forma continua, sin interrumpir ni degradar el flujo original de información, se opta por el uso de algoritmos de cifrado por flujo. Este tipo de algoritmos permite el procesamiento de los datos en tiempo real, bit a bit o byte a byte, lo cual es especialmente adecuado para sistemas de comunicación serial donde la información se transmite de manera secuencial.
 
 
 
 
-\clearpage
 
-\section{UART (Universal Asynchronous Receiver-Transmitter)}
-El UART es un protocolo de comunicación serie asíncrono ampliamente utilizado en sistemas embebidos por su simplicidad y bajo costo. Permite la transmisión de datos entre dispositivos mediante el envío de bits secuenciales. Aunque eficiente, UART no incluye mecanismos de seguridad nativos, lo que lo hace susceptible a ataques como sniffing, inyectado de datos, y suplantación de dispositivos.
-
-\section{FPGA (Field-Programmable Gate Array)}
-Las FPGAs son dispositivos semiconductores programables que permiten implementar circuitos digitales personalizados. Se utilizan en múltiples aplicaciones donde se requiere alta flexibilidad, paralelismo y velocidad. Las FPGAs son ideales para:
-
-Implementar algoritmos criptográficos en hardware.
-
-Realizar prototipos rápidos.
-
-Diseños de sistemas de comunicación personalizados.
-
-\section{Diseño RTL (Register Transfer Level)}
-El diseño a nivel de transferencia de registros (RTL) es una metodología de modelado de hardware digital que describe cómo los datos se mueven entre registros y qué operaciones lógicas se aplican. Este nivel de abstracción permite desarrollar arquitecturas eficientes en FPGAs para tareas como cifrado, descifrado y control de flujos de datos.
-
-\section{Seguridad en Sistemas Embebidos}
-Los sistemas embebidos, al estar presentes en dispositivos IoT, sensores, sistemas médicos y automotrices, requieren niveles crecientes de seguridad. Las amenazas comunes incluyen acceso físico, clonación, manipulación de firmware y espionaje de datos. El uso de hardware criptográfico integrado es una de las soluciones más efectivas para mitigar estos riesgos, sobre todo en dispositivos con recursos limitados.
 
 \section{Trabajos Relacionados}
 En investigaciones previas se han propuesto mecanismos de seguridad sobre UART, pero en su mayoría dependen de software, lo que limita la eficiencia y vulnerabilidad ante ataques. Otros estudios han demostrado que la implementación de algoritmos criptográficos en FPGA, como AES en modo CTR, es factible y efectiva para mejorar la seguridad sin afectar el rendimiento significativamente.
