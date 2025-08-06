@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.16)  5 AUG 2025 02:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.16)  6 AUG 2025 00:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1352,20 +1352,20 @@ LaTeX Info: Redefining \% on input line 1.
 ]
 
 LaTeX Font Info:    Font shape `T1/Montserrat-LF/regular/n' will be
-(Font)              scaled to size 8.0pt on input line 43.
-LaTeX Info: Redefining \. on input line 43.
-LaTeX Info: Redefining \% on input line 43.
+(Font)              scaled to size 8.0pt on input line 42.
+LaTeX Info: Redefining \. on input line 42.
+LaTeX Info: Redefining \% on input line 42.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported  on input line 43.
-LaTeX Font Info:    Trying to load font information for U+futs on input line 43
+(babel)             Reported  on input line 42.
+LaTeX Font Info:    Trying to load font information for U+futs on input line 42
 .
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/fourier\ufuts.fd
 File: ufuts.fd 2024/07/22 Fontinst v1.933 font definitions for U/futs.
 )
 [10]
 
-LaTeX Info: Redefining \. on input line 70.
-LaTeX Info: Redefining \% on input line 70.
+LaTeX Info: Redefining \. on input line 68.
+LaTeX Info: Redefining \% on input line 68.
 [11])
 \tf@toc=\write5
 \openout5 = `Principal.toc'.
@@ -1552,12 +1552,12 @@ LaTeX Info: Redefining \% on input line 107.
 LaTeX Info: Redefining \. on input line 119.
 LaTeX Info: Redefining \% on input line 119.
 [15]
-<imagenes/img1.jpg, id=359, 666.23906pt x 594.72188pt>
+<imagenes/img1.jpg, id=358, 666.23906pt x 594.72188pt>
 File: imagenes/img1.jpg Graphic file (type jpg)
 <use imagenes/img1.jpg>
 Package pdftex.def Info: imagenes/img1.jpg  used on input line 125.
 (pdftex.def)             Requested size: 221.78093pt x 170.7135pt.
-<imagenes/img2.jpg, id=361, 844.65562pt x 437.38406pt>
+<imagenes/img2.jpg, id=360, 844.65562pt x 437.38406pt>
 File: imagenes/img2.jpg Graphic file (type jpg)
 <use imagenes/img2.jpg>
 Package pdftex.def Info: imagenes/img2.jpg  used on input line 134.
@@ -1590,7 +1590,7 @@ l.145
 LaTeX Info: Redefining \. on input line 163.
 LaTeX Info: Redefining \% on input line 163.
 [18]
-<imagenes/img3.jpg, id=377, 1003.75pt x 676.5275pt>
+<imagenes/img3.jpg, id=376, 1003.75pt x 676.5275pt>
 File: imagenes/img3.jpg Graphic file (type jpg)
 <use imagenes/img3.jpg>
 Package pdftex.def Info: imagenes/img3.jpg  used on input line 188.
@@ -1630,62 +1630,97 @@ LaTeX Info: Redefining \% on input line 215.
 LaTeX Info: Redefining \. on input line 235.
 LaTeX Info: Redefining \% on input line 235.
 [23]
-<imagenes/img4.jpg, id=404, 621.82312pt x 361.35pt>
+<imagenes/img4.jpg, id=403, 621.82312pt x 361.35pt>
 File: imagenes/img4.jpg Graphic file (type jpg)
 <use imagenes/img4.jpg>
 Package pdftex.def Info: imagenes/img4.jpg  used on input line 238.
 (pdftex.def)             Requested size: 443.58492pt x 227.62413pt.
-<imagenes/img5.jpg, id=406, 723.20187pt x 125.46875pt>
+
+
+LaTeX Info: Redefining \. on input line 247.
+LaTeX Info: Redefining \% on input line 247.
+[24
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.247 \clearpage
+                 <./imagenes/img4.jpg>]
+<imagenes/img5.jpg, id=409, 723.20187pt x 125.46875pt>
 File: imagenes/img5.jpg Graphic file (type jpg)
 <use imagenes/img5.jpg>
-Package pdftex.def Info: imagenes/img5.jpg  used on input line 249.
+Package pdftex.def Info: imagenes/img5.jpg  used on input line 251.
 (pdftex.def)             Requested size: 354.86859pt x 85.36163pt.
+
+
+LaTeX Info: Redefining \. on input line 263.
+LaTeX Info: Redefining \% on input line 263.
+[25
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.263 
+       <./imagenes/img5.jpg>]
+<imagenes/img6.jpg, id=415, 889.82437pt x 438.13687pt>
+File: imagenes/img6.jpg Graphic file (type jpg)
+<use imagenes/img6.jpg>
+Package pdftex.def Info: imagenes/img6.jpg  used on input line 268.
+(pdftex.def)             Requested size: 399.20886pt x 227.62523pt.
+
+
+LaTeX Info: Redefining \. on input line 275.
+LaTeX Info: Redefining \% on input line 275.
+[26
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.275 C
+       on este diseño se logra verificar el funcionamiento general de la pl...
+ <./imagenes/img6.jpg>]
+<imagenes/img7.jpg, id=421, 600.74437pt x 315.1775pt>
+File: imagenes/img7.jpg Graphic file (type jpg)
+<use imagenes/img7.jpg>
+Package pdftex.def Info: imagenes/img7.jpg  used on input line 285.
+(pdftex.def)             Requested size: 443.59055pt x 227.62495pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-LaTeX Info: Redefining \. on input line 255.
-LaTeX Info: Redefining \% on input line 255.
-[24
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) 
+LaTeX Info: Redefining \. on input line 292.
+LaTeX Info: Redefining \% on input line 292.
+[27]
+
+LaTeX Info: Redefining \. on input line 292.
+LaTeX Info: Redefining \% on input line 292.
+[28
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.4}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.255 
-       <./imagenes/img4.jpg>]
+l.292 \clearpage
+                 <./imagenes/img7.jpg>]
 LaTeX Font Info:    Font shape `T1/Montserrat-LF/regular/n' will be
-(Font)              scaled to size 12.0pt on input line 267.
+(Font)              scaled to size 12.0pt on input line 302.
 
 
-LaTeX Info: Redefining \. on input line 279.
-LaTeX Info: Redefining \% on input line 279.
-[25
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.279 \subsection{Análisis del protocolo UART }
-                                                 <./imagenes/img5.jpg>]
+LaTeX Info: Redefining \. on input line 326.
+LaTeX Info: Redefining \% on input line 326.
+[29
 
-LaTeX Info: Redefining \. on input line 312.
-LaTeX Info: Redefining \% on input line 312.
-[26])
+])
 
 LaTeX Info: Redefining \. on input line 146.
 LaTeX Info: Redefining \% on input line 146.
-[27]
+[30]
 \openout2 = `capitulos/diseconceptual.aux'.
 
  (capitulos/diseconceptual.tex
-
-[28
-
-
-
-
-]
 Cap\'{\i }tulo 4.
 LaTeX Font Info:    Font shape `T1/Montserrat-LF/regular/n' will be
 (Font)              scaled to size 10.95pt on input line 14.
@@ -1731,7 +1766,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 )
 
-[29
+[31
+
+
+
+
 
 ]
 \openout2 = `capitulos/disedetallado.aux'.
@@ -1740,7 +1779,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 LaTeX Info: Redefining \. on input line 158.
 LaTeX Info: Redefining \% on input line 158.
-[30
+[32
 
 
 
@@ -1754,7 +1793,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[31
+[33
 
 
 
@@ -1764,14 +1803,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 161.
 LaTeX Info: Redefining \% on input line 161.
-[32]
+[34]
 \openout2 = `capitulos/discusion.aux'.
 
  (capitulos/discusion.tex
 Cap\'{\i }tulo 6.
 )
 
-[33
+[35
 
 
 
@@ -1782,22 +1821,22 @@ Cap\'{\i }tulo 6.
 
  (capitulos/conclusiones.tex
 
-[34
-
-
-
-
-]
-
-[35
-
-]
-
 [36
+
+
+
 
 ]
 
 [37
+
+]
+
+[38
+
+]
+
+[39
 
 ]
 Overfull \hbox (26.52708pt too wide) in paragraph at lines 25--26
@@ -1809,11 +1848,11 @@ u-pe-ra-do de https://www.terasic.com.tw
 
 LaTeX Info: Redefining \. on input line 171.
 LaTeX Info: Redefining \% on input line 171.
-[38]
+[40]
 No file Principal.bbl.
 
 
-[39
+[41
 
 
 
@@ -1821,12 +1860,12 @@ No file Principal.bbl.
 
 ]
 
-[40]
+[42]
 \openout2 = `apendices/apendice1.aux'.
 
  (apendices/apendice1.tex)
 
-[41
+[43
 
 
 
@@ -1834,20 +1873,6 @@ No file Principal.bbl.
 \openout2 = `apendices/apendice2.aux'.
 
  (apendices/apendice2.tex
-
-[42
-
-
-
-
-])
-
-[43
-
-]
-\openout2 = `apendices/apendice3.aux'.
-
- (apendices/apendice3.tex
 
 [44
 
@@ -1859,21 +1884,35 @@ No file Principal.bbl.
 [45
 
 ]
+\openout2 = `apendices/apendice3.aux'.
+
+ (apendices/apendice3.tex
 
 [46
 
 
 
+
+])
+
+[47
+
 ]
 
-[47]
+[48
 
-[48]
+
+
+]
+
+[49]
+
+[50]
 \openout2 = `apendices/anexo1.aux'.
 
  (apendices/anexo1.tex)
 
-[49
+[51
 
 
 
@@ -1881,20 +1920,6 @@ No file Principal.bbl.
 \openout2 = `apendices/anexo2.aux'.
 
  (apendices/anexo2.tex
-
-[50
-
-
-
-
-])
-
-[51
-
-]
-\openout2 = `apendices/anexo3.aux'.
-
- (apendices/anexo3.tex
 
 [52
 
@@ -1906,8 +1931,22 @@ No file Principal.bbl.
 [53
 
 ]
+\openout2 = `apendices/anexo3.aux'.
+
+ (apendices/anexo3.tex
 
 [54
+
+
+
+
+])
+
+[55
+
+]
+
+[56
 
 
 
@@ -1946,59 +1985,15 @@ el .ind directamente de Principal.idx
 *****************
 ) ) 
 Here is how much of TeX's memory you used:
- 24071 strings out of 468149
- 463222 string characters out of 5431082
- 883773 words of memory out of 5000000
- 51958 multiletter control sequences out of 15000+600000
+ 24095 strings out of 468149
+ 463754 string characters out of 5431082
+ 883021 words of memory out of 5000000
+ 51988 multiletter control sequences out of 15000+600000
  774926 words of font info for 99 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  125i,13n,121p,1119b,1306s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{section*.25} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.3.9.6} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.3.9.5} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.3.9.4} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.3.9.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.3.9.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.3.9.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.3.9} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.3.8.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.3.8} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.3.7} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.3.6} has been referenced but does not exist
 , replaced by a fixed one
 
  <C:\Users\chris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt10
@@ -2022,9 +2017,9 @@ eX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/chris/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/chris/AppData/Lo
 cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/chris/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/fourier/fourier-orns.pfb>
-Output written on Principal.pdf (74 pages, 997478 bytes).
+Output written on Principal.pdf (76 pages, 1214644 bytes).
 PDF statistics:
- 1197 PDF objects out of 1200 (max. 8388607)
- 180 named destinations out of 1000 (max. 500000)
- 716 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1207 PDF objects out of 1440 (max. 8388607)
+ 174 named destinations out of 1000 (max. 500000)
+ 734 words of extra memory for PDF output out of 10000 (max. 10000000)
 

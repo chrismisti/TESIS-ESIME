@@ -10,6 +10,8 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama de bloques de un sistema de comunicación simplificado. a) Sistema Inseguro. b) Sistema con el cifrado en los extremos de la línea de la transmisión. c) Sistema con el cifrado como interfaz entre el usuario y el equipo de comunicación. }}{24}{figure.3.1}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Diagrama de bloques del dispositivo de cifrado y Descifrado.}}{25}{figure.3.2}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Diseño de la Plataforma integrando el proceso de cifrado y el bloque de control.}}{26}{figure.3.3}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Diseño de la Plataforma Criptográfica incorporando el proceso de cifrado/descifrado como un bloque independiente.}}{28}{figure.3.4}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

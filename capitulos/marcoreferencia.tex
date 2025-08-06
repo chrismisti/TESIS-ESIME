@@ -244,6 +244,8 @@ como interfaz entre el usuario y el  equipo de comunicación. }
 
 El mecanismo encargado del cifrado debe incluir, en términos generales, un módulo central de control responsable de coordinar todo el proceso de cifrado y descifrado. Este módulo gestiona el flujo de datos entre dos interfaces de comunicación serial, actuando como intermediario entre el transmisor y el receptor. Su funcionamiento se basa en controlar la entrada y salida de datos cifrados y descifrados de acuerdo con la lógica definida por el algoritmo criptográfico. La Figura \ref{fig:imagen5} ilustra la estructura general del sistema, destacando el papel del controlador central dentro del esquema de comunicación segura.
 
+\clearpage
+
 \begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
     \centering % Centra la imagen
      \includegraphics[width=0.8\textwidth, height=3cm]{imagenes/img5} % Reemplaza con el nombre de tu archivo de imagen
@@ -253,8 +255,41 @@ El mecanismo encargado del cifrado debe incluir, en términos generales, un mód
 
 Con el objetivo de garantizar que el proceso de cifrado y descifrado se ejecute de forma continua, sin interrumpir ni degradar el flujo original de información, se opta por el uso de algoritmos de cifrado por flujo. Este tipo de algoritmos permite el procesamiento de los datos en tiempo real, bit a bit o byte a byte, lo cual es especialmente adecuado para sistemas de comunicación serial donde la información se transmite de manera secuencial.
 
+\section{Diseño de la Plataforma Criptográfica}
+
+Para llevar a cabo el diseño de la plataforma criptográfica, se parte de las especificaciones definidas en la sección anterior. El método comúnmente empleado para el intercambio de información es la transmisión de datos en serie. Por ello, se implementan dos puertos “Universal Asynchronous Receiver/Transmitter” (UART), los cuales permiten la conexión de la plataforma con el medio de comunicación: uno destinado a recibir y enviar datos en su formato original hacia y desde el usuario, y otro encargado de manejar la información cifrada a través del canal de transmisión. Esta configuración facilita la incorporación del proceso de cifrado en cualquier sistema de comunicación digital que utilice transmisión serial full-dúplex asincrónica, requiriendo únicamente el desarrollo de una interfaz adecuada según el punto de integración dentro del sistema.
+
+Por otro lado para poner la plataforma criptográfica en ejecución se decide utilizar un FPGA, aprovechando sus características, incluyendo su operación de alta velocidad, bajo costo, facilidad de empleo y reconfiguración. En trabajo se decidió utilizar una tarjeta de desarrollo con un EP4CE115integrado, de la familia a Cyclone® IVSpartan. Este FPGA es de tamaño medio, con el equivalente a 114,480 mil compuertas lógicas. El integrado tiene gran capacidad de poder integrar la plataforma criptográfica junto con cualquier bloque que se quiera cifrar y evaluar. Esta plataforma de desarrollo funciona a 50 [MHz], que permite configurar el UART para funcionar a una velocidad de 3.125 [Mbps], que es bastante para funcionar en tiempo real como la mayor parte de los sistemas de comunicación.
+
+Ahora bien para probar la operación total del cifrador, que podría ser integrado en una línea de comunicación, primero se desarrolló el esquema de cifrado que se muestra en la Figura \ref{fig:imagen6}. Esta implementación consiste de un módulo con una máquina de estados que controle al dispositivo, maneje la operación de los UART y que lleve a cabo los procesos de cifrado y descifrado. 
+
+\begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
+    \centering % Centra la imagen
+     \includegraphics[width=0.9\textwidth, height=8cm]{imagenes/img6} % Reemplaza con el nombre de tu archivo de imagen
+    \caption{Diseño de la Plataforma integrando el proceso de cifrado y el bloque de control.}
+    \label{fig:imagen6} % Etiqueta para referenciar la figura
+\end{figure} 
+
+Este dispositivo se emplea para validar el funcionamiento de la plataforma criptográfica, permitiendo la ejecución del proceso de cifrado dentro de un sistema de comunicación. Durante las pruebas experimentales, se utilizaron dos de estos dispositivos conectados entre dos computadoras que se comunicaban mediante un puerto serial RS-232. Los resultados obtenidos a partir de estas pruebas se detallan en el capítulo \#\#\#\#, correspondiente a los resultados.
+
+Con este diseño se logra verificar el funcionamiento general de la plataforma criptográfica; sin embargo, no se satisfacen completamente los requisitos establecidos, particularmente en lo referente a la flexibilidad para cambiar el algoritmo de cifrado. Esto se debe a que el módulo criptográfico está integrado dentro de la máquina de estados del bloque de control, lo que implica que incluso un cambio simple en el algoritmo requiere modificaciones estructurales en todo el sistema.
+
+Para solucionar esta limitación, se propone una reestructuración del diseño, separando el elemento de seguridad del bloque de control. Así, los procesos de cifrado y descifrado se implementan en un módulo independiente, permitiendo que el bloque de control se limite exclusivamente a gestionar la comunicación a través de los UARTs, una vez que los datos han sido procesados por el bloque criptográfico.
+
+Se tiene especial cuidado en proporcionar al bloque de cifrado/descifrado una interfaz genérica que le permita interactuar con el bloque de control sin depender del algoritmo utilizado. Para ello, se define un protocolo simple de handshake que permite al bloque de cifrado/descifrado recibir una señal cuando hay datos listos para ser procesados, y notificar al bloque de control una vez finalizado el procesamiento. Este mecanismo asegura que no se pierda información, evitando que se envíen nuevos datos al cifrador antes de que haya finalizado el procesamiento de los datos actuales.
+
+Si bien el alcance de esta tesis se limita a la implementación del algoritmo de cifrado CESAR dentro de la plataforma de comunicación, el diseño apunta a una arquitectura escalable que permita integrar distintos algoritmos criptográficos. De esta manera, cuando se requiera implementar un nuevo dispositivo de cifrado/descifrado, bastará con desarrollar el bloque correspondiente al nuevo algoritmo y conectarlo a la plataforma para obtener un sistema completamente funcional. El dispositivo resultante puede observarse en la Figura \ref{fig:imagen7}.
+
+\begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
+    \centering % Centra la imagen
+     \includegraphics[width=1\textwidth, height=8cm]{imagenes/img7} % Reemplaza con el nombre de tu archivo de imagen
+    \caption{ Diseño de la Plataforma Criptográfica incorporando el proceso de cifrado/descifrado 
+como un bloque independiente.}
+    \label{fig:imagen7} % Etiqueta para referenciar la figura
+\end{figure} 
 
 
+\clearpage
 
 
 
