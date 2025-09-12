@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.16)  9 AUG 2025 15:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.16)  12 SEP 2025 05:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1708,18 +1708,15 @@ l.292 \clearpage
 LaTeX Font Info:    Font shape `T1/Montserrat-LF/regular/n' will be
 (Font)              scaled to size 12.0pt on input line 300.
 
-Underfull \vbox (badness 1596) has occurred while \output is active []
 
-
-
-LaTeX Info: Redefining \. on input line 315.
-LaTeX Info: Redefining \% on input line 315.
+LaTeX Info: Redefining \. on input line 303.
+LaTeX Info: Redefining \% on input line 303.
 [29
 
 ]
 
-LaTeX Info: Redefining \. on input line 343.
-LaTeX Info: Redefining \% on input line 343.
+LaTeX Info: Redefining \. on input line 334.
+LaTeX Info: Redefining \% on input line 334.
 [30])
 
 LaTeX Info: Redefining \. on input line 146.
@@ -2001,7 +1998,7 @@ Here is how much of TeX's memory you used:
  51990 multiletter control sequences out of 15000+600000
  774926 words of font info for 99 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 125i,13n,121p,1119b,1333s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 125i,13n,121p,1128b,1333s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{section*.25} has been referenced but does not exist
 , replaced by a fixed one
@@ -2027,9 +2024,9 @@ eX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/chris/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/chris/AppData/Lo
 cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/chris/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/fourier/fourier-orns.pfb>
-Output written on Principal.pdf (78 pages, 1219981 bytes).
+Output written on Principal.pdf (78 pages, 1220143 bytes).
 PDF statistics:
- 1229 PDF objects out of 1440 (max. 8388607)
+ 1228 PDF objects out of 1440 (max. 8388607)
  178 named destinations out of 1000 (max. 500000)
  750 words of extra memory for PDF output out of 10000 (max. 10000000)
 

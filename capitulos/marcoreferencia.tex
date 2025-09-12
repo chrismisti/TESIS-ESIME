@@ -293,24 +293,16 @@ como un bloque independiente.}
 
 \section{Aspectos Clave del UART}
 
-El UART controla los puertos y dispositivos serie para comincaciones. La tarjeta de desarllo Altera DE2-115 tiene implementado un puerto RS-232, el cual no se utilizo y se opto por utilizar y personalizar los pines de comunicacion utilizando el ''Expansion Header (J15)'' para fines practicos mostrado en la Figura \ref{fig:imagen3}. Se desarrollaron los bloques para general el módulo que se encarga de implementar la UART personalizado en Verilog. para los pines respectivos en el Hexpansion Header.
+La unidad UART se encarga de controlar los puertos y dispositivos serie destinados a la comunicación de datos. En la tarjeta de desarrollo Altera DE2-115 se encuentra implementado un puerto RS-232; sin embargo, este no fue utilizado en el presente diseño. En su lugar, se optó por la personalización de los pines de comunicación a través del Expansion Header (J15), con el propósito de facilitar la integración práctica del sistema, tal como se ilustra en la figura \ref{fig:imagen3}. Se desarrollaron los bloques necesarios para generar el módulo encargado de implementar una UART personalizada en lenguaje Verilog, destinada a los pines correspondientes del Expansion Header.
 
 En el contexto del diseño digital mediante RTL sobre FPGA, la Unidad de Recepción-Transmisión Asíncrona (UART) cumple funciones esenciales, entre las que destacan la gestión de interrupciones provenientes de los dispositivos conectados al puerto serie y la conversión de datos entre los formatos paralelo y serie. En este proceso, los datos en formato paralelo provenientes del bus del sistema son transformados a formato serie para su transmisión a través de la interfaz de comunicación, mientras que los datos recibidos en formato serie son convertidos nuevamente a formato paralelo para su procesamiento interno.
 
 \subsection{Propiedades Principales del UART}
 
+Para fines demostrativos del proceso de cifrado y con el objetivo de verificar la correcta transmisión de la información, se implementó la comunicación estándar hacia computadoras personales. Es importante señalar que no es posible establecer una comunicación directa entre la tarjeta de desarrollo Altera DE2-115 y un ordenador, debido a que uno de los objetivos de este trabajo consistió en modificar el protocolo UART para incorporar una capa adicional de seguridad a nivel de hardware. En este sentido, si la tarjeta se conecta directamente a un ordenador, este únicamente dispondrá de la comunicación bajo el estándar UART original, lo que imposibilita una transmisión exitosa entre ambas plataformas (PC y FPGA). Para solventar esta limitación, se empleó una segunda FPGA del mismo modelo (Altera DE2-115), en la cual se implementó la misma arquitectura. De esta forma, la comunicación entre ambas FPGA resulta exitosa y adecuada, considerando que en una aplicación real no se requerirá del uso de ordenadores para el monitoreo de la información.
 
 
-
-
-
-
-
-
-Para fines demostrativos del cifrado y que la información se esta enviando correctamente se implemento la comunicación estandard hacia unos ordenadores, hay recordar que que no podemos implementar directamente la comunicacion de la tarjeta de desarollo Altera DE2-115 con nuestro ordenador siendo que uno de los objetivos fue el modificar el protocolo UART para crear una capa de seguridad extra a nivel Hardware y si esta se conecta con el ordenador este solo tendra disponible la comunicacion bajo el estandard UART original y la comunicacion entre estas dos plataformas PC y FPGA no sera exitosa. Para esto se implemento otra FPGA similar Altera DE2-115 para que en esta se implemente la misma aquitectura y le comunicacion entre FPGA's sea exitosa e ideal siendo que en una aplicacion real no requeriremos de los ordenadores para monitorear la informacion. 
-
-
-\section{Trabajos Relacionados}
+\section{Principio de Operación de la UART}
 En investigaciones previas se han propuesto mecanismos de seguridad sobre UART, pero en su mayoría dependen de software, lo que limita la eficiencia y vulnerabilidad ante ataques. Otros estudios han demostrado que la implementación de algoritmos criptográficos en FPGA, como AES en modo CTR, es factible y efectiva para mejorar la seguridad sin afectar el rendimiento significativamente.
 
 

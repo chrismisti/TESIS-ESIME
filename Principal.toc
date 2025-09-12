@@ -29,12 +29,12 @@
 \contentsline {section}{\numberline {3.3}Diseño de la Plataforma Criptográfica}{25}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Aspectos Clave del UART}{29}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Propiedades Principales del UART}{29}{subsection.3.4.1}%
-\contentsline {section}{\numberline {3.5}Trabajos Relacionados}{30}{section.3.5}%
+\contentsline {section}{\numberline {3.5}Principio de Operación de la UART}{30}{section.3.5}%
 \contentsline {section}{\numberline {3.6}Metodología}{30}{section.3.6}%
 \contentsline {subsection}{\numberline {3.6.1}Enfoque Metodol\'ogico}{30}{subsection.3.6.1}%
 \contentsline {section}{\numberline {3.7}Marco procedimental/ Etapas de Desarollo}{30}{section.3.7}%
 \contentsline {subsection}{\numberline {3.7.1}Análisis del protocolo UART }{30}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}Diseño de la capa criptogr\'afica }{30}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.2}Diseño de la capa criptogr\'afica }{31}{subsection.3.7.2}%
 \contentsline {subsection}{\numberline {3.7.3}Integración con el protocolo UART }{31}{subsection.3.7.3}%
 \contentsline {subsection}{\numberline {3.7.4}Implementación en FPGA}{31}{subsection.3.7.4}%
 \contentsline {subsection}{\numberline {3.7.5} Validación y pruebas}{31}{subsection.3.7.5}%
