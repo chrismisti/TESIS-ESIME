@@ -119,7 +119,7 @@ Desde el punto de vista sintáctico, los HDL presentan similitudes con los lengu
 
 Es fundamental que, cuando un modelo HDL esté destinado a la síntesis e implementación física (por ejemplo, en FPGAs o ASICs), el diseñador adopte una mentalidad orientada al hardware, describiendo la lógica con un enfoque estructural o de transferencia de registros (RTL), y no meramente algorítmico. Por otro lado, el uso de estructuras típicas del software puede ser apropiado cuando el objetivo sea únicamente la simulación funcional del sistema, permitiendo optimizar el rendimiento en las etapas de verificación y análisis temporal.
 
-En resumen, los HDL son lenguajes formales de alto nivel, diseñados específicamente para representar circuitos electrónicos a diversos niveles de abstracción —desde compuertas lógicas básicas hasta sistemas digitales completos— y permiten un modelado flexible, estructurado y preciso del hardware, aprovechando conceptos tanto del diseño electrónico como del desarrollo de software, tal y como se muestran en la Figura \ref{fig:imagen1}. 
+En resumen, los HDL son lenguajes formales de alto nivel, diseñados específicamente para representar circuitos electrónicos a diversos niveles de abstracción —desde compuertas lógicas básicas hasta sistemas digitales completos— y permiten un modelado flexible, estructurado y preciso del hardware, aprovechando conceptos tanto del diseño electrónico como del desarrollo de software, tal y como se muestran en la Figura ( \ref{fig:imagen1}). 
 \begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
     \centering % Centra la imagen
      \includegraphics[width=0.5\textwidth, height=6cm]{imagenes/img1} % Reemplaza con el nombre de tu archivo de imagen
@@ -128,7 +128,7 @@ En resumen, los HDL son lenguajes formales de alto nivel, diseñados específica
 \end{figure} 
 %\clearpage
 
-Los lenguajes de descripción de hardware (HDL) fueron desarrollados inicialmente con el propósito de modelar el comportamiento funcional de los componentes electrónicos, permitiendo su simulación previa a la implementación física. No obstante, también son ampliamente utilizados para la descripción estructural de circuitos digitales, facilitando su posterior síntesis y verificación mediante procesos de simulación validados \ref{fig:imagen2}.
+Los lenguajes de descripción de hardware (HDL) fueron desarrollados inicialmente con el propósito de modelar el comportamiento funcional de los componentes electrónicos, permitiendo su simulación previa a la implementación física. No obstante, también son ampliamente utilizados para la descripción estructural de circuitos digitales, facilitando su posterior síntesis y verificación mediante procesos de simulación validados (\ref{fig:imagen2}).
 \begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
     \centering % Centra la imagen
      \includegraphics[width=0.8\textwidth, height=6cm]{imagenes/img2} % Reemplaza con el nombre de tu archivo de imagen
@@ -136,7 +136,7 @@ Los lenguajes de descripción de hardware (HDL) fueron desarrollados inicialment
     \label{fig:imagen2} % Etiqueta para referenciar la figura
 \end{figure} 
 
-A partir de las descripciones iniciales, los enfoques de diseño descendente (top-down) permiten aplicar procesos progresivos de síntesis que conducen gradualmente a niveles más detallados de implementación, hasta alcanzar una descripción física específica y dependiente de la tecnología utilizada. La validación en cada etapa del diseño se lleva a cabo mediante simulaciones y análisis funcionales, permitiendo iteraciones sucesivas de verificación y corrección hasta lograr un comportamiento conforme a los requisitos especificados \ref{fig:imagen2}(b).
+A partir de las descripciones iniciales, los enfoques de diseño descendente (top-down) permiten aplicar procesos progresivos de síntesis que conducen gradualmente a niveles más detallados de implementación, hasta alcanzar una descripción física específica y dependiente de la tecnología utilizada. La validación en cada etapa del diseño se lleva a cabo mediante simulaciones y análisis funcionales, permitiendo iteraciones sucesivas de verificación y corrección hasta lograr un comportamiento conforme a los requisitos especificados ( \ref{fig:imagen2}(b)).
 
 
 \section{Descripción de la tarjeta de desarollo Altera DE2-115 }
@@ -231,7 +231,7 @@ A partir de los lineamientos previamente establecidos, se definen las caracterí
 
 Para alcanzar el primer objetivo —la integración transparente del sistema de seguridad— se diseñaron módulos hardware que pueden ser instalados en ambos extremos de la línea de comunicación. Estos dispositivos pueden colocarse directamente en los puntos finales del canal de transmisión, o bien actuar como una interfaz entre el usuario y el equipo de comunicación. La ubicación óptima dependerá del contexto de uso, de las características del equipo involucrado y del medio físico de transmisión utilizado.
 
-La Figura \ref{fig:imagen4} muestra un diagrama de bloques que ilustra cómo puede integrarse el sistema de seguridad dentro de una arquitectura de comunicación serial, permitiendo el cifrado de los datos sin alterar la funcionalidad básica del canal.
+La Figura (\ref{fig:imagen4}) muestra un diagrama de bloques que ilustra cómo puede integrarse el sistema de seguridad dentro de una arquitectura de comunicación serial, permitiendo el cifrado de los datos sin alterar la funcionalidad básica del canal.
 
 \begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
     \centering % Centra la imagen
@@ -242,7 +242,7 @@ como interfaz entre el usuario y el  equipo de comunicación. }
     \label{fig:imagen4} % Etiqueta para referenciar la figura
 \end{figure} 
 
-El mecanismo encargado del cifrado debe incluir, en términos generales, un módulo central de control responsable de coordinar todo el proceso de cifrado y descifrado. Este módulo gestiona el flujo de datos entre dos interfaces de comunicación serial, actuando como intermediario entre el transmisor y el receptor. Su funcionamiento se basa en controlar la entrada y salida de datos cifrados y descifrados de acuerdo con la lógica definida por el algoritmo criptográfico. La Figura \ref{fig:imagen5} ilustra la estructura general del sistema, destacando el papel del controlador central dentro del esquema de comunicación segura.
+El mecanismo encargado del cifrado debe incluir, en términos generales, un módulo central de control responsable de coordinar todo el proceso de cifrado y descifrado. Este módulo gestiona el flujo de datos entre dos interfaces de comunicación serial, actuando como intermediario entre el transmisor y el receptor. Su funcionamiento se basa en controlar la entrada y salida de datos cifrados y descifrados de acuerdo con la lógica definida por el algoritmo criptográfico. La Figura (\ref{fig:imagen5}) ilustra la estructura general del sistema, destacando el papel del controlador central dentro del esquema de comunicación segura.
 
 \clearpage
 
@@ -261,7 +261,7 @@ Para llevar a cabo el diseño de la plataforma criptográfica, se parte de las e
 
 Por otro lado para poner la plataforma criptográfica en ejecución se decide utilizar un FPGA, aprovechando sus características, incluyendo su operación de alta velocidad, bajo costo, facilidad de empleo y reconfiguración. En trabajo se decidió utilizar una tarjeta de desarrollo con un EP4CE115integrado, de la familia a Cyclone® IVSpartan. Este FPGA es de tamaño medio, con el equivalente a 114,480 mil compuertas lógicas. El integrado tiene gran capacidad de poder integrar la plataforma criptográfica junto con cualquier bloque que se quiera cifrar y evaluar. Esta plataforma de desarrollo funciona a 50 [MHz], que permite configurar el UART para funcionar a una velocidad de 3.125 [Mbps], que es bastante para funcionar en tiempo real como la mayor parte de los sistemas de comunicación.
 
-Ahora bien para probar la operación total del cifrador, que podría ser integrado en una línea de comunicación, primero se desarrolló el esquema de cifrado que se muestra en la Figura \ref{fig:imagen6}. Esta implementación consiste de un módulo con una máquina de estados que controle al dispositivo, maneje la operación de los UART y que lleve a cabo los procesos de cifrado y descifrado. 
+Ahora bien para probar la operación total del cifrador, que podría ser integrado en una línea de comunicación, primero se desarrolló el esquema de cifrado que se muestra en la Figura (\ref{fig:imagen6}). Esta implementación consiste de un módulo con una máquina de estados que controle al dispositivo, maneje la operación de los UART y que lleve a cabo los procesos de cifrado y descifrado. 
 
 \begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
     \centering % Centra la imagen
@@ -278,7 +278,7 @@ Para solucionar esta limitación, se propone una reestructuración del diseño, 
 
 Se tiene especial cuidado en proporcionar al bloque de cifrado/descifrado una interfaz genérica que le permita interactuar con el bloque de control sin depender del algoritmo utilizado. Para ello, se define un protocolo simple de handshake que permite al bloque de cifrado/descifrado recibir una señal cuando hay datos listos para ser procesados, y notificar al bloque de control una vez finalizado el procesamiento. Este mecanismo asegura que no se pierda información, evitando que se envíen nuevos datos al cifrador antes de que haya finalizado el procesamiento de los datos actuales.
 
-Si bien el alcance de esta tesis se limita a la implementación del algoritmo de cifrado CESAR dentro de la plataforma de comunicación, el diseño apunta a una arquitectura escalable que permita integrar distintos algoritmos criptográficos. De esta manera, cuando se requiera implementar un nuevo dispositivo de cifrado/descifrado, bastará con desarrollar el bloque correspondiente al nuevo algoritmo y conectarlo a la plataforma para obtener un sistema completamente funcional. El dispositivo resultante puede observarse en la Figura \ref{fig:imagen7}.
+Si bien el alcance de esta tesis se limita a la implementación del algoritmo de cifrado CESAR dentro de la plataforma de comunicación, el diseño apunta a una arquitectura escalable que permita integrar distintos algoritmos criptográficos. De esta manera, cuando se requiera implementar un nuevo dispositivo de cifrado/descifrado, bastará con desarrollar el bloque correspondiente al nuevo algoritmo y conectarlo a la plataforma para obtener un sistema completamente funcional. El dispositivo resultante puede observarse en la Figura (\ref{fig:imagen7}).
 
 \begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
     \centering % Centra la imagen
@@ -293,7 +293,7 @@ como un bloque independiente.}
 
 \section{Aspectos Clave del UART}
 
-La unidad UART se encarga de controlar los puertos y dispositivos serie destinados a la comunicación de datos. En la tarjeta de desarrollo Altera DE2-115 se encuentra implementado un puerto RS-232; sin embargo, este no fue utilizado en el presente diseño. En su lugar, se optó por la personalización de los pines de comunicación a través del Expansion Header (J15), con el propósito de facilitar la integración práctica del sistema, tal como se ilustra en la figura \ref{fig:imagen3}. Se desarrollaron los bloques necesarios para generar el módulo encargado de implementar una UART personalizada en lenguaje Verilog, destinada a los pines correspondientes del Expansion Header.
+La unidad UART se encarga de controlar los puertos y dispositivos serie destinados a la comunicación de datos. En la tarjeta de desarrollo Altera DE2-115 se encuentra implementado un puerto RS-232; sin embargo, este no fue utilizado en el presente diseño. En su lugar, se optó por la personalización de los pines de comunicación a través del Expansion Header (J15), con el propósito de facilitar la integración práctica del sistema, tal como se ilustra en la Figura (\ref{fig:imagen3}). Se desarrollaron los bloques necesarios para generar el módulo encargado de implementar una UART personalizada en lenguaje Verilog, destinada a los pines correspondientes del Expansion Header.
 
 En el contexto del diseño digital mediante RTL sobre FPGA, la Unidad de Recepción-Transmisión Asíncrona (UART) cumple funciones esenciales, entre las que destacan la gestión de interrupciones provenientes de los dispositivos conectados al puerto serie y la conversión de datos entre los formatos paralelo y serie. En este proceso, los datos en formato paralelo provenientes del bus del sistema son transformados a formato serie para su transmisión a través de la interfaz de comunicación, mientras que los datos recibidos en formato serie son convertidos nuevamente a formato paralelo para su procesamiento interno.
 
@@ -305,15 +305,65 @@ Para fines demostrativos del proceso de cifrado y con el objetivo de verificar l
 \section{Principio de Operación de la UART}
 En investigaciones previas se han propuesto mecanismos de seguridad sobre UART, pero en su mayoría dependen de software, lo que limita la eficiencia y vulnerabilidad ante ataques. Otros estudios han demostrado que la implementación de algoritmos criptográficos en FPGA, como AES en modo CTR, es factible y efectiva para mejorar la seguridad sin afectar el rendimiento significativamente.
 
+\subsection{Mecanismo de transmisión y recepción UART}
+
+Un UART, debido a la forma en que están construidos el transmisor y el receptor, no opera de manera sincronizada; sin embargo, ambos emplean un tiempo de referencia con cierta tolerancia que permite la transferencia serial de cada byte de datos. La transmisión se realiza de forma serial, enviando primero el bit menos significativo (LSB) a una razón de bits determinada (tasa en baud), la cual es conocida tanto por el transmisor como por el receptor. De esta manera, el transmisor puede iniciar el envío de datos en cualquier momento, mientras que el receptor requiere un mecanismo que le permita identificar cuándo ha sido transmitido el primer bit (LSB). Este proceso se logra mediante el envío de una señal de inicio (start bit), activada en nivel bajo durante la duración de un bit, como se muestra en la Figura (\ref{fig:imagen8}).
+
+\begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
+    \centering % Centra la imagen
+     \includegraphics[width=0.8\textwidth, height=1.5cm]{imagenes/img8} % Reemplaza con el nombre de tu archivo de imagen
+    \caption{ Esquema de tiempo para la transmisión de un byte.}
+    \label{fig:imagen8} % Etiqueta para referenciar la figura
+\end{figure} 
+
+El receptor utiliza el flanco de bajada del bit de inicio para activar un circuito de temporización interno. Este tiempo de referencia permite muestrear la señal de entrada serial aproximadamente a la mitad de la duración de cada bit de datos, momento en el que se espera que el valor del bit sea estable. Una vez que se ha leído el último bit de datos (MSB), el receptor verifica que el bit de parada esté en nivel alto, como se espera, lo cual confirma que la operación de recepción se realizó correctamente Figura (\ref{fig:imagen9}).
+
+\begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
+    \centering % Centra la imagen
+     \includegraphics[width=0.7\textwidth, height=1.8cm]{imagenes/img9} % Reemplaza con el nombre de tu archivo de imagen
+    \caption{  Esquema temporal para la recepción de datos.}
+    \label{fig:imagen9} % Etiqueta para referenciar la figura
+\end{figure} 
+
+El receptor se vuelve a sincronizar utilizando el flanco de bajada de cada bit de inicio mediante su circuito temporal interno. Para que la transmisión y recepción funcionen correctamente, el tiempo de ambos sistemas solo necesita coincidir dentro de una tolerancia de aproximadamente la mitad del período de un bit en cada 10 períodos de bit. Esta precisión del 5\% es difícil de alcanzar con sistemas digitales convencionales.
+
+Al igual que muchas implementaciones UART, estos macros esperan un tiempo de referencia proporcionado mediante una señal habilitadora, denominada ''en\_16\_x\_baud'', que se aplica a razón de una vez por cada 16 bits transmitidos.
 
 
-\section{Metodología}
-\subsection{Enfoque Metodol\'ogico}
+\subsection{Criterios para la terminación de la transmisión UART}
 
-Este trabajo de investigación sigue una metodología de tipo experimental y aplicada, con enfoque cuantitativo, ya que se propone diseñar, implementar y evaluar un sistema de comunicación seguro basado en el protocolo UART, incorporando funciones criptográficas mediante diseño RTL en una FPGA.
+En condiciones normales, una línea serial se mantiene activa en nivel alto, de modo que un nuevo bit de inicio se identifica mediante un flanco de bajada. Sin embargo, bajo una condición de fallo, el transmisor puede mantener continuamente la línea en nivel bajo (por ejemplo, por falta de alimentación). En este caso, el receptor interpretará el nivel bajo como un bit de inicio seguido de bits de datos en cero. Como consecuencia, el bit de parada no será válido y la trama incorrecta será descartada, Figura (\ref{fig:imagen10}).
 
+\begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
+    \centering % Centra la imagen
+     \includegraphics[width=0.9\textwidth, height=1.5cm]{imagenes/img10} % Reemplaza con el nombre de tu archivo de imagen
+    \caption{  Esquema temporal de una parada invalida.}
+    \label{fig:imagen10} % Etiqueta para referenciar la figura
+\end{figure} 
 
+El receptor permanecerá a la espera hasta que la línea vuelva a nivel alto y únicamente se volverá a sincronizar con el siguiente flanco de bajada correspondiente al bit de inicio Figura \ref{fig:imagen11}).
 
+\begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
+    \centering % Centra la imagen
+     \includegraphics[width=0.8\textwidth, height=1.4cm]{imagenes/img11} % Reemplaza con el nombre de tu archivo de imagen
+    \caption{  Esquema temporal de una operacion de ruptura.}
+    \label{fig:imagen11} % Etiqueta para referenciar la figura
+\end{figure} 
+
+El macro del transmisor, de forma natural, no realizará ninguna transmisión bajo una condición de fallo. En cambio, el macro del receptor reconoce esta situación y continúa operando según lo descrito previamente.
+
+\subsection{Tasa de baudios de la UART}
+
+A partir de los macros de transmisión y recepción se generan los tiempos de la señal de referencia ''en\_16\_x\_baud''. Como indica su nombre, esta señal debe aplicarse al macro de la tasa de transmisión, que opera a 16 veces la velocidad de bits deseada Figura (\ref{fig:imagen12}).
+
+\begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
+    \centering % Centra la imagen
+     \includegraphics[width=0.8\textwidth, height=1.4cm]{imagenes/img12} % Reemplaza con el nombre de tu archivo de imagen
+    \caption{  Esquema temporal en BAUD's.}
+    \label{fig:imagen12} % Etiqueta para referenciar la figura
+\end{figure} 
+
+De esta forma, la señal se utiliza como un reloj habilitador dentro de los macros. Debe ser generada a partir de un reloj sincronizado y tener una duración de pulso equivalente a un solo ciclo de reloj (lo que requiere, al menos, una frecuencia de reloj máxima dividida entre 16).
 
 \section{Marco procedimental/ Etapas de Desarollo}
 La metodología se estructura en las siguientes etapas:

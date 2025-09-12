@@ -12,6 +12,11 @@
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Diagrama de bloques del dispositivo de cifrado y Descifrado.}}{25}{figure.3.2}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Diseño de la Plataforma integrando el proceso de cifrado y el bloque de control.}}{26}{figure.3.3}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Diseño de la Plataforma Criptográfica incorporando el proceso de cifrado/descifrado como un bloque independiente.}}{28}{figure.3.4}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Esquema de tiempo para la transmisión de un byte.}}{30}{figure.3.5}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Esquema temporal para la recepción de datos.}}{31}{figure.3.6}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Esquema temporal de una parada invalida.}}{32}{figure.3.7}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Esquema temporal de una operacion de ruptura.}}{32}{figure.3.8}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Esquema temporal en BAUD's.}}{32}{figure.3.9}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
