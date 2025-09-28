@@ -365,49 +365,45 @@ A partir de los macros de transmisión y recepción se generan los tiempos de la
 
 De esta forma, la señal se utiliza como un reloj habilitador dentro de los macros. Debe ser generada a partir de un reloj sincronizado y tener una duración de pulso equivalente a un solo ciclo de reloj (lo que requiere, al menos, una frecuencia de reloj máxima dividida entre 16).
 
-\section{Marco procedimental/ Etapas de Desarollo}
-La metodología se estructura en las siguientes etapas:
+\subsection{Implementación RTL del Bloque UART\_Tx y UART\_rx }
+El UART receptor está formado por un archivo en Verilog. El nombre del archivo es ''receiver.sv'' que esta implementando en combinación con los modulos de ''binary\_to\_7seg.sv'' y ''transmitter.sv'', los modulos tanto de receiver y transmitter cuentan con su capa de cifrado y descifrado, incluyendo las variantes de rotación de bits y la selecció de rango de esta misma.
 
+\subsection{Configuración de las Interfaces Seriales con las TarjetasAltera DE2–115 }
 
+En la Figura (\ref{fig:imagen13}) se observa la conexión de los puertos definidos por el usuario, lo cual pone de manifiesto la flexibilidad inherente a las FPGA. Esta característica permite que los pines de entrada y salida no estén restringidos a conectores predeterminados, sino que puedan ser asignados libremente por el diseñador. De esta manera, además de optimizar la arquitectura del sistema, se incrementa la dificultad para que un agente externo pueda identificar los pines específicos donde se lleva a cabo la comunicación (Brown \& Vranesic, 2013).
 
-\subsection{Análisis del protocolo UART }
+\begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
+    \centering % Centra la imagen
+     \includegraphics[width=1\textwidth, height=12cm]{imagenes/img13} % Reemplaza con el nombre de tu archivo de imagen
+    \caption{  Conexion de las dos plataformas Altera DE2–115 mediante la selección de pines del modulo Jtag .}
+    \label{fig:imagen13} % Etiqueta para referenciar la figura
+\end{figure} 
 
-\begin{itemize}
-\item Estudio de la estructura y funcionamiento del protocolo UART.
-\item Identificación de vulnerabilidades y limitaciones en cuanto a seguridad.
-\end{itemize}
+\clearpage
+En la Figura (\ref{fig:imagen14}) se ilustra la definición de los pines destinados a la comunicación serial, la cual fue realizada dentro del software Quartus. Este procedimiento permite establecer de manera explícita las asignaciones físicas entre los pines de la FPGA y las señales lógicas del diseño, asegurando así la correcta implementación del sistema en el dispositivo reconfigurable. 
 
-\subsection{Diseño de la capa criptogr\'afica }
+\begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
+    \centering % Centra la imagen
+     \includegraphics[width=1\textwidth, height=10cm]{imagenes/img14} % Reemplaza con el nombre de tu archivo de imagen
+    \caption{  Seleccion de pines mediante el Software Quartus.}
+    \label{fig:imagen14} % Etiqueta para referenciar la figura
+\end{figure} 
 
-\begin{itemize}
-\item Selección de un algoritmo de cifrado simétrico adecuado (por ejemplo, AES o XOR extendido para propósitos didácticos).
-\item Modelado de módulos de cifrado y descifrado a nivel RTL (Register Transfer Level).
-\end{itemize}
+\clearpage
+A continuación, en la Figura (\ref{fig:imagen15}), se presenta el esquema de las conexiones empleadas para la validación del sistema. Con el propósito de verificar el correcto funcionamiento de los módulos implementados, se estableció una comunicación entre dos ordenadores conectados en los extremos, lo que permitió comprobar la transmisión y recepción adecuada de los datos.
 
-\subsection{Integración con el protocolo UART }
+\begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
+    \centering % Centra la imagen
+     \includegraphics[width=1\textwidth, height=3cm]{imagenes/img15} % Reemplaza con el nombre de tu archivo de imagen
+    \caption{ Esquema de conexiones para la plataforma de cifrado y su validación.}
+    \label{fig:imagen15} % Etiqueta para referenciar la figura
+\end{figure} 
 
-\begin{itemize}
-\item Modificación del módulo UART para incluir la capa criptográfica sin alterar su estructura base.
-\item Definición de flujos de datos seguros: entrada cifrada, salida descifrada.
-\end{itemize}
+\chapter{RESULTADOS}
 
-\subsection{Implementación en FPGA}
+\section{Resultados}
 
-\begin{itemize}
-\item Codificación en Verilog.
-\item Síntesis, simulación y verificación funcional utilizando herramientas CAD (Quartus de Intel).
-\item Implementación física en una FPGA (por ejemplo, una placa DE10-Lite, Nexys A7 o similar).
-\end{itemize}
-
-\subsection{ Validación y pruebas}
-
-\begin{itemize}
-\item Pruebas funcionales de transmisión segura UART en hardware.
-\item Medición de rendimiento: latencia, velocidad de transmisión, utilización de recursos.
-\item Comparación con versiones sin seguridad o implementaciones en software.
-\end{itemize}
-
-\subsection{ }
+En este último capítulo se presentan los resultados obtenidos durante el desarrollo de las implementaciones propuestas, tanto en relación con los objetivos particulares como con el objetivo general de la presente tesis. Algunos de estos resultados se contrastan con los publicados en los estándares correspondientes, tanto para el algoritmo de cifrado seleccionado y programado, como para el modo de operación implementado. Asimismo, se incluyen resultados derivados de la aplicación desarrollada para la integración de los mecanismos de seguridad, específicamente aquellos vinculados a las pruebas realizadas en la plataforma criptográfica destinada a la comunicación serial segura. Finalmente, para la consulta de los códigos fuente y ciertos detalles específicos de la programación, el lector puede remitirse a los anexos ubicados al final de este capítulo.
 
 
 %\newgeometry{margin=1cm,includefoot}

@@ -17,6 +17,10 @@
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Esquema temporal de una parada invalida.}}{32}{figure.3.7}%
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Esquema temporal de una operacion de ruptura.}}{32}{figure.3.8}%
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Esquema temporal en BAUD's.}}{32}{figure.3.9}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Conexion de las dos plataformas Altera DE2–115 mediante la selección de pines del modulo Jtag .}}{34}{figure.3.10}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Seleccion de pines mediante el Software Quartus.}}{35}{figure.3.11}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Esquema de conexiones para la plataforma de cifrado y su validación.}}{36}{figure.3.12}%
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
