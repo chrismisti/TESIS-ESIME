@@ -37,46 +37,46 @@
 \contentsline {subsection}{\numberline {3.5.5}Configuración de las Interfaces Seriales con las TarjetasAltera DE2–115 }{33}{subsection.3.5.5}%
 \contentsline {chapter}{\numberline {4}RESULTADOS}{37}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Resultados}{37}{section.4.1}%
-\contentsline {chapter}{\numberline {5}Diseño del sistema}{39}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Diseño Conceptual}{39}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Necesidades - Requerimientos}{39}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Arquitectura funcional (funciones)}{39}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}Arquitectura física (módulos)}{39}{subsection.5.1.3}%
-\contentsline {subsection}{\numberline {5.1.4}Propuestas de solución}{39}{subsection.5.1.4}%
-\contentsline {subsubsection}{\numberline {5.1.4.1}Módulos (M$\textsubscript {1}$ \dots M$\textsubscript {n}$)}{39}{subsubsection.5.1.4.1}%
-\contentsline {subsubsection}{\numberline {5.1.4.2}Integración (sistema)}{39}{subsubsection.5.1.4.2}%
-\contentsline {subsection}{\numberline {5.1.5}Validación}{39}{subsection.5.1.5}%
-\contentsline {subsection}{\numberline {5.1.6}Selección diseño conceptual}{39}{subsection.5.1.6}%
-\contentsline {section}{\numberline {5.2}Diseño Detallado}{40}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Detalle módulo 1 (M{l})}{40}{subsection.5.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.1.1}Validación (M{l})}{40}{subsubsection.5.2.1.1}%
-\contentsline {subsection}{\numberline {5.2.2}Detalle módulo 2 (M{2})}{40}{subsection.5.2.2}%
-\contentsline {subsubsection}{\numberline {5.2.2.1}Validación (M{2})}{40}{subsubsection.5.2.2.1}%
-\contentsline {subsection}{\numberline {5.2.3}Detalle módulo n (M{n})}{40}{subsection.5.2.3}%
-\contentsline {subsubsection}{\numberline {5.2.3.1}Validación (M{n})}{40}{subsubsection.5.2.3.1}%
-\contentsline {subsection}{\numberline {5.2.4}Integración sistema mecatrónico}{40}{subsection.5.2.4}%
-\contentsline {subsection}{\numberline {5.2.5}Validación sistema mecatrónico}{40}{subsection.5.2.5}%
-\contentsline {chapter}{\numberline {6}Implementación del sistema}{41}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Implementación módulo 1 (M{l})}{41}{section.6.1}%
-\contentsline {subsubsection}{\numberline {6.1.0.1}Verificación (M{l})}{41}{subsubsection.6.1.0.1}%
-\contentsline {section}{\numberline {6.2}Implementación módulo 2 (M{2})}{41}{section.6.2}%
-\contentsline {subsubsection}{\numberline {6.2.0.1}Verificación (M{2})}{41}{subsubsection.6.2.0.1}%
-\contentsline {section}{\numberline {6.3}Implementación módulo 2 (M{n})}{42}{section.6.3}%
-\contentsline {subsubsection}{\numberline {6.3.0.1}Verificación (M{n}}{42}{subsubsection.6.3.0.1}%
-\contentsline {section}{\numberline {6.4}Implementación módulo 1 (M{l})}{42}{section.6.4}%
-\contentsline {subsubsection}{\numberline {6.4.0.1}Verificación (M{l})}{42}{subsubsection.6.4.0.1}%
-\contentsline {chapter}{\numberline {7}Discusión / Análisis de resultados}{43}{chapter.7}%
-\contentsline {subsection}{\numberline {7.0.1}Análisis de ingeniería}{43}{subsection.7.0.1}%
-\contentsline {subsection}{\numberline {7.0.2}Análisis de costos}{43}{subsection.7.0.2}%
-\contentsline {subsection}{\numberline {7.0.3}Análisis de valor}{43}{subsection.7.0.3}%
-\contentsline {chapter}{Conclusiones}{45}{chapter*.15}%
-\contentsline {section}{Recomendaciones y trabajo futuro}{45}{section*.16}%
-\contentsline {chapter}{Referencias Bibliográficas}{47}{chapter*.17}%
-\contentsline {part}{Apéndices}{49}{part.1}%
-\contentsline {chapter}{Ap\'endice 1}{51}{appendix*.19}%
-\contentsline {chapter}{Der Zweite Anhang (Ap\'endice 2)}{53}{appendix*.20}%
-\contentsline {chapter}{Der dritte Anhang (Ap\'endice 3)}{55}{appendix*.21}%
-\contentsline {part}{Anexos}{57}{part.2}%
-\contentsline {chapter}{Anexo 1. Hoja de datos}{59}{appendix*.22}%
-\contentsline {chapter}{Anexo 2. Hoja de datos}{61}{appendix*.23}%
-\contentsline {chapter}{Anexo 3 (Anexo título 3)}{63}{appendix*.24}%
+\contentsline {chapter}{\numberline {5}Diseño del sistema}{41}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Diseño Conceptual}{41}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Necesidades - Requerimientos}{41}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Arquitectura funcional (funciones)}{41}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Arquitectura física (módulos)}{41}{subsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.1.4}Propuestas de solución}{41}{subsection.5.1.4}%
+\contentsline {subsubsection}{\numberline {5.1.4.1}Módulos (M$\textsubscript {1}$ \dots M$\textsubscript {n}$)}{41}{subsubsection.5.1.4.1}%
+\contentsline {subsubsection}{\numberline {5.1.4.2}Integración (sistema)}{41}{subsubsection.5.1.4.2}%
+\contentsline {subsection}{\numberline {5.1.5}Validación}{41}{subsection.5.1.5}%
+\contentsline {subsection}{\numberline {5.1.6}Selección diseño conceptual}{41}{subsection.5.1.6}%
+\contentsline {section}{\numberline {5.2}Diseño Detallado}{42}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Detalle módulo 1 (M{l})}{42}{subsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.1.1}Validación (M{l})}{42}{subsubsection.5.2.1.1}%
+\contentsline {subsection}{\numberline {5.2.2}Detalle módulo 2 (M{2})}{42}{subsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.2.1}Validación (M{2})}{42}{subsubsection.5.2.2.1}%
+\contentsline {subsection}{\numberline {5.2.3}Detalle módulo n (M{n})}{42}{subsection.5.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.3.1}Validación (M{n})}{42}{subsubsection.5.2.3.1}%
+\contentsline {subsection}{\numberline {5.2.4}Integración sistema mecatrónico}{42}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}Validación sistema mecatrónico}{42}{subsection.5.2.5}%
+\contentsline {chapter}{\numberline {6}Implementación del sistema}{43}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Implementación módulo 1 (M{l})}{43}{section.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.0.1}Verificación (M{l})}{43}{subsubsection.6.1.0.1}%
+\contentsline {section}{\numberline {6.2}Implementación módulo 2 (M{2})}{43}{section.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.0.1}Verificación (M{2})}{43}{subsubsection.6.2.0.1}%
+\contentsline {section}{\numberline {6.3}Implementación módulo 2 (M{n})}{44}{section.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.0.1}Verificación (M{n}}{44}{subsubsection.6.3.0.1}%
+\contentsline {section}{\numberline {6.4}Implementación módulo 1 (M{l})}{44}{section.6.4}%
+\contentsline {subsubsection}{\numberline {6.4.0.1}Verificación (M{l})}{44}{subsubsection.6.4.0.1}%
+\contentsline {chapter}{\numberline {7}Discusión / Análisis de resultados}{45}{chapter.7}%
+\contentsline {subsection}{\numberline {7.0.1}Análisis de ingeniería}{45}{subsection.7.0.1}%
+\contentsline {subsection}{\numberline {7.0.2}Análisis de costos}{45}{subsection.7.0.2}%
+\contentsline {subsection}{\numberline {7.0.3}Análisis de valor}{45}{subsection.7.0.3}%
+\contentsline {chapter}{Conclusiones}{47}{chapter*.15}%
+\contentsline {section}{Recomendaciones y trabajo futuro}{47}{section*.16}%
+\contentsline {chapter}{Referencias Bibliográficas}{49}{chapter*.17}%
+\contentsline {part}{Apéndices}{51}{part.1}%
+\contentsline {chapter}{Ap\'endice 1}{53}{appendix*.19}%
+\contentsline {chapter}{Der Zweite Anhang (Ap\'endice 2)}{55}{appendix*.20}%
+\contentsline {chapter}{Der dritte Anhang (Ap\'endice 3)}{57}{appendix*.21}%
+\contentsline {part}{Anexos}{59}{part.2}%
+\contentsline {chapter}{Anexo 1. Hoja de datos}{61}{appendix*.22}%
+\contentsline {chapter}{Anexo 2. Hoja de datos}{63}{appendix*.23}%
+\contentsline {chapter}{Anexo 3 (Anexo título 3)}{65}{appendix*.24}%

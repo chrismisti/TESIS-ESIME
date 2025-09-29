@@ -405,6 +405,30 @@ A continuación, en la Figura (\ref{fig:imagen15}), se presenta el esquema de la
 
 En este último capítulo se presentan los resultados obtenidos durante el desarrollo de las implementaciones propuestas, tanto en relación con los objetivos particulares como con el objetivo general de la presente tesis. Algunos de estos resultados se contrastan con los publicados en los estándares correspondientes, tanto para el algoritmo de cifrado seleccionado y programado, como para el modo de operación implementado. Asimismo, se incluyen resultados derivados de la aplicación desarrollada para la integración de los mecanismos de seguridad, específicamente aquellos vinculados a las pruebas realizadas en la plataforma criptográfica destinada a la comunicación serial segura. Finalmente, para la consulta de los códigos fuente y ciertos detalles específicos de la programación, el lector puede remitirse a los anexos ubicados al final de este capítulo.
 
+Con el fin de validar el mecanismo de ofuscación propuesto como una mejora al cifrado César tradicional, se llevaron a cabo una serie de experimentos tanto en el ámbito de software como en el de hardware. El objetivo principal fue demostrar que la integración de una capa adicional de ofuscación no solo incrementa la complejidad del proceso de descifrado del mensaje encriptado, sino que también preserva la equivalencia funcional entre el prototipo en software y su implementación en hardware.
+
+La primera etapa de la experimentación consistió en el desarrollo de un script en Python que implementaba el cifrado César combinado con la técnica de ofuscación propuesta. Este entorno permitió un prototipado rápido y la verificación de la corrección funcional. Se utilizaron diversos conjuntos de datos de entrada, incluyendo cadenas alfanuméricas y secuencias binarias, los cuales fueron sometidos a pruebas de cifrado y descifrado. Posteriormente, se aplicaron medidas estadísticas para evaluar la distribución de los caracteres del texto cifrado  Figura (\ref{fig:imagen16}, con el objetivo de confirmar que la ofuscación lograba una reducción en los patrones de frecuencia predecibles, típicamente explotables en los cifrados clásicos por sustitución. Los gráficos resultantes evidenciaron un aplanamiento notable en las distribuciones de frecuencia de los caracteres, lo que indica que el cifrado modificado mitiga de manera efectiva una de las principales debilidades del esquema César tradicional.
+
+
+\begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
+    \centering % Centra la imagen
+     \includegraphics[width=1\textwidth, height=6cm]{imagenes/img16} % Reemplaza con el nombre de tu archivo de imagen
+    \caption{ Distribución de texto simple en español.}
+    \label{fig:imagen16} % Etiqueta para referenciar la figura
+\end{figure} 
+
+Tras la validación exitosa en el dominio de software, el algoritmo fue traducido a una descripción de hardware adecuada para su implementación en FPGA. Específicamente, se diseñó un bloque RTL (Register Transfer Level) utilizando VHDL con el fin de replicar las operaciones tanto del cifrado César como de la capa de ofuscación. La elección de RTL aseguró que el diseño permaneciera sintetizable y pudiera desplegarse físicamente en la plataforma FPGA Altera DE2-115. Este proceso de traducción requirió especial atención al temporizado, la utilización de recursos y la gestión de la concurrencia, ya que la ejecución en hardware introduce restricciones que no están presentes en la ejecución secuencial del software.
+
+La simulación del bloque RTL se llevó a cabo antes de la síntesis, garantizando que la salida coincidiera con la implementación de referencia en Python en todos los vectores de prueba. El análisis de formas de onda confirmó la correcta alineación de las rutas de datos, la sincronización del reloj y el comportamiento de la lógica de control. Posteriormente, el diseño fue sintetizado, colocado y ruteado sobre la FPGA. Los reportes de utilización de recursos indicaron que la lógica adicional de ofuscación introdujo únicamente un incremento moderado en el consumo de elementos lógicos, manteniéndose ampliamente dentro de la capacidad del dispositivo Cyclone IV.
+\clearpage
+Para validar aún más la efectividad del diseño en hardware, se recolectaron resultados experimentales directamente de la implementación en la FPGA. Secuencias de texto de entrada fueron encriptadas, procesadas a través del mecanismo de ofuscación y posteriormente desencriptadas en tiempo real. Los textos cifrados resultantes fueron nuevamente sometidos a un análisis estadístico de frecuencias (véase Fig. \ref{fig:imagen17}). La comparación entre las distribuciones generadas en software y en hardware confirmó la equivalencia funcional: ambas plataformas alcanzaron niveles similares de dispersión e imprevisibilidad de caracteres.
+
+\begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
+    \centering % Centra la imagen
+     \includegraphics[width=1\textwidth, height=6cm]{imagenes/img17} % Reemplaza con el nombre de tu archivo de imagen
+    \caption{ Distribución del texto cifrado producido por la capa de ofuscación implementada en hardware..}
+    \label{fig:imagen17} % Etiqueta para referenciar la figura
+\end{figure} 
 
 %\newgeometry{margin=1cm,includefoot}
 %\layout
