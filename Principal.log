@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.16)  17 NOV 2025 03:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.16)  17 NOV 2025 14:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1035,8 +1035,8 @@ Package babel Info: 'spanish' activates 'spanish' shorthands.
 (babel)             Reported  on input line 13.
  (preliminares/resumen.aux) (preliminares/abstract.aux)
 (preliminares/nomenclatura.aux) (preliminares/introduccion.aux)
-(capitulos/marcoreferencia.aux) (capitulos/conclusiones.aux)
-(apendices/anexo1.aux) (apendices/anexo2.aux) (apendices/anexo3.aux))
+(capitulos/marcoreferencia.aux) (apendices/anexo1.aux) (apendices/anexo2.aux)
+(capitulos/conclusiones.aux))
 \openout1 = `Principal.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 107.
@@ -1360,12 +1360,12 @@ LaTeX Info: Redefining \% on input line 1.
 ]
 
 LaTeX Font Info:    Font shape `T1/Montserrat-LF/regular/n' will be
-(Font)              scaled to size 8.0pt on input line 41.
-LaTeX Info: Redefining \. on input line 41.
-LaTeX Info: Redefining \% on input line 41.
+(Font)              scaled to size 8.0pt on input line 42.
+LaTeX Info: Redefining \. on input line 42.
+LaTeX Info: Redefining \% on input line 42.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported  on input line 41.
-LaTeX Font Info:    Trying to load font information for U+futs on input line 41
+(babel)             Reported  on input line 42.
+LaTeX Font Info:    Trying to load font information for U+futs on input line 42
 .
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/fourier\ufuts.fd
 File: ufuts.fd 2024/07/22 Fontinst v1.933 font definitions for U/futs.
@@ -1560,12 +1560,12 @@ LaTeX Info: Redefining \% on input line 107.
 LaTeX Info: Redefining \. on input line 119.
 LaTeX Info: Redefining \% on input line 119.
 [15]
-<imagenes/img1.jpg, id=320, 666.23906pt x 594.72188pt>
+<imagenes/img1.jpg, id=318, 666.23906pt x 594.72188pt>
 File: imagenes/img1.jpg Graphic file (type jpg)
 <use imagenes/img1.jpg>
 Package pdftex.def Info: imagenes/img1.jpg  used on input line 125.
 (pdftex.def)             Requested size: 221.78093pt x 170.7135pt.
-<imagenes/img2.jpg, id=322, 844.65562pt x 437.38406pt>
+<imagenes/img2.jpg, id=320, 844.65562pt x 437.38406pt>
 File: imagenes/img2.jpg Graphic file (type jpg)
 <use imagenes/img2.jpg>
 Package pdftex.def Info: imagenes/img2.jpg  used on input line 134.
@@ -1598,7 +1598,7 @@ l.145
 LaTeX Info: Redefining \. on input line 163.
 LaTeX Info: Redefining \% on input line 163.
 [18]
-<imagenes/img3.jpg, id=338, 1003.75pt x 676.5275pt>
+<imagenes/img3.jpg, id=336, 1003.75pt x 676.5275pt>
 File: imagenes/img3.jpg Graphic file (type jpg)
 <use imagenes/img3.jpg>
 Package pdftex.def Info: imagenes/img3.jpg  used on input line 188.
@@ -1638,7 +1638,7 @@ LaTeX Info: Redefining \% on input line 215.
 LaTeX Info: Redefining \. on input line 235.
 LaTeX Info: Redefining \% on input line 235.
 [23]
-<imagenes/img4.jpg, id=365, 621.82312pt x 361.35pt>
+<imagenes/img4.jpg, id=363, 621.82312pt x 361.35pt>
 File: imagenes/img4.jpg Graphic file (type jpg)
 <use imagenes/img4.jpg>
 Package pdftex.def Info: imagenes/img4.jpg  used on input line 238.
@@ -1654,7 +1654,7 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.247 \clearpage
                  <./imagenes/img4.jpg>]
-<imagenes/img5.jpg, id=371, 723.20187pt x 125.46875pt>
+<imagenes/img5.jpg, id=369, 723.20187pt x 125.46875pt>
 File: imagenes/img5.jpg Graphic file (type jpg)
 <use imagenes/img5.jpg>
 Package pdftex.def Info: imagenes/img5.jpg  used on input line 251.
@@ -1672,7 +1672,7 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.263 
        <./imagenes/img5.jpg>]
-<imagenes/img6.jpg, id=377, 889.82437pt x 438.13687pt>
+<imagenes/img6.jpg, id=375, 889.82437pt x 438.13687pt>
 File: imagenes/img6.jpg Graphic file (type jpg)
 <use imagenes/img6.jpg>
 Package pdftex.def Info: imagenes/img6.jpg  used on input line 268.
@@ -1689,7 +1689,7 @@ has been already used, duplicate ignored
 l.275 C
        on este diseÃ±o se logra verificar el funcionamiento general de la pl...
  <./imagenes/img6.jpg>]
-<imagenes/img7.jpg, id=383, 600.74437pt x 315.1775pt>
+<imagenes/img7.jpg, id=381, 600.74437pt x 315.1775pt>
 File: imagenes/img7.jpg Graphic file (type jpg)
 <use imagenes/img7.jpg>
 Package pdftex.def Info: imagenes/img7.jpg  used on input line 285.
@@ -1722,7 +1722,7 @@ LaTeX Info: Redefining \% on input line 303.
 [29
 
 ]
-<imagenes/img8.jpg, id=399, 438.63875pt x 34.62938pt>
+<imagenes/img8.jpg, id=397, 438.63875pt x 34.62938pt>
 File: imagenes/img8.jpg Graphic file (type jpg)
 <use imagenes/img8.jpg>
 Package pdftex.def Info: imagenes/img8.jpg  used on input line 314.
@@ -1738,12 +1738,12 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.320 
        <./imagenes/img8.jpg>]
-<imagenes/img9.jpg, id=405, 328.72812pt x 71.26625pt>
+<imagenes/img9.jpg, id=403, 328.72812pt x 71.26625pt>
 File: imagenes/img9.jpg Graphic file (type jpg)
 <use imagenes/img9.jpg>
 Package pdftex.def Info: imagenes/img9.jpg  used on input line 323.
 (pdftex.def)             Requested size: 310.50926pt x 51.21486pt.
-<imagenes/img10.jpg, id=407, 487.8225pt x 51.19125pt>
+<imagenes/img10.jpg, id=405, 487.8225pt x 51.19125pt>
 File: imagenes/img10.jpg Graphic file (type jpg)
 <use imagenes/img10.jpg>
 Package pdftex.def Info: imagenes/img10.jpg  used on input line 339.
@@ -1763,12 +1763,12 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.345 
        <./imagenes/img9.jpg>]
-<imagenes/img11.jpg, id=413, 510.40688pt x 36.135pt>
+<imagenes/img11.jpg, id=411, 510.40688pt x 36.135pt>
 File: imagenes/img11.jpg Graphic file (type jpg)
 <use imagenes/img11.jpg>
 Package pdftex.def Info: imagenes/img11.jpg  used on input line 348.
 (pdftex.def)             Requested size: 354.88362pt x 39.83571pt.
-<imagenes/img12.jpg, id=415, 448.17438pt x 61.73062pt>
+<imagenes/img12.jpg, id=413, 448.17438pt x 61.73062pt>
 File: imagenes/img12.jpg Graphic file (type jpg)
 <use imagenes/img12.jpg>
 Package pdftex.def Info: imagenes/img12.jpg  used on input line 361.
@@ -1796,7 +1796,7 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.370 
        <./imagenes/img10.jpg> <./imagenes/img11.jpg> <./imagenes/img12.jpg>]
-<imagenes/img20.jpg, id=421, 807.51688pt x 170.6375pt>
+<imagenes/img20.jpg, id=419, 807.51688pt x 170.6375pt>
 File: imagenes/img20.jpg Graphic file (type jpg)
 <use imagenes/img20.jpg>
 Package pdftex.def Info: imagenes/img20.jpg  used on input line 376.
@@ -1817,7 +1817,7 @@ Overfull \hbox (1.40038pt too wide) in paragraph at lines 382--382
  con las Tar-je-ta-sAl-te-ra DE2^^U115
  []
 
-<imagenes/img14.jpg, id=427, 675.52374pt x 452.69125pt>
+<imagenes/img14.jpg, id=425, 675.52374pt x 452.69125pt>
 File: imagenes/img14.jpg Graphic file (type jpg)
 <use imagenes/img14.jpg>
 Package pdftex.def Info: imagenes/img14.jpg  used on input line 388.
@@ -1835,7 +1835,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.11})
                                                   \__shipout_drop_firstpage_...
 l.392 \clearpage
                  <./imagenes/img14.jpg>]
-<imagenes/img13.jpg, id=433, 403.5075pt x 537.50812pt>
+<imagenes/img13.jpg, id=431, 403.5075pt x 537.50812pt>
 File: imagenes/img13.jpg Graphic file (type jpg)
 <use imagenes/img13.jpg>
 Package pdftex.def Info: imagenes/img13.jpg  used on input line 397.
@@ -1853,7 +1853,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.12})
                                                   \__shipout_drop_firstpage_...
 l.403 \clearpage
                  <./imagenes/img13.jpg>]
-<imagenes/img15.jpg, id=440, 580.1675pt x 110.4125pt>
+<imagenes/img15.jpg, id=438, 580.1675pt x 110.4125pt>
 File: imagenes/img15.jpg Graphic file (type jpg)
 <use imagenes/img15.jpg>
 Package pdftex.def Info: imagenes/img15.jpg  used on input line 408.
@@ -1878,7 +1878,7 @@ Cap\'{\i }tulo 4.
 
 
 ]
-<imagenes/img16.jpg, id=450, 749.80125pt x 306.39468pt>
+<imagenes/img16.jpg, id=448, 749.80125pt x 306.39468pt>
 File: imagenes/img16.jpg Graphic file (type jpg)
 <use imagenes/img16.jpg>
 Package pdftex.def Info: imagenes/img16.jpg  used on input line 426.
@@ -1898,7 +1898,7 @@ l.432
 LaTeX Info: Redefining \. on input line 434.
 LaTeX Info: Redefining \% on input line 434.
 [39]
-<imagenes/img17.jpg, id=460, 722.7pt x 303.38344pt>
+<imagenes/img17.jpg, id=458, 722.7pt x 303.38344pt>
 File: imagenes/img17.jpg Graphic file (type jpg)
 <use imagenes/img17.jpg>
 Package pdftex.def Info: imagenes/img17.jpg  used on input line 439.
@@ -1916,7 +1916,7 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.443 \clearpage
                  <./imagenes/img17.jpg>]
-<imagenes/img18.png, id=466, 559.59062pt x 229.85875pt>
+<imagenes/img18.png, id=464, 559.59062pt x 229.85875pt>
 File: imagenes/img18.png Graphic file (type png)
 <use imagenes/img18.png>
 Package pdftex.def Info: imagenes/img18.png  used on input line 448.
@@ -1934,7 +1934,7 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.453 \clearpage
                  <./imagenes/img18.png>]
-<imagenes/img19.jpg, id=474, 532.48938pt x 56.71187pt>
+<imagenes/img19.jpg, id=472, 532.48938pt x 56.71187pt>
 File: imagenes/img19.jpg Graphic file (type jpg)
 <use imagenes/img19.jpg>
 Package pdftex.def Info: imagenes/img19.jpg  used on input line 462.
@@ -1959,64 +1959,34 @@ l.472
 LaTeX Info: Redefining \. on input line 146.
 LaTeX Info: Redefining \% on input line 146.
 [43]
-\openout2 = `capitulos/conclusiones.aux'.
-
- (capitulos/conclusiones.tex
 
 [44
 
 
 
-
 ]
-Cap\'{\i }tulo 5.
+No file Principal.bbl.
 
 
 [45
 
-]
-
-[46
-
-]
-Cap\'{\i }tulo 6.
-
-
-[47
-
-]
-Overfull \hbox (26.52708pt too wide) in paragraph at lines 25--26
-[]\T1/cmr/m/n/10.95 Terasic Tech-no-lo-gies. (s.f.). DE2-115 User Ma-nual. Re-c
-u-pe-ra-do de https://www.terasic.com.tw 
- []
-
-)
-
-LaTeX Info: Redefining \. on input line 171.
-LaTeX Info: Redefining \% on input line 171.
-[48]
-No file Principal.bbl.
-
-
-[49
-
-
-
-
 
 ]
 
-[50]
+[46]
 \openout2 = `apendices/anexo1.aux'.
 
  (apendices/anexo1.tex
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2024/09/23 1.10c listings language file
+)
 Overfull \hbox (13.71689pt too wide) in paragraph at lines 13--14
 [][][][][][][][][][][][][][][][] 
  []
 
 
 
-[51
+[47
 
 
 
@@ -2035,11 +2005,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-LaTeX Info: Redefining \. on input line 51.
-LaTeX Info: Redefining \% on input line 51.
-[52]
+LaTeX Info: Redefining \. on input line 53.
+LaTeX Info: Redefining \% on input line 53.
+[48]
 Overfull \hbox (39.84805pt too wide) in paragraph at lines 53--54
-[][][][][][][][][][][][][][][][][][][] 
+[][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
@@ -2049,7 +2019,7 @@ Overfull \hbox (7.1841pt too wide) in paragraph at lines 55--57
 
 
 Overfull \hbox (65.97922pt too wide) in paragraph at lines 57--58
-[][][][][][][][][][][][][][][][][][][] 
+[][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
@@ -2059,7 +2029,7 @@ Overfull \hbox (33.31526pt too wide) in paragraph at lines 60--61
 
 
 Overfull \hbox (65.97922pt too wide) in paragraph at lines 63--64
-[][][][][][][][][][][][][][][][][][][] 
+[][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
@@ -2069,7 +2039,7 @@ Overfull \hbox (79.0448pt too wide) in paragraph at lines 66--67
 
 
 Overfull \hbox (65.97922pt too wide) in paragraph at lines 77--78
-[][][][][][][][][][][][][][][][][][][][][] 
+[][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
@@ -2077,7 +2047,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[53]
+[49]
 Overfull \hbox (33.31526pt too wide) in paragraph at lines 85--86
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -2089,7 +2059,7 @@ Overfull \hbox (39.84805pt too wide) in paragraph at lines 99--100
 
 
 Overfull \hbox (7.1841pt too wide) in paragraph at lines 105--106
-[][][][][][][][][][] 
+[][][][][][][][][][][][] 
  []
 
 
@@ -2098,20 +2068,20 @@ Overfull \hbox (26.78247pt too wide) in paragraph at lines 106--107
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-LaTeX Info: Redefining \. on input line 107.
-LaTeX Info: Redefining \% on input line 107.
-[54]
 Overfull \hbox (59.44643pt too wide) in paragraph at lines 107--108
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 110.
+LaTeX Info: Redefining \% on input line 110.
+[50]
 Overfull \hbox (13.71689pt too wide) in paragraph at lines 110--111
-[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
@@ -2124,29 +2094,29 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[55]
+[51]
 Overfull \hbox (26.78247pt too wide) in paragraph at lines 140--141
-[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
 Overfull \hbox (72.51201pt too wide) in paragraph at lines 147--148
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
 Overfull \hbox (20.24968pt too wide) in paragraph at lines 148--149
-[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
 Overfull \hbox (72.51201pt too wide) in paragraph at lines 149--150
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
 Overfull \hbox (39.84805pt too wide) in paragraph at lines 150--152
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
@@ -2170,18 +2140,18 @@ Overfull \hbox (39.84805pt too wide) in paragraph at lines 159--161
  []
 
 
+Overfull \hbox (13.71689pt too wide) in paragraph at lines 163--164
+[][][][][][][][][][] 
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-LaTeX Info: Redefining \. on input line 163.
-LaTeX Info: Redefining \% on input line 163.
-[56]
-Overfull \hbox (13.71689pt too wide) in paragraph at lines 163--164
-[][][][][][][][][] 
- []
-
-
+LaTeX Info: Redefining \. on input line 165.
+LaTeX Info: Redefining \% on input line 165.
+[52]
 Overfull \hbox (20.24968pt too wide) in paragraph at lines 165--167
 [][][][][][][][][][][][][][] 
  []
@@ -2228,148 +2198,146 @@ Overfull \hbox (13.71689pt too wide) in paragraph at lines 181--183
 
 )
 
-[57]
+[53]
 \openout2 = `apendices/anexo2.aux'.
 
  (apendices/anexo2.tex
 
-[58
+[54
 
 
 
 
 ]
-Underfull \vbox (badness 5105) has occurred while \output is active []
+
+[55
+
+]
+Overfull \hbox (33.31526pt too wide) in paragraph at lines 47--48
+[][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 54.
+LaTeX Info: Redefining \% on input line 54.
+[56]
+Overfull \hbox (33.31526pt too wide) in paragraph at lines 56--57
+[][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (7.1841pt too wide) in paragraph at lines 61--62
+[][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (33.31526pt too wide) in paragraph at lines 70--71
+[][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[57]
+
+LaTeX Info: Redefining \. on input line 89.
+LaTeX Info: Redefining \% on input line 89.
+[58]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [59
 
 ]
+Overfull \hbox (0.6513pt too wide) in paragraph at lines 124--125
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (26.78247pt too wide) in paragraph at lines 125--127
+[][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (46.38084pt too wide) in paragraph at lines 135--136
+[][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (33.31526pt too wide) in paragraph at lines 142--143
+[][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (7.1841pt too wide) in paragraph at lines 144--145
+[][][][][][][][][][][][][] 
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-LaTeX Info: Redefining \. on input line 175.
-LaTeX Info: Redefining \% on input line 175.
+LaTeX Info: Redefining \. on input line 148.
+LaTeX Info: Redefining \% on input line 148.
 [60]
-Overfull \hbox (20.40793pt too wide) in paragraph at lines 175--175
-[]\T1/cmtt/m/n/10.95 def intercambiar_bits_circular(bin_str, inicio, fin, direc
-cion='L', posiciones=1):[] 
+Overfull \hbox (13.71689pt too wide) in paragraph at lines 148--149
+[][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (20.40793pt too wide) in paragraph at lines 175--175
-[]\T1/cmtt/m/n/10.95 def invertir_rotacion_circular(bin_str, inicio, fin, direc
-cion='L', posiciones=1):[] 
+Overfull \hbox (33.31526pt too wide) in paragraph at lines 152--153
+[][][][][][][][][][][][][][][] 
  []
-
-
-Overfull \hbox (43.04141pt too wide) in paragraph at lines 175--175
-[]    \T1/cmtt/m/n/10.95 bits_rev = rotacion_circular_inversa(bits_rev, inicio,
- fin, direccion, posiciones)[] 
- []
-
-
-Overfull \hbox (26.0663pt too wide) in paragraph at lines 175--175
-[]\T1/cmtt/m/n/10.95 def procesar_texto(texto, texto_cifrado, inicio, fin, dire
-ccion='L', posiciones=1):[] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [61]
-Overfull \hbox (71.33327pt too wide) in paragraph at lines 175--175
-[]        \T1/cmtt/m/n/10.95 bin_mod  = intercambiar_bits_circular(bin_orig, in
-icio, fin, direccion, posiciones)[] 
- []
-
-
-Overfull \hbox (60.01653pt too wide) in paragraph at lines 175--175
-[]\T1/cmtt/m/n/10.95 def proceso_inverso(texto_modificado, inicio, fin, direcci
-on='L', posiciones=1, llave=0):[] 
- []
-
-
-Overfull \hbox (65.6749pt too wide) in paragraph at lines 175--175
-[]        \T1/cmtt/m/n/10.95 bin_orig = invertir_rotacion_circular(bin_mod, ini
-cio, fin, direccion, posiciones)[] 
- []
-
-
-Overfull \hbox (224.10928pt too wide) in paragraph at lines 175--175
-[]\T1/cmtt/m/n/10.95 def guardar_csv_completo(resultados_directo, resultados_in
-verso, nombre_archivo="resultado_binarios_modificados.csv"):[] 
- []
-
-
-Overfull \hbox (365.56856pt too wide) in paragraph at lines 175--175
-[]    \T1/cmtt/m/n/10.95 Columnas: Carácter original | Carácter después de Césa
-r | Binario original | Binario modificado | Carácter modificado | Carácter recu
-perado[] 
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-LaTeX Info: Redefining \. on input line 175.
-LaTeX Info: Redefining \% on input line 175.
-[62]
-Overfull \hbox (60.01653pt too wide) in paragraph at lines 175--175
-[]            \T1/cmtt/m/n/10.95 writer.writerow([c_orig, c_cesar, bin_orig, bi
-n_mod, char_mod, c_recuperado])[] 
- []
+LaTeX Info: Redefining \. on input line 198.
+LaTeX Info: Redefining \% on input line 198.
+[62
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
+]
 
 [63]
-Overfull \hbox (3.43282pt too wide) in paragraph at lines 175--175
-[]    \T1/cmtt/m/n/10.95 direccion = input("Ingrese dirección de rotación circu
-lar (L/R): ").upper()[] 
+
+LaTeX Info: Redefining \. on input line 242.
+LaTeX Info: Redefining \% on input line 242.
+[64
+
+]
+Overfull \hbox (7.1841pt too wide) in paragraph at lines 246--247
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (3.43282pt too wide) in paragraph at lines 175--175
-[]    \T1/cmtt/m/n/10.95 inicio = int(input("Ingrese posición inicial del bloqu
-e a rotar (0-11): "))[] 
+Overfull \hbox (13.71689pt too wide) in paragraph at lines 248--250
+[][][][] 
  []
 
 
-Overfull \hbox (207.13417pt too wide) in paragraph at lines 175--175
-[]    \T1/cmtt/m/n/10.95 resultados_directo, texto_modificado = procesar_texto(
-texto, texto_cifrado, inicio, fin, direccion, posiciones)[] 
+Overfull \hbox (72.51201pt too wide) in paragraph at lines 251--252
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (229.76765pt too wide) in paragraph at lines 175--175
-[]    \T1/cmtt/m/n/10.95 resultados_inverso, texto_recuperado = proceso_inverso
-(texto_modificado, inicio, fin, direccion, posiciones, llave)[] 
- []
 
+[65
 
-Overfull \hbox (133.57535pt too wide) in paragraph at lines 175--175
-[]    \T1/cmtt/m/n/10.95 guardar_csv_completo(resultados_directo, resultados_in
-verso, "resultado_binarios_modificados.csv")[] 
- []
-
-
-Overfull \hbox (150.55046pt too wide) in paragraph at lines 175--175
-[]    \T1/cmtt/m/n/10.95 print(" Archivo 'resultado_binarios_modificados.csv' g
-enerado con carácter modificado y recuperado.")[] 
- []
-
-
-Overfull \hbox (105.2835pt too wide) in paragraph at lines 175--175
-[]    \T1/cmtt/m/n/10.95 for i, (direct, inverso) in enumerate(zip(resultados_d
-irecto[:15], resultados_inverso[:15])):[] 
+]
+Overfull \hbox (0.6513pt too wide) in paragraph at lines 303--304
+[][][][][][][][][][][][][][][][][][][][] 
  []
 
 
@@ -2377,58 +2345,89 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-LaTeX Info: Redefining \. on input line 175.
-LaTeX Info: Redefining \% on input line 175.
-[64]
-Overfull \hbox (450.44412pt too wide) in paragraph at lines 175--175
-[]        \T1/cmtt/m/n/10.95 print(f"Original: {c_orig} | Después César: {c_ces
-ar} | Binario modificado: {bin_mod} | Carácter modificado: {char_mod} | Recuper
-ado: {c_recuperado}")[] 
+LaTeX Info: Redefining \. on input line 306.
+LaTeX Info: Redefining \% on input line 306.
+[66
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[67]
+
+LaTeX Info: Redefining \. on input line 345.
+LaTeX Info: Redefining \% on input line 345.
+[68]
+Overfull \hbox (0.6513pt too wide) in paragraph at lines 367--368
+[][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (88.30838pt too wide) in paragraph at lines 175--175
-[]    \T1/cmtt/m/n/10.95 histograma_frecuencias(texto_modificado, "Histograma d
-e Caracteres Modificados (Directo)")[] 
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Overfull \hbox (88.30838pt too wide) in paragraph at lines 175--175
-[]    \T1/cmtt/m/n/10.95 histograma_frecuencias(texto_recuperado, "Histograma d
-e Caracteres Recuperados (Inverso)")[] 
+
+[69
+
+])
+
+LaTeX Info: Redefining \. on input line 191.
+LaTeX Info: Redefining \% on input line 191.
+[70]
+\openout2 = `capitulos/conclusiones.aux'.
+
+ (capitulos/conclusiones.tex
+pdfTeX warning (ext4): destination with the same identifier (name{section.2.1})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.6 \section{ConclusiÃ³n}
+                         
+Underfull \vbox (badness 1127) has occurred while \output is active []
+
+
+
+[71
+
+
+
+
+
+]
+pdfTeX warning (ext4): destination with the same identifier (name{section.2.2})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.13 ...n{Futuros Trabajos y Alcances Potenciales}
+                                                  
+
+LaTeX Info: Redefining \. on input line 41.
+LaTeX Info: Redefining \% on input line 41.
+[72]
+
+[73
+
+
+]
+Overfull \hbox (26.52708pt too wide) in paragraph at lines 57--58
+[]\T1/cmr/m/n/10.95 Terasic Tech-no-lo-gies. (s.f.). DE2-115 User Ma-nual. Re-c
+u-pe-ra-do de https://www.terasic.com.tw 
  []
 
 )
 
-[65]
-\openout2 = `apendices/anexo3.aux'.
-
- (apendices/anexo3.tex
-
-[66
-
-
-
-
-])
-
-[67
-
-]
-
-[68
-
-
-
-]
+LaTeX Info: Redefining \. on input line 194.
+LaTeX Info: Redefining \% on input line 194.
+[74]
 No file Principal.ind.
 (Principal.aux
 LaTeX Info: Redefining \. on input line 13.
 LaTeX Info: Redefining \% on input line 13.
  (preliminares/resumen.aux) (preliminares/abstract.aux)
 (preliminares/nomenclatura.aux) (preliminares/introduccion.aux)
-(capitulos/marcoreferencia.aux) (capitulos/conclusiones.aux)
-(apendices/anexo1.aux) (apendices/anexo2.aux) (apendices/anexo3.aux))
+(capitulos/marcoreferencia.aux) (apendices/anexo1.aux) (apendices/anexo2.aux)
+(capitulos/conclusiones.aux))
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-11>
@@ -2444,7 +2443,7 @@ sty
  (Principal.idx)
 *****************
 Se ha procesado: Principal.idx
-Lineas leidas: 2
+Lineas leidas: 0
 Lineas convertidas: 0
 Resultado en: Principal.eix
 No se ha convertido nada. Se puede generar
@@ -2452,40 +2451,41 @@ el .ind directamente de Principal.idx
 *****************
 ) ) 
 Here is how much of TeX's memory you used:
- 24884 strings out of 468149
- 471553 string characters out of 5431082
- 916951 words of memory out of 5000000
- 52655 multiletter control sequences out of 15000+600000
- 758597 words of font info for 97 fonts, out of 8000000 for 9000
+ 25673 strings out of 468149
+ 481490 string characters out of 5431082
+ 1090787 words of memory out of 5000000
+ 53078 multiletter control sequences out of 15000+600000
+ 759353 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 125i,13n,121p,1238b,2421s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 125i,13n,121p,1238b,2654s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-pdfTeX warning (dest): name{section*.19} has been referenced but does not exist
+pdfTeX warning (dest): name{section*.20} has been referenced but does not exist
 , replaced by a fixed one
 
- <C:\Users\chris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt10
+ <C:\Users\chris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti10
 95.pk> <C:\Users\chris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\
-ecbx2488.pk> <C:\Users\chris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
-pi600\tcrm1095.pk> <C:\Users\chris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappe
-n/ec/dpi600\ecbi1095.pk> <C:\Users\chris\AppData\Local\MiKTeX\fonts/pk/ljfour/j
-knappen/ec/dpi600\ecbx1200.pk> <C:\Users\chris\AppData\Local\MiKTeX\fonts/pk/lj
-four/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\chris\AppData\Local\MiKTeX\fonts
-/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\chris\AppData\Local\MiKTeX
-\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\chris\AppData\Local\
-MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\chris\AppData\
-Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\chris\Ap
-pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\ch
-ris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1095.pk><C:/Use
-rs/chris/AppData/Local/Programs/MiKTeX/fonts/type1/public/montserrat/Montserrat
--Bold.pfb><C:/Users/chris/AppData/Local/Programs/MiKTeX/fonts/type1/public/mont
-serrat/Montserrat-Regular.pfb><C:/Users/chris/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/chris/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/chris/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/chris/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/fourier/fourier-orns.pfb>
-Output written on Principal.pdf (88 pages, 2676110 bytes).
+ecti1095.pk> <C:\Users\chris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
+pi600\ecbx2488.pk> <C:\Users\chris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappe
+n/ec/dpi600\tcrm1095.pk> <C:\Users\chris\AppData\Local\MiKTeX\fonts/pk/ljfour/j
+knappen/ec/dpi600\ecbi1095.pk> <C:\Users\chris\AppData\Local\MiKTeX\fonts/pk/lj
+four/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\chris\AppData\Local\MiKTeX\fonts
+/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\chris\AppData\Local\MiKTeX
+\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\chris\AppData\Local\
+MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\chris\AppData\
+Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\chris\Ap
+pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\ch
+ris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Us
+ers\chris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1095.pk><
+C:/Users/chris/AppData/Local/Programs/MiKTeX/fonts/type1/public/montserrat/Mont
+serrat-Bold.pfb><C:/Users/chris/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/montserrat/Montserrat-Regular.pfb><C:/Users/chris/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/chris/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/chris/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/chris/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/fourier/fourier-orns.pfb>
+Output written on Principal.pdf (94 pages, 2731539 bytes).
 PDF statistics:
- 1425 PDF objects out of 1440 (max. 8388607)
- 342 named destinations out of 1000 (max. 500000)
+ 1857 PDF objects out of 2073 (max. 8388607)
+ 711 named destinations out of 1000 (max. 500000)
  519 words of extra memory for PDF output out of 10000 (max. 10000000)
 

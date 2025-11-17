@@ -1,9 +1,41 @@
 
 \chapter{Conclusiones}
 
-una conclusi\'on\index{conclusión}
 
-\section{Recomendaciones y trabajo futuro}
+
+\section{Conclusión}
+La implementación del mecanismo de ofuscación sobre la plataforma FPGA DE2-115 permitió demostrar que es posible incrementar significativamente la seguridad de un sistema de comunicación serial sin comprometer su rendimiento operativo. A lo largo del desarrollo del proyecto, se integró un esquema de cifrado tipo César reforzado con una capa adicional de ofuscación basada en rotaciones de bits, lo que derivó en una solución hardware capaz de alterar la estructura estadística del mensaje y dificultar sustancialmente cualquier intento de interceptación o análisis por parte de un agente externo.
+
+Las pruebas realizadas tanto en software como en hardware confirmaron la equivalencia funcional del sistema, así como la coherencia entre los flujos de datos cifrados, ofuscados y posteriormente recuperados. Los experimentos de ataque tipo man-in-the-middle demostraron que, aun cuando un tercero pudiera acceder a las líneas físicas de transmisión UART, la información obtenida se reduce a caracteres sin significado, lo que valida la efectividad del mecanismo propuesto. Este resultado evidencia que la ofuscación incorporada actúa como un refuerzo efectivo frente a ataques de análisis de frecuencia y frente a la pérdida potencial de confidencialidad en enlaces expuestos.
+
+Asimismo, la síntesis del diseño en la FPGA mostró que el costo en recursos lógicos fue reducido, permitiendo que el sistema sea escalable y compatible con arquitecturas de mayor complejidad. Esto confirma que las FPGAs son plataformas idóneas para el desarrollo de mecanismos criptográficos personalizados y orientados a hardware, particularmente cuando se requiere velocidad, seguridad y control total del flujo de datos.
+
+\section{Futuros Trabajos y Alcances Potenciales}
+
+El éxito de la implementación abre la posibilidad de continuar expandiendo la línea de investigación y desarrollo. Entre los futuros alcances destacan:
+\begin{enumerate}
+\item Integración con algoritmos criptográficos modernos
+
+Extender el mecanismo de ofuscación hacia cifrados más robustos como AES, SHA512, permitiendo validar la eficiencia del método en escenarios de mayor seguridad.
+
+\item Implementación de una arquitectura pipeline
+
+Optimizar el proceso de cifrado y ofuscación mediante técnicas de paralelismo y segmentación interna para aumentar la tasa de transferencia en sistemas de comunicación de alta velocidad.
+
+\item Inclusión de hardware adicional de autenticación
+
+Agregar módulos para autenticación de mensajes (HMAC o CMAC), incrementando la protección frente a ataques de suplantación o modificación de datos.
+
+
+\item Migración a una plataforma SoC (System-on-Chip)
+
+Implementar el sistema en arquitecturas híbridas como Intel SoC FPGA o Zynq, integrando procesadores ARM para combinar seguridad en hardware y capacidad de gestión en software.
+
+\item Desarrollo de un sistema dinámico de llaves
+
+Incorporar mecanismos automáticos de actualización o negociación de llaves para evitar ataques de repetición y fortalecer la longevidad del sistema.
+
+\end{enumerate}
 
 %
 \chapter{Referencias Bibliográficas}

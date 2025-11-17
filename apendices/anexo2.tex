@@ -1,190 +1,398 @@
-\chapter{Anexo 2. Hoja de datos}\label{anexo2}
+\chapter{Anexo 2. Codigo de modulos en Verilog implementados en FPGA }\label{anexo2}
 \stepcounter{chapter} %instrucción necesaria para cambiar numeración
 
 
+%\begin{verbatim}[fontsize=\tiny]
+%\begin{lstlisting}[language=Python]
+\begin{lstlisting}
 
 
-\begin{verbatim}
-Text enclosed inside \texttt{verbatim} environment 
-is printed directly 
-and all \LaTeX{} commands are ignored.
+#----------Transmitter.sv----- 
 
-# -*- coding: utf-8 -*-
-import matplotlib.pyplot as plt
-from collections import Counter
-import csv
-import unicodedata
-
-# -------------------- Función para limpiar texto --------------------
-def limpiar_texto(texto):
-    # Quitar comas
-    texto = texto.replace(",", "")
-    # Quitar acentos
-    texto = ''.join(c for c in unicodedata.normalize('NFD', texto)
-                    if unicodedata.category(c) != 'Mn')
-    return texto
-
-# -------------------- Cifrado César --------------------
-def cifrado_cesar(texto, llave):
-    resultado = []
-    for c in texto:
-        if c.isalpha():
-            base = ord('A') if c.isupper() else ord('a')
-            resultado.append(chr((ord(c) - base + llave) % 26 + base))
-        else:
-            resultado.append(c)
-    return ''.join(resultado)
-
-def descifrado_cesar(texto, llave):
-    return cifrado_cesar(texto, -llave)
-
-# -------------------- Binario y rotación circular --------------------
-def letra_a_binario(c, bits=12):
-    return format(ord(c), f'0{bits}b')
-
-def rotar_bloque(bits, inicio, fin, direccion='L', posiciones=1):
-    bloque = bits[inicio:fin+1]
-    n = len(bloque)
-    posiciones = posiciones % n
-    if direccion == 'L':
-        bloque_rotado = bloque[posiciones:] + bloque[:posiciones]
-    elif direccion == 'R':
-        bloque_rotado = bloque[-posiciones:] + bloque[:-posiciones]
-    else:
-        raise ValueError("Dirección debe ser 'L' o 'R'")
-    bits[inicio:fin+1] = bloque_rotado
-    return bits
-
-def rotacion_circular_inversa(bits, inicio, fin, direccion='L', posiciones=1):
-    direccion_inv = 'R' if direccion=='L' else 'L'
-    return rotar_bloque(bits, inicio, fin, direccion_inv, posiciones)
-
-def intercambiar_bits_circular(bin_str, inicio, fin, direccion='L', posiciones=1):
-    bits = list(bin_str)
-    bits_rev = bits[::-1]  # contar desde LSB
-    bits_rev = rotar_bloque(bits_rev, inicio, fin, direccion, posiciones)
-    return ''.join(bits_rev[::-1])
-
-def invertir_rotacion_circular(bin_str, inicio, fin, direccion='L', posiciones=1):
-    bits = list(bin_str)
-    bits_rev = bits[::-1]
-    bits_rev = rotacion_circular_inversa(bits_rev, inicio, fin, direccion, posiciones)
-    return ''.join(bits_rev[::-1])
-
-def binario_a_caracter(bin_str):
-    codigo = int(bin_str, 2)
-    try:
-        return chr(codigo)
-    except ValueError:
-        return '?'
-
-# -------------------- Procesamiento --------------------
-def procesar_texto(texto, texto_cifrado, inicio, fin, direccion='L', posiciones=1):
-    resultados = []
-    texto_final = []
-    for c_orig, c_cesar in zip(texto, texto_cifrado):
-        bin_orig = letra_a_binario(c_cesar, bits=12)
-        bin_mod  = intercambiar_bits_circular(bin_orig, inicio, fin, direccion, posiciones)
-        char_mod = binario_a_caracter(bin_mod)
-        resultados.append((c_orig, c_cesar, bin_orig, bin_mod, char_mod))
-        texto_final.append(char_mod)
-    return resultados, ''.join(texto_final)
-
-def proceso_inverso(texto_modificado, inicio, fin, direccion='L', posiciones=1, llave=0):
-    resultados_inv = []
-    texto_recuperado = []
-    for c_mod in texto_modificado:
-        bin_mod = letra_a_binario(c_mod, bits=12)
-        bin_orig = invertir_rotacion_circular(bin_mod, inicio, fin, direccion, posiciones)
-        c_cesar = binario_a_caracter(bin_orig)
-        c_orig = descifrado_cesar(c_cesar, llave)
-        resultados_inv.append((c_mod, bin_mod, bin_orig, c_cesar, c_orig))
-        texto_recuperado.append(c_orig)
-    return resultados_inv, ''.join(texto_recuperado)
-
-# -------------------- Guardar CSV completo --------------------
-def guardar_csv_completo(resultados_directo, resultados_inverso, nombre_archivo="resultado_binarios_modificados.csv"):
-    """
-    Combina la información del proceso directo y el inverso en un solo CSV.
-    Columnas: Carácter original | Carácter después de César | Binario original | Binario modificado | Carácter modificado | Carácter recuperado
-    """
-    with open(nombre_archivo, "w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        writer.writerow([
-            "Carácter original", "Carácter después de César", 
-            "Binario original", "Binario modificado", 
-            "Carácter modificado", "Carácter recuperado"
-        ])
-        for direct, inverso in zip(resultados_directo, resultados_inverso):
-            c_orig, c_cesar, bin_orig, bin_mod, char_mod = direct
-            _, _, _, _, c_recuperado = inverso
-            writer.writerow([c_orig, c_cesar, bin_orig, bin_mod, char_mod, c_recuperado])
-
-# -------------------- Histograma --------------------
-def histograma_frecuencias(texto, titulo="Histograma"):
-    conteo = Counter([c for c in texto if c != '?'])
-    ordenados = sorted(conteo.items(), key=lambda x: ord(x[0]))
-    if ordenados:
-        chars, freqs = zip(*ordenados)
-        plt.figure(figsize=(16,6))
-        plt.bar(chars, freqs)
-        plt.title(titulo)
-        plt.xlabel("Caracteres")
-        plt.ylabel("Frecuencia")
-        plt.show()
-    return conteo
-
-# -------------------- Programa principal --------------------
-if __name__ == "__main__":
-    # Leer archivo
-    with open("segunda_guerra_mundial.txt", "r", encoding="utf-8") as f:
-        texto = f.read()
-
-    # Limpiar comas y acentos
-    texto = limpiar_texto(texto)
-    # Parámetros
-    llave = int(input("Ingrese la llave para el cifrado César: "))
-    direccion = input("Ingrese dirección de rotación circular (L/R): ").upper()
-    posiciones = int(input("Ingrese cantidad de posiciones a rotar: "))
-    inicio = int(input("Ingrese posición inicial del bloque a rotar (0-11): "))
-    fin = int(input("Ingrese posición final del bloque a rotar (0-11): "))
-
-    # Proceso directo
-    texto_cifrado = cifrado_cesar(texto, llave)
-    resultados_directo, texto_modificado = procesar_texto(texto, texto_cifrado, inicio, fin, direccion, posiciones)
-
-    # Proceso inverso
-    resultados_inverso, texto_recuperado = proceso_inverso(texto_modificado, inicio, fin, direccion, posiciones, llave)
-
-    # Guardar CSV completo
-    guardar_csv_completo(resultados_directo, resultados_inverso, "resultado_binarios_modificados.csv")
-    print(" Archivo 'resultado_binarios_modificados.csv' generado con carácter modificado y recuperado.")
-
-    # Mostrar ejemplos del proceso inverso
-    print("\nEjemplos del proceso inverso:")
-    for i, (direct, inverso) in enumerate(zip(resultados_directo[:15], resultados_inverso[:15])):
-        c_orig, c_cesar, bin_orig, bin_mod, char_mod = direct
-        _, _, _, _, c_recuperado = inverso
-        print(f"Original: {c_orig} | Después César: {c_cesar} | Binario modificado: {bin_mod} | Carácter modificado: {char_mod} | Recuperado: {c_recuperado}")
-
-    # Histogramas comparativos
-    histograma_frecuencias(texto_modificado, "Histograma de Caracteres Modificados (Directo)")
-    histograma_frecuencias(texto_recuperado, "Histograma de Caracteres Recuperados (Inverso)")
-
-
-\end{verbatim}
+module transmitter #(
+	parameter CLOCKS_PER_PULSE = 16
+)
+(
+	input logic [7:0] data_in,
+	input logic data_en,
+	input logic clk,
+	input logic rstn,
+	output logic tx,
+	output logic tx_busy
+);
+	enum {TX_IDLE, TX_START, TX_DATA, TX_END} state;
+	
+	logic[7:0] data = 8'b0;
+	logic[2:0] c_bits = 3'b0;
+	logic[$clog2(CLOCKS_PER_PULSE)-1:0] c_clocks = 0;
+	
+	always_ff @(posedge clk or negedge rstn) begin
+		if (!rstn) begin
+			c_clocks <= 0;
+			c_bits <= 0;
+			data <= 0;
+          	tx <= 1'b1;
+			state <= TX_IDLE;
+		end else begin 
+			case (state)
+			TX_IDLE: begin
+				if (~data_en) begin
+					state <= TX_START;
+					data <= data_in;
+					c_bits <= 3'b0;
+					c_clocks <= 0;
+				end else tx <= 1'b1;
+			end
+			TX_START: begin
+				if (c_clocks == CLOCKS_PER_PULSE-1) begin
+					state <= TX_DATA;
+					c_clocks <= 0;
+				end else begin
+					tx <= 1'b0;
+					c_clocks <= c_clocks + 1;
+				end
+			end
+			TX_DATA: begin
+				if (c_clocks == CLOCKS_PER_PULSE-1) begin
+					c_clocks <= 0;
+					if (c_bits == 3'd7) begin
+						state <= TX_END;
+					end else begin
+						c_bits <= c_bits + 1;
+						tx <= data[c_bits];
+					end
+				end else begin
+					tx <= data[c_bits];
+					c_clocks <= c_clocks + 1;
+				end
+			end
+			TX_END: begin
+				if (c_clocks == CLOCKS_PER_PULSE-1) begin
+					state <= TX_IDLE;
+					c_clocks <= 0;
+				end else begin
+					tx <= 1'b1;
+					c_clocks <= c_clocks + 1;
+				end
+			end
+            default: state <= TX_IDLE;
+			endcase
+		end
+	end
+	assign tx_busy = (state != TX_IDLE);
+	
+endmodule
 
 
 
+\end{lstlisting}
+\clearpage
+\begin{lstlisting}
+
+#----------Receiver.sv----- 
+module receiver #(
+	parameter CLOCKS_PER_PULSE = 16
+)
+(
+	input logic clk,
+	input logic rstn,
+	input logic ready_clr,
+	input logic rx,
+	output logic ready,
+	output logic [7:0] data_out
+);
+
+	enum {RX_IDLE, RX_START, RX_DATA, RX_END} state;
+
+	logic[2:0] c_bits;
+	logic[$clog2(CLOCKS_PER_PULSE)-1:0] c_clocks;
+	
+  	logic[7:0] temp_data;
+	logic rx_sync;
+	
+	always_ff @(posedge clk or negedge rstn) begin
+	
+		if (!rstn) begin
+			c_clocks <= 0;
+			c_bits <= 0;
+			temp_data <= 8'b0;
+			//data_out <= 8'b0;
+			ready <= 0;
+			state <= RX_IDLE;
+			
+		end else begin 
+			rx_sync <= rx;  // Synchronize the input ...
+						signal using a flip-flop
+			
+			case (state)
+			RX_IDLE : begin
+				if (rx_sync == 0) begin
+					state <= RX_START;
+					c_clocks <= 0;
+				end
+			end
+			RX_START: begin
+				if (c_clocks == CLOCKS_PER_PULSE/2-1) begin
+					state <= RX_DATA;
+					c_clocks <= 0;
+				end else
+					c_clocks <= c_clocks + 1;
+			end
+			RX_DATA : begin
+				if (c_clocks == CLOCKS_PER_PULSE-1) begin
+					c_clocks <= 0;
+					temp_data[c_bits] <= rx_sync;
+					if (c_bits == 3'd7) begin
+						state <= RX_END;
+						c_bits <= 0;
+					end else c_bits <= c_bits + 1;
+				end else c_clocks <= c_clocks + 1;
+			end
+			RX_END : begin
+				if (c_clocks == CLOCKS_PER_PULSE-1) begin
+					//data_out <= temp_data;
+					ready <= 1'b1;
+					state <= RX_IDLE;
+					c_clocks <= 0;
+				end else c_clocks <= c_clocks + 1;
+			end
+			default: state <= RX_IDLE;
+			endcase
+		end
+	end
+	assign data_out = temp_data;
+endmodule
+
+\end{lstlisting}
+\clearpage
+\begin{lstlisting}
+#----------Binary to 7seg.sv----- 
 
 
+module binary_to_7seg ( 
+	input logic [3:0] data_in,
+	output logic [6:0] data_out
+);
+    // Make a LUT to convert digits to 7 segment output
+    // Input - 4 bits, output - 7 bits
+    logic [15:0][6:0] lut_7seg;
+
+    // Output is gfedcba
+    assign lut_7seg[0] = 7'b0111111;
+    assign lut_7seg[1] = 7'b0000110;
+    assign lut_7seg[2] = 7'b1011011;
+    assign lut_7seg[3] = 7'b1001111;
+    assign lut_7seg[4] = 7'b1100110;
+    assign lut_7seg[5] = 7'b1101101;
+    assign lut_7seg[6] = 7'b1111101;
+    assign lut_7seg[7] = 7'b0000111;
+    assign lut_7seg[8] = 7'b1111111;
+    assign lut_7seg[9] = 7'b1101111;
+    assign lut_7seg[15:10] = 7'b0;    // unused
+	 
+	 assign data_out = ~lut_7seg[data_in];
+	 
+endmodule
+
+/*
+Seven segment display
+    a
+f       b
+    g
+e       c
+    d
+*/
 
 
+\end{lstlisting}
+
+\clearpage
+\begin{lstlisting}
+#----------Ofuscacion.sv----- 
+// - Cifrado Cesar con clave 5
+// - Rotacion a la izquierda de 5 posiciones (bits 0 a 11)
 
 
-\verb+\+bigskip
+module obfuscation_module (
+    input  wire [11:0] data_in,     // Entrada de 12 bits
+    output wire [11:0] data_out     // Salida ofuscada
+);
+
+    // --------------------------
+    //Cifrado Cesar (clave = 5)
+    // --------------------------
+    wire [11:0] caesar_out;
+    assign caesar_out = data_in + 12'd5;
+
+    // ---------------------------------------------------------
+    // Rotacion a la izquierda de 5 posiciones (bits 0 a 11)
+    //    Ejemplo: ROTL12(x,5) = {x[6:0], x[11:7]}
+    // ---------------------------------------------------------
+    wire [11:0] rotated_out;
+    assign rotated_out = {caesar_out[6:0], caesar_out[11:7]};
+
+    // Salida final
+    assign data_out = rotated_out;
+
+endmodule
 
 
+\end{lstlisting}
+
+\clearpage
+\begin{lstlisting}
+#----------Desofuscacion.sv----- 
+
+//  Deshacer rotacion izquierda de 5 bits --> rotacion derecha 5 bits
+//  Deshacer Cesar clave 5 --> resta de 5
+//====================================================================
+
+module deobfuscation_module (
+    input  wire [11:0] data_in,      // Entrada de 12 bits (cifrada + ofuscada)
+    output wire [11:0] data_out      // Salida original restaurada
+);
+
+    // -----------------------------------------------------------
+    // Rotacion a la derecha de 5 posiciones (inverso del ROTL)
+    // ROTR12(x,5) = {x[4:0], x[11:5]}
+    // -----------------------------------------------------------
+    wire [11:0] rotated_back;
+    assign rotated_back = {data_in[4:0], data_in[11:5]};
+
+    // ------------------------------
+    // 2) Deshacer el Cesar (clave=5)
+    // ------------------------------
+    wire [11:0] original;
+    assign original = rotated_back - 12'd5;
+
+    assign data_out = original;
+
+endmodule
+
+\end{lstlisting}
+
+\clearpage
+\begin{lstlisting}
+
+#----------Testbench validacion_cifrado_descifrado.sv----- 
+
+`timescale 1ns/1ps
+
+module tb_cipher_validation;
+
+    // Senales del test
+    reg  [11:0] data_in;
+    wire [11:0] encrypted;
+    wire [11:0] decrypted;
+
+    // Instancia del modulo de cifrado (ofuscacion)
+    obfuscation_module uut_encrypt (
+        .data_in(data_in),
+        .data_out(encrypted)
+    );
+
+    // Instancia del modulo de descifrado (deofuscacion)
+    deobfuscation_module uut_decrypt (
+        .data_in(encrypted),
+        .data_out(decrypted)
+    );
+
+    // Procedimiento de prueba
+    initial begin
+        $display("==============================================");
+        $display("   TESTBENCH: Validacion Cifrado <-> Descifrado");
+        $display("==============================================");
+
+        // Pruebas con distintos datos
+        apply_test(12'h000);
+        apply_test(12'h001);
+        apply_test(12'h00A);
+        apply_test(12'h123);
+        apply_test(12'h555);
+        apply_test(12'hAAA);
+        apply_test(12'hF0F);
+        apply_test(12'hFFF);
+
+        $display("==============================================");
+        $display("   FIN DE LA SIMULACION");
+        $display("==============================================");
+        $finish;
+    end
+
+    // Tarea para aplicar un vector de prueba
+    task apply_test(input [11:0] value);
+    begin
+        data_in = value;
+        #10; // Esperar propagacion combinacional
+
+        $display("Entrada Original : %h", data_in);
+        $display("Cifrado (Obfusc.): %h", encrypted);
+        $display("Descifrado        : %h", decrypted);
+
+        if (decrypted == data_in)
+            $display( " TEST OK Descifrado correcto. ");
+        else begin
+            $display(" ERROR El descifrado NO coincide. ");
+            $stop;
+        end
+    end
+    endtask
+
+endmodule
+
+\end{lstlisting}
+
+\clearpage
+\begin{lstlisting}
+#----------Testbench uart.sv----- 
+module uart #(
+	parameter CLOCKS_PER_PULSE = 5208
+)
+(
+	input logic [3:0] data_in,
+	input logic data_en,
+	input logic clk,
+	input logic rstn,
+	output logic tx,
+	output logic tx_busy,
+	input logic ready_clr,
+	input logic rx,
+	output logic ready,
+	output logic [7:0] led_out,
+	output logic [6:0] display_out
+);
+	logic [7:0] data_input; 
+	logic [7:0] data_output;
+
+	transmitter #(.CLOCKS_PER_PULSE(CLOCKS_PER_PULSE)) uart_tx (
+		.data_in(data_input),
+		.data_en(data_en),
+		.clk(clk),
+		.rstn(rstn),
+		.tx(tx),
+		.tx_busy(tx_busy)
+	);
+	
+	receiver #(.CLOCKS_PER_PULSE(CLOCKS_PER_PULSE)) uart_rx (
+		.clk(clk),
+		.rstn(rstn),
+		.ready_clr(ready_clr),
+		.rx(rx),
+		.ready(ready),
+		.data_out(data_output)
+	);
+	
+	binary_to_7seg converter (
+		.data_in(data_output[3:0]),
+		.data_out(display_out)
+	);
+	
+	assign data_input = {4'b0, data_in};
+	assign led_out = data_output[7:0];
+	
+	
+endmodule
+\end{lstlisting}
 
 %%%%%%fin del archivo
 \endinput 

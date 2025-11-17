@@ -38,10 +38,10 @@
 \contentsline {subsection}{\numberline {3.5.6}Configuración de las Interfaces Seriales con las TarjetasAltera DE2–115 }{34}{subsection.3.5.6}%
 \contentsline {chapter}{\numberline {4}RESULTADOS}{37}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Resultados}{37}{section.4.1}%
-\contentsline {chapter}{\numberline {5}Conclusiones}{45}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Recomendaciones y trabajo futuro}{45}{section.5.1}%
-\contentsline {chapter}{\numberline {6}Referencias Bibliográficas}{47}{chapter.6}%
-\contentsline {part}{Anexos}{49}{part.1}%
-\contentsline {chapter}{Anexo 1. Desarrollo del Programa BitChange en Python para la Evaluacion Experimental de la Ofuscacion }{51}{chapter*.16}%
-\contentsline {chapter}{Anexo 2. Hoja de datos}{59}{chapter*.17}%
-\contentsline {chapter}{Anexo 3 (Anexo título 3)}{67}{chapter*.18}%
+\contentsline {part}{Anexos}{45}{part.1}%
+\contentsline {chapter}{Anexo 1. Desarrollo del Programa BitChange en Python para la Evaluacion Experimental de la Ofuscacion }{47}{chapter*.16}%
+\contentsline {chapter}{Anexo 2. Codigo de modulos en Verilog implementados en FPGA }{55}{chapter*.17}%
+\contentsline {chapter}{Conclusiones}{71}{chapter*.18}%
+\contentsline {section}{\numberline {B.1}Conclusión}{71}{section.2.1}%
+\contentsline {section}{\numberline {B.2}Futuros Trabajos y Alcances Potenciales}{72}{section.2.2}%
+\contentsline {chapter}{Referencias Bibliográficas}{73}{chapter*.19}%
