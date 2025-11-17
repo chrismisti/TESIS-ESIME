@@ -1,18 +1,187 @@
-\chapter{Anexo 1. Hoja de datos}\label{anexo1}
-\stepcounter{chapter} %instrucción necesaria para cambiar numeración
+\chapter{Anexo 1. Desarrollo del Programa BitChange en Python para la Evaluacion Experimental de la Ofuscacion  }\label{anexo1}
+\stepcounter{chapter} %instruccion necesaria para cambiar numeracion
 
-Una ficha técnica, hoja técnica u hoja de datos (datasheet en inglés), también ficha de características u hoja de características, es un documento que resume el funcionamiento y otras características de un componente (por ejemplo, un componente electroóico) o subsistema (por ejemplo, una fuente de alimentación) con el suficiente detalle para ser utilizado por un ingeniero de diseño y diseñar el componente en un sistema.
+\begin{lstlisting}
+%\begin{verbatim}[fontsize=\tiny]
+%\begin{lstlisting}[language=Python]
+# -*- coding: utf-8 -*-
+import matplotlib.pyplot as plt
+from collections import Counter
+import csv
+import unicodedata
 
-Comienza típicamente con una página introductoria que describe el resto del documento, seguido por los listados de componentes específicos, con la información adicional sobre la conectividad de los dispositivos. En caso de que haya código fuente relevante a incluir, se une cerca del extremo del documento o se separa generalmente en otro archivo.
+# -------------------- Funcion para limpiar texto --------------------
+def limpiar_texto(texto):
+    # Quitar comas
+    texto = texto.replace(",", "")
+    # Quitar acentos
+    texto = ''.join(c for c in unicodedata.normalize('NFD', texto)
+                    if unicodedata.category(c) != 'Mn')
+    return texto
 
-Las fichas técnicas no se limitan solo a componentes electrónicos, si no que también se dan en otros campos de la ciencia, como por ejemplo compuestos químicos o alimentos.
+# -------------------- Cifrado Cesar --------------------
+def cifrado_cesar(texto, llave):
+    resultado = []
+    for c in texto:
+        if c.isalpha():
+            base = ord('A') if c.isupper() else ord('a')
+            resultado.append(chr((ord(c) - base + llave) % 26 + base))
+        else:
+            resultado.append(c)
+    return ''.join(resultado)
 
-\bigskip
+def descifrado_cesar(texto, llave):
+    return cifrado_cesar(texto, -llave)
 
+# -------------------- Binario y rotacion circular --------------------
+def letra_a_binario(c, bits=12):
+    return format(ord(c), f'0{bits}b')
 
+def rotar_bloque(bits, inicio, fin, direccion='L', posiciones=1):
+    bloque = bits[inicio:fin+1]
+    n = len(bloque)
+    posiciones = posiciones % n
+    if direccion == 'L':
+        bloque_rotado = bloque[posiciones:] + bloque[:posiciones]
+    elif direccion == 'R':
+        bloque_rotado = bloque[-posiciones:] + bloque[:-posiciones]
+    else:
+        raise ValueError("Direccion debe ser 'L' o 'R'")
+    bits[inicio:fin+1] = bloque_rotado
+    return bits
 
+def rotacion_circular_inversa(bits,inicio,fin,direccion='L',posiciones=1):
+    direccion_inv = 'R' if direccion=='L' else 'L'
+    return rotar_bloque(bits, inicio, fin, direccion_inv, posiciones)
 
+def intercambiar_bits_circular(bin_str,inicio,fin,direccion='L',posiciones=1):
+    bits = list(bin_str)
+    bits_rev = bits[::-1]  # contar desde LSB
+    bits_rev = rotar_bloque(bits_rev, inicio, fin, direccion, posiciones)
+    return ''.join(bits_rev[::-1])
 
+def invertir_rotacion_circular(bin_str,inicio,fin,direccion='L',posiciones=1):
+    bits = list(bin_str)
+    bits_rev = bits[::-1]
+    bits_rev=rotacion_circular_inversa(bits_rev,inicio,fin,direccion,posiciones)
+    return ''.join(bits_rev[::-1])
+
+def binario_a_caracter(bin_str):
+    codigo = int(bin_str, 2)
+    try:
+        return chr(codigo)
+    except ValueError:
+        return '?'
+
+# -------------------- Procesamiento --------------------
+def procesar_texto(texto,texto_cifrado,inicio,fin,direccion='L',posiciones=1):
+    resultados = []
+    texto_final = []
+    for c_orig, c_cesar in zip(texto, texto_cifrado):
+        bin_orig = letra_a_binario(c_cesar, bits=12)
+        bin_mod=intercambiar_bits_circular(bin_orig,inicio\
+					,fin,direccion,posiciones)
+        char_mod = binario_a_caracter(bin_mod)
+        resultados.append((c_orig, c_cesar, bin_orig, bin_mod, char_mod))
+        texto_final.append(char_mod)
+    return resultados, ''.join(texto_final)
+
+def proceso_inverso(texto_modificado, inicio, fin,\
+			direccion='L', posiciones=1, llave=0):
+    resultados_inv = []
+    texto_recuperado = []
+    for c_mod in texto_modificado:
+        bin_mod = letra_a_binario(c_mod, bits=12)
+        bin_orig = invertir_rotacion_circular(bin_mod,\ 
+				inicio, fin, direccion, posiciones)
+        c_cesar = binario_a_caracter(bin_orig)
+        c_orig = descifrado_cesar(c_cesar, llave)
+        resultados_inv.append((c_mod, bin_mod, bin_orig, c_cesar, c_orig))
+        texto_recuperado.append(c_orig)
+    return resultados_inv, ''.join(texto_recuperado)
+
+# -------------------- Guardar CSV completo --------------------
+def guardar_csv_completo(resultados_directo, resultados_inverso,\
+		nombre_archivo="resultado_binarios_modificados.csv"):
+#Combina la informacion del proceso directo y el inverso en un solo CSV.
+#Columnas: Caracter original | Caracter despues de Cesar | Binario original |
+# Binario modificado | Caracter modificado | Caracter recuperado
+
+    with open(nombre_archivo, "w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        writer.writerow([
+            "Caracter original", "Caracter despues de Cesar", 
+            "Binario original", "Binario modificado", 
+            "Caracter modificado", "Caracter recuperado"
+        ])
+        for direct, inverso in zip(resultados_directo, resultados_inverso):
+            c_orig, c_cesar, bin_orig, bin_mod, char_mod = direct
+            _, _, _, _, c_recuperado = inverso
+            writer.writerow([c_orig,c_cesar,bin_orig,bin_mod,\
+					char_mod,c_recuperado])
+
+# -------------------- Histograma --------------------
+def histograma_frecuencias(texto, titulo="Histograma"):
+    conteo = Counter([c for c in texto if c != '?'])
+    ordenados = sorted(conteo.items(), key=lambda x: ord(x[0]))
+    if ordenados:
+        chars, freqs = zip(*ordenados)
+        plt.figure(figsize=(16,6))
+        plt.bar(chars, freqs)
+        plt.title(titulo)
+        plt.xlabel("Caracteres")
+        plt.ylabel("Frecuencia")
+        plt.show()
+    return conteo
+
+# -------------------- Programa principal --------------------
+if __name__ == "__main__":
+    # Leer archivo
+    with open("segunda_guerra_mundial.txt", "r", encoding="utf-8") as f:
+        texto = f.read()
+
+    # Limpiar comas y acentos
+    texto = limpiar_texto(texto)
+    # Parametros
+    llave = int(input('Ingrese la llave para el cifrado Cesar:'))
+    direccion = input('Ingrese direccion de rotacion circular (L/R): ').upper()
+    posiciones = int(input('Ingrese cantidad de posiciones a rotar: '))
+    inicio = int(input('Ingrese posicion inicial del bloque a rotar (0-11): '))
+    fin = int(input('Ingrese posicion final del bloque a rotar (0-11): '))
+
+    # Proceso directo
+    texto_cifrado = cifrado_cesar(texto, llave)
+    resultados_directo, texto_modificado = procesar_texto(texto, texto_cifrado,\
+				 inicio, fin, direccion, posiciones)
+
+    # Proceso inverso
+    resultados_inverso, texto_recuperado = proceso_inverso(texto_modificado,\
+				inicio, fin, direccion, posiciones, llave)
+
+    # Guardar CSV completo
+    guardar_csv_completo(resultados_directo, resultados_inverso,\
+				 "resultado_binarios_modificados.csv")
+    print(Archivo 'resultado_binarios_modificados.csv' generado\
+				 con caracter modificado y recuperado.)
+
+    # Mostrar ejemplos del proceso inverso
+    print("\nEjemplos del proceso inverso:")
+    for i, (direct, inverso) in enumerate(zip(resultados_directo[:15],\
+						 resultados_inverso[:15])):
+        c_orig, c_cesar, bin_orig, bin_mod, char_mod = direct
+        _, _, _, _, c_recuperado = inverso
+        print(f Original: {c_orig} | Despues Cesar: {c_cesar} | \
+		Binario modificado: {bin_mod} | Caracter modificado: {char_mod}\
+					 | Recuperado: {c_recuperado})
+
+    # Histogramas comparativos
+    histograma_frecuencias(texto_modificado, Histograma de Caracteres \
+						Modificados (Directo))
+    histograma_frecuencias(texto_recuperado, Histograma de Caracteres \
+						Recuperados (Inverso))
+
+\end{lstlisting}
+%\end{verbatim}
 
 %%%%%%fin del archivo
 \endinput 

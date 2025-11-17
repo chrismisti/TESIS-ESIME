@@ -368,18 +368,19 @@ De esta forma, la señal se utiliza como un reloj habilitador dentro de los macr
 \subsection{Implementación RTL del Bloque UART\_Tx y UART\_rx }
 El UART receptor está formado por un archivo en Verilog. El nombre del archivo es ''receiver.sv'' que esta implementando en combinación con los modulos de ''binary\_to\_7seg.sv'' y ''transmitter.sv'', los modulos tanto de receiver y transmitter cuentan con su capa de cifrado y descifrado, incluyendo las variantes de rotación de bits y la selecció de rango de esta misma.
 
-\subsection{Configuración de las Interfaces Seriales con las TarjetasAltera DE2–115 }
-
-En la Figura (\ref{fig:imagen13}) se observa la conexión de los puertos definidos por el usuario, lo cual pone de manifiesto la flexibilidad inherente a las FPGA. Esta característica permite que los pines de entrada y salida no estén restringidos a conectores predeterminados, sino que puedan ser asignados libremente por el diseñador. De esta manera, además de optimizar la arquitectura del sistema, se incrementa la dificultad para que un agente externo pueda identificar los pines específicos donde se lleva a cabo la comunicación (Brown \& Vranesic, 2013).
+\subsection{Metodología de Verificación del UART mediante Testbench}
+Debido a las capacidades de prototipado que proporciona la herramienta Quartus, resulta posible realizar una validación exhaustiva del protocolo UART mediante el uso de un testbench. Esta metodología permite comprobar de manera precisa el cumplimiento de los tiempos, secuencias de transmisión y recepción, así como la integridad funcional del sistema previo a su síntesis e implementación en el dispositivo FPGA Figura (\ref{fig:imagen20}).
 
 \begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
     \centering % Centra la imagen
-     \includegraphics[width=1\textwidth, height=12cm]{imagenes/img13} % Reemplaza con el nombre de tu archivo de imagen
-    \caption{  Conexion de las dos plataformas Altera DE2–115 mediante la selección de pines del modulo Jtag .}
-    \label{fig:imagen13} % Etiqueta para referenciar la figura
+     \includegraphics[width=1\textwidth, height=5cm]{imagenes/img20} % Reemplaza con el nombre de tu archivo de imagen
+    \caption{  Salida del testbench para la validación del protocolo UART.}
+    \label{fig:imagen20} % Etiqueta para referenciar la figura
 \end{figure} 
-
 \clearpage
+
+\subsection{Configuración de las Interfaces Seriales con las TarjetasAltera DE2–115 }
+
 En la Figura (\ref{fig:imagen14}) se ilustra la definición de los pines destinados a la comunicación serial, la cual fue realizada dentro del software Quartus. Este procedimiento permite establecer de manera explícita las asignaciones físicas entre los pines de la FPGA y las señales lógicas del diseño, asegurando así la correcta implementación del sistema en el dispositivo reconfigurable. 
 
 \begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
@@ -388,6 +389,16 @@ En la Figura (\ref{fig:imagen14}) se ilustra la definición de los pines destina
     \caption{  Seleccion de pines mediante el Software Quartus.}
     \label{fig:imagen14} % Etiqueta para referenciar la figura
 \end{figure} 
+\clearpage
+En la Figura (\ref{fig:imagen13}) se observa la conexión de los puertos definidos por el usuario, lo cual pone de manifiesto la flexibilidad inherente a las FPGA. Esta característica permite que los pines de entrada y salida no estén restringidos a conectores predeterminados, sino que puedan ser asignados libremente por el diseñador. De esta manera, además de optimizar la arquitectura del sistema, se incrementa la dificultad para que un agente externo pueda identificar los pines específicos donde se lleva a cabo la comunicación (Brown \& Vranesic, 2013).
+
+\begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
+    \centering % Centra la imagen
+     \includegraphics[width=1\textwidth, height=10cm]{imagenes/img13} % Reemplaza con el nombre de tu archivo de imagen
+    \caption{  Conexion de las dos plataformas Altera DE2–115 mediante la selección de pines del modulo Jtag .}
+    \label{fig:imagen13} % Etiqueta para referenciar la figura
+\end{figure} 
+
 
 \clearpage
 A continuación, en la Figura (\ref{fig:imagen15}), se presenta el esquema de las conexiones empleadas para la validación del sistema. Con el propósito de verificar el correcto funcionamiento de los módulos implementados, se estableció una comunicación entre dos ordenadores conectados en los extremos, lo que permitió comprobar la transmisión y recepción adecuada de los datos.
@@ -426,10 +437,34 @@ Para validar aún más la efectividad del diseño en hardware, se recolectaron r
 \begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
     \centering % Centra la imagen
      \includegraphics[width=1\textwidth, height=6cm]{imagenes/img17} % Reemplaza con el nombre de tu archivo de imagen
-    \caption{ Distribución del texto cifrado producido por la capa de ofuscación implementada en hardware..}
+    \caption{ Distribución del texto cifrado producido por la capa de ofuscación implementada en hardware.}
     \label{fig:imagen17} % Etiqueta para referenciar la figura
 \end{figure} 
+\clearpage
+Con el propósito de evaluar la robustez del método de ofuscación implementado, se diseñó un escenario controlado en el cual se introdujo un agente externo destinado a interceptar la comunicación (man in the middle) establecida entre las FPGA. En este contexto, se asume que dicho agente ha logrado identificar las líneas físicas responsables de la transmisión de información bajo el protocolo UART. Para llevar a cabo la interceptación, se empleó una tarjeta de desarrollo Arduino Uno (véase Figura \ref{fig:imagen18}), configurada de acuerdo con los parámetros definidos por dicho protocolo. Adicionalmente, se realizó un barrido sistemático de los baudios estándar con el fin de determinar si el agente externo sería capaz de recuperar información significativa a partir de los datos cifrados y ofuscados.
 
+\begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
+    \centering % Centra la imagen
+     \includegraphics[width=1\textwidth, height=6cm]{imagenes/img18} % Reemplaza con el nombre de tu archivo de imagen
+    \caption{Configuración experimental en la que se observa la conexión entre las FPGA y la tarjeta Arduino Uno utilizada como agente externo para intentar la interceptación de la comunicación UART.}
+    \label{fig:imagen18} % Etiqueta para referenciar la figura
+\end{figure} 
+
+\clearpage
+Los resultados experimentales obtenidos permiten confirmar la efectividad del mecanismo de ofuscación implementado en el sistema de comunicación. Durante las pruebas, se recreó un escenario de ataque del tipo man-in-the-middle, en el cual un agente externo intentó interceptar la comunicación establecida entre las FPGA. Para ello, dicho agente fue configurado con los parámetros estándar del protocolo UART y realizó un barrido completo de las velocidades en baudios con el objetivo de sincronizarse con el flujo de datos transmitidos.
+
+Una vez establecida la sincronización, el agente externo logró capturar correctamente las tramas UART generadas por el sistema. Sin embargo, debido al proceso de cifrado César y a la capa de ofuscación por rotación de bits aplicada en hardware, la información recuperada no presentó ninguna estructura interpretable. En otras palabras, aunque el atacante consiguió acceder físicamente a la línea de transmisión y leer los datos, el contenido obtenido carecía por completo de significado semántico o lingüístico.
+
+Este comportamiento se aprecia claramente en la Figura \ref{fig:imagen19}, donde se muestra la salida obtenida por el dispositivo de escucha. En dicha salida únicamente se observan caracteres aleatorios y sin coherencia, lo cual evidencia que la transformación criptográfica impide la recuperación del mensaje original sin la clave correspondiente. Este resultado es particularmente relevante, ya que demuestra que la ofuscación no solo opera correctamente en condiciones de simulación, sino también bajo condiciones reales de operación y frente a un intento explícito de interceptación.
+
+\begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
+    \centering % Centra la imagen
+     \includegraphics[width=1\textwidth, height=2.5cm]{imagenes/img19} % Reemplaza con el nombre de tu archivo de imagen
+    \caption{Salida capturada por el agente externo durante el intento de interceptación. Se observa que los datos recuperados carecen de significado, mostrando únicamente caracteres no legibles debido al proceso de cifrado y ofuscación aplicado.}
+    \label{fig:imagen19} % Etiqueta para referenciar la figura
+\end{figure} 
+
+En conjunto, estos hallazgos validan que la arquitectura propuesta proporciona un nivel adicional de protección para el canal UART, mitigando la posibilidad de que un agente no autorizado pueda leer o reconstruir la información transmitida. Por tanto, se confirma que el método de ofuscación cumple su objetivo principal: mantener la confidencialidad del contenido incluso ante un atacante con acceso directo al medio físico de comunicación.
 %\newgeometry{margin=1cm,includefoot}
 %\layout
 %\printinunitsof{cm}

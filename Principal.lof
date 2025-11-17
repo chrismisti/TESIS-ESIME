@@ -17,18 +17,15 @@
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Esquema temporal de una parada invalida.}}{32}{figure.3.7}%
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Esquema temporal de una operacion de ruptura.}}{32}{figure.3.8}%
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Esquema temporal en BAUD's.}}{32}{figure.3.9}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Conexion de las dos plataformas Altera DE2–115 mediante la selección de pines del modulo Jtag .}}{34}{figure.3.10}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Seleccion de pines mediante el Software Quartus.}}{35}{figure.3.11}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Esquema de conexiones para la plataforma de cifrado y su validación.}}{36}{figure.3.12}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Salida del testbench para la validación del protocolo UART.}}{33}{figure.3.10}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Seleccion de pines mediante el Software Quartus.}}{34}{figure.3.11}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Conexion de las dos plataformas Altera DE2–115 mediante la selección de pines del modulo Jtag .}}{35}{figure.3.12}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Esquema de conexiones para la plataforma de cifrado y su validación.}}{36}{figure.3.13}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Distribución de texto simple en español.}}{38}{figure.4.1}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Distribución del texto cifrado producido por la capa de ofuscación implementada en hardware..}}{40}{figure.4.2}%
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Distribución del texto cifrado producido por la capa de ofuscación implementada en hardware.}}{40}{figure.4.2}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Configuración experimental en la que se observa la conexión entre las FPGA y la tarjeta Arduino Uno utilizada como agente externo para intentar la interceptación de la comunicación UART.}}{41}{figure.4.3}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Salida capturada por el agente externo durante el intento de interceptación. Se observa que los datos recuperados carecen de significado, mostrando únicamente caracteres no legibles debido al proceso de cifrado y ofuscación aplicado.}}{42}{figure.4.4}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
