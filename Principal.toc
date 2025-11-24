@@ -2,46 +2,46 @@
 \contentsline {chapter}{Resumen}{xiii}{chapter*.2}%
 \contentsline {chapter}{Abstract}{xv}{chapter*.3}%
 \contentsline {chapter}{\listfigurename }{xviii}{chapter*.4}%
-\contentsline {chapter}{Introducción}{1}{chapter*.7}%
-\contentsline {section}{Definición del problema}{3}{section*.8}%
-\contentsline {section}{Justificación}{4}{section*.9}%
-\contentsline {section}{Objetivo}{5}{section*.10}%
-\contentsline {section}{Objetivo General}{5}{section*.11}%
-\contentsline {section}{Objetivos Específicos}{5}{section*.12}%
-\contentsline {section}{Enfoque en Seguridad de la informaci\'on}{6}{section*.13}%
-\contentsline {section}{Antecedentes}{6}{section*.14}%
+\contentsline {chapter}{Introducción}{1}{chapter*.6}%
+\contentsline {section}{Definición del problema}{3}{section*.7}%
+\contentsline {section}{Justificación}{4}{section*.8}%
+\contentsline {section}{Objetivo}{5}{section*.9}%
+\contentsline {section}{Objetivo General}{5}{section*.10}%
+\contentsline {section}{Objetivos Específicos}{5}{section*.11}%
+\contentsline {section}{Enfoque en Seguridad de la informaci\'on}{6}{section*.12}%
+\contentsline {section}{Antecedentes}{6}{section*.13}%
 \contentsline {chapter}{\numberline {1}Marco Teórico Contextual}{7}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Marco Teórico Contextual}{7}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Fundamentos de la Criptografía clasica}{8}{section.1.2}%
+\contentsline {section}{\numberline {1.2}Fundamentos de cifrado y decifrado clasico}{8}{section.1.2}%
 \contentsline {section}{\numberline {1.3}El Cifrado César: Origen Histórico}{8}{section.1.3}%
 \contentsline {section}{\numberline {1.4}Funcionamiento del Algoritmo}{8}{section.1.4}%
 \contentsline {section}{\numberline {1.5}Seguridad y Vulnerabilidades}{9}{section.1.5}%
-\contentsline {section}{\numberline {1.6}Utilidad en el Diseño de Sistemas Criptográficos}{9}{section.1.6}%
+\contentsline {section}{\numberline {1.6}Utilidad en el Diseño de Sistemas de Cifrado}{9}{section.1.6}%
 \contentsline {chapter}{\numberline {2}Antecedentes System Verilog}{11}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Evolución del diseño digital y el surgimiento de SystemVerilog}{11}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Lenguajes de Descripción de Hardware (HDL) y su Aplicación en el Diseño Digital}{13}{section.2.2}%
 \contentsline {section}{\numberline {2.3}SystemVerilog: Lenguaje de Descripción y Verificación de Hardware }{14}{section.2.3}%
 \contentsline {section}{\numberline {2.4}Comparativa entre Lenguajes de Descripción de Hardware y Desarrollo de Software}{15}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Descripción de la tarjeta de desarollo Altera DE2-115 }{17}{section.2.5}%
+\contentsline {section}{\numberline {2.5}Descripción de la tarjeta de desarrollo Altera DE2-115 }{17}{section.2.5}%
 \contentsline {chapter}{\numberline {3}Diseño de Plataforma para Transmisión Serial de Datos}{21}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Plataforma de Comunicación Serial para el Cifrado y Descifrado }{21}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Protocolo Seguro para Comunicación Serial}{22}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Diseño de la Plataforma Criptográfica}{25}{section.3.3}%
+\contentsline {section}{\numberline {3.3}Diseño de la Plataforma de Cifrado}{25}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Aspectos Clave del UART}{29}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Propiedades Principales del UART}{29}{subsection.3.4.1}%
 \contentsline {section}{\numberline {3.5}Principio de Operación de la UART}{30}{section.3.5}%
 \contentsline {subsection}{\numberline {3.5.1}Mecanismo de transmisión y recepción UART}{30}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Criterios para la terminación de la transmisión UART}{31}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Tasa de baudios de la UART}{32}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.2}Criterios para la terminación de la transmisión UART}{32}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Tasa de baudios de la UART}{33}{subsection.3.5.3}%
 \contentsline {subsection}{\numberline {3.5.4}Implementación RTL del Bloque UART\_Tx y UART\_rx }{33}{subsection.3.5.4}%
-\contentsline {subsection}{\numberline {3.5.5}Metodología de Verificación del UART mediante Testbench}{33}{subsection.3.5.5}%
-\contentsline {subsection}{\numberline {3.5.6}Configuración de las Interfaces Seriales con las TarjetasAltera DE2–115 }{34}{subsection.3.5.6}%
-\contentsline {chapter}{\numberline {4}RESULTADOS}{37}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Resultados}{37}{section.4.1}%
+\contentsline {subsection}{\numberline {3.5.5}Metodología de Verificación del UART mediante Testbench}{34}{subsection.3.5.5}%
+\contentsline {subsection}{\numberline {3.5.6}Configuración de las Interfaces Seriales con las TarjetasAltera DE2–115 }{35}{subsection.3.5.6}%
+\contentsline {chapter}{\numberline {4}RESULTADOS}{39}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Resultados}{39}{section.4.1}%
 \contentsline {part}{Anexos}{45}{part.1}%
-\contentsline {chapter}{Anexo 1. Desarrollo del Programa BitChange en Python para la Evaluacion Experimental de la Ofuscacion }{47}{chapter*.16}%
-\contentsline {chapter}{Anexo 2. Codigo de modulos en Verilog implementados en FPGA }{55}{chapter*.17}%
-\contentsline {chapter}{Conclusiones}{71}{chapter*.18}%
+\contentsline {chapter}{Anexo 1. Desarrollo del Programa BitChange en Python para la Evaluacion Experimental de la Ofuscacion }{47}{chapter*.35}%
+\contentsline {chapter}{Anexo 2. Codigo de modulos en Verilog implementados en FPGA }{55}{chapter*.36}%
+\contentsline {chapter}{Conclusiones}{71}{chapter*.37}%
 \contentsline {section}{\numberline {B.1}Conclusión}{71}{section.2.1}%
-\contentsline {section}{\numberline {B.2}Futuros Trabajos y Alcances Potenciales}{72}{section.2.2}%
-\contentsline {chapter}{Referencias Bibliográficas}{73}{chapter*.19}%
+\contentsline {section}{\numberline {B.2}Futuros Trabajos y Alcances Potenciales}{73}{section.2.2}%
+\contentsline {chapter}{Referencias Bibliográficas}{75}{chapter*.39}%

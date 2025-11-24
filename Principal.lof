@@ -4,29 +4,30 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Niveles de abstracción/precisión y estilos de modelado VHDL.}}{16}{figure.2.1}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Desarrollo en software versus hardware: (a) niveles de abstracción y lenguajes de alto nivel y (b) esquema básico del diseño descendente con HDL. .}}{17}{figure.2.2}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Tarjeta de desarollo Altera DE2-115.}}{20}{figure.2.3}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Niveles de abstracción/precisión y estilos de modelado HDL.}}{16}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Desarrollo en software versus hardware: (a) niveles de abstracción y lenguajes de alto nivel y (b) esquema básico del diseño descendente con HDL.}}{17}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Tarjeta de desarollo Altera DE2-115.}}{20}{figure.caption.16}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama de bloques de un sistema de comunicación simplificado. a) Sistema Inseguro. b) Sistema con el cifrado en los extremos de la línea de la transmisión. c) Sistema con el cifrado como interfaz entre el usuario y el equipo de comunicación. }}{24}{figure.3.1}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagrama de bloques del dispositivo de cifrado y Descifrado.}}{25}{figure.3.2}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Diseño de la Plataforma integrando el proceso de cifrado y el bloque de control.}}{26}{figure.3.3}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Diseño de la Plataforma Criptográfica incorporando el proceso de cifrado/descifrado como un bloque independiente.}}{28}{figure.3.4}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Esquema de tiempo para la transmisión de un byte.}}{30}{figure.3.5}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Esquema temporal para la recepción de datos.}}{31}{figure.3.6}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Esquema temporal de una parada invalida.}}{32}{figure.3.7}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Esquema temporal de una operacion de ruptura.}}{32}{figure.3.8}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Esquema temporal en BAUD's.}}{32}{figure.3.9}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Salida del testbench para la validación del protocolo UART.}}{33}{figure.3.10}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Seleccion de pines mediante el Software Quartus.}}{34}{figure.3.11}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Conexion de las dos plataformas Altera DE2–115 mediante la selección de pines del modulo Jtag .}}{35}{figure.3.12}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Esquema de conexiones para la plataforma de cifrado y su validación.}}{36}{figure.3.13}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama de bloques de un sistema de comunicación simplificado. a) Sistema Inseguro. b) Sistema con el cifrado en los extremos de la línea de la transmisión. c) Sistema con el cifrado como interfaz entre el usuario y el equipo de comunicación. }}{24}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagrama de bloques del dispositivo de cifrado y Descifrado.}}{25}{figure.caption.18}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Diseño de la Plataforma integrando el proceso de cifrado y el bloque de control.}}{26}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Diseño de la Plataforma de Cifrado incorporando el proceso de cifrado/descifrado como un bloque independiente.}}{28}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Esquema de tiempo para la transmisión de un byte.}}{30}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Esquema temporal para la recepción de datos.}}{31}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Esquema temporal de una parada invalida.}}{32}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Esquema temporal de una operacion de ruptura.}}{32}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Esquema temporal en BAUD's.}}{33}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Salida del testbench para la validación del protocolo UART.}}{34}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Seleccion de pines mediante el Software Quartus.}}{35}{figure.caption.27}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Conexion de las dos plataformas Altera DE2–115 mediante la selección de pines del modulo Jtag .}}{36}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Esquema de conexiones para la plataforma de cifrado y su validación.}}{37}{figure.caption.29}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Distribución de texto simple en español.}}{38}{figure.4.1}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Distribución del texto cifrado producido por la capa de ofuscación implementada en hardware.}}{40}{figure.4.2}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Configuración experimental en la que se observa la conexión entre las FPGA y la tarjeta Arduino Uno utilizada como agente externo para intentar la interceptación de la comunicación UART.}}{41}{figure.4.3}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Salida capturada por el agente externo durante el intento de interceptación. Se observa que los datos recuperados carecen de significado, mostrando únicamente caracteres no legibles debido al proceso de cifrado y ofuscación aplicado.}}{42}{figure.4.4}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Distribución de texto simple en español.}}{40}{figure.caption.30}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Distribución del texto cifrado producido por la capa de ofuscación implementada en hardware.}}{42}{figure.caption.31}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Configuración experimental en la que se observa la conexión entre las FPGA y la tarjeta Arduino Uno utilizada como agente externo para intentar la interceptación de la comunicación UART.}}{43}{figure.caption.32}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Salida capturada por el agente externo durante el intento de interceptación. Se observa que los datos recuperados carecen de significado, mostrando únicamente caracteres no legibles debido al proceso de cifrado y ofuscación aplicado.}}{44}{figure.caption.33}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Desarrollo en software versus hardware: (a) niveles de abstracción y lenguajes de alto nivel y (b) esquema básico del diseño descendente con HDL.}}{72}{figure.caption.38}%
 \addvspace {10\p@ }

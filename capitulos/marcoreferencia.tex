@@ -1,14 +1,24 @@
+
 \chapter{Marco Teórico Contextual}
+\captionsetup[figure]{font=scriptsize}
+%\captionsetup[figure]{font=footnotesize}
+%the size options for font are as follows:
+%scriptsize
+%footnotesize
+%small
+%normalsize
+%large
+%Large
 
 \section{Marco Teórico Contextual}
-Para contextualizar adecuadamente el presente trabajo de tesis dentro del marco teórico, es necesario abordar el origen del algoritmo criptográfico estándar César, así como su evolución y aplicaciones a lo largo del tiempo. Asimismo, se explorarán las condiciones en las que surgieron los servicios y mecanismos de seguridad informática, y las formas en que estos han sido implementados en distintos entornos. Este análisis permite delimitar la problemática que se busca atender mediante la propuesta de implementación en hardware presentada en esta investigación. En consecuencia, se realiza una revisión del estado del arte en la disciplina, con especial énfasis en los sistemas embebidos que incorporan mecanismos de seguridad.
+Para contextualizar adecuadamente el presente trabajo de tesis dentro del marco teórico, es necesario abordar el origen del algoritmo de cifrado estándar César, así como su evolución y aplicaciones a lo largo del tiempo. Asimismo, se explorarán las condiciones en las que surgieron los servicios y mecanismos de seguridad informática, y las formas en que estos han sido implementados en distintos entornos. Este análisis permite delimitar la problemática que se busca atender mediante la propuesta de implementación en hardware presentada en esta investigación. En consecuencia, se realiza una revisión del estado del arte en la disciplina, con especial énfasis en los sistemas embebidos que incorporan mecanismos de seguridad.
 
-A través de esta revisión se busca comprender las bases que fundamentan el diseño de soluciones criptográficas en plataformas reconfigurables, como las FPGAs, y su relevancia en escenarios donde la protección de la información es crítica. Este marco teórico sienta las bases para el desarrollo metodológico y experimental abordado en los siguientes capítulos.
+A través de esta revisión se busca comprender las bases que fundamentan el diseño de soluciones de cifrado y decifrado en plataformas reconfigurables, como las FPGA, y su relevancia en escenarios donde la protección de la información es crítica. Este marco teórico sienta las bases para el desarrollo metodológico y experimental abordado en los siguientes capítulos.
 
-\section{Fundamentos de la Criptografía clasica}
-La criptografía es la ciencia y arte de proteger la información mediante técnicas que transforman datos legibles (texto plano) en datos ininteligibles (texto cifrado), de modo que sólo las personas autorizadas puedan acceder a su contenido (Stallings, 2017). A lo largo de la historia, la criptografía ha evolucionado desde métodos simples de sustitución y transposición hasta complejos algoritmos basados en teoría matemática, álgebra moderna y teoría de números.
+\section{Fundamentos de cifrado y decifrado clasico}
+El cifrado es la ciencia y arte de proteger la información mediante técnicas que transforman datos legibles (texto plano) en datos ininteligibles (texto cifrado), de modo que sólo las personas autorizadas puedan acceder a su contenido (Stallings, 2017). A lo largo de la historia, el cifrado ha evolucionado desde métodos simples de sustitución y transposición hasta complejos algoritmos basados en teoría matemática, álgebra moderna y teoría de números.
 
-Los métodos clásicos, aunque hoy son inseguros frente a los ataques modernos, permiten comprender los conceptos fundamentales sobre el uso de claves, cifrado simétrico y análisis criptográfico. Uno de los algoritmos más representativos de la criptografía clásica es el cifrado César, también conocido como cifrado por desplazamiento.
+Los métodos clásicos, aunque hoy son inseguros frente a los ataques modernos, permiten comprender los conceptos fundamentales sobre el uso de claves, cifrado simétrico y análisis. Uno de los algoritmos más representativos es el cifrado César, también conocido como cifrado por desplazamiento.
 
 \section{El Cifrado César: Origen Histórico}
 El cifrado César recibe su nombre de Julio César, quien lo empleaba para cifrar mensajes militares. Según registros históricos, César utilizaba un desplazamiento de tres posiciones para codificar sus mensajes (Kahn, 1996). Aunque su simplicidad hoy lo convierte en un cifrado trivial, en su época ofrecía una protección básica frente a lectores no entrenados o no alfabetizados.
@@ -38,7 +48,7 @@ Por ejemplo, si se cifra la palabra \textbf{\textit{''HOLA''}} con un desplazami
 
 \section{Seguridad y Vulnerabilidades}
 
-El cifrado César es vulnerable a varios tipos de ataques criptográficos:
+El cifrado César es vulnerable a varios tipos de ataques :
 
 \begin{itemize}
 \item Ataque por fuerza bruta: Dado que existen solamente 25 posibles claves (excluyendo el desplazamiento nulo), un atacante puede probar todas las combinaciones en poco tiempo.
@@ -47,13 +57,13 @@ El cifrado César es vulnerable a varios tipos de ataques criptográficos:
 
 Estas debilidades lo hacen inapropiado para cualquier uso moderno que requiera confidencialidad real, pero útil como herramienta de desarrollo.
 
-\section{Utilidad en el Diseño de Sistemas Criptográficos}
-A pesar de sus limitaciones, el cifrado César es frecuentemente utilizado en el diseño de sistemas criptográficos hardware/software con fines educativos y experimentales. Su estructura simple lo convierte en una opción ideal para:
+\section{Utilidad en el Diseño de Sistemas de Cifrado}
+A pesar de sus limitaciones, el cifrado César es frecuentemente utilizado en el diseño de sistemas hardware/software con fines educativos y experimentales. Su estructura simple lo convierte en una opción ideal para:
 
 \begin{itemize}
 \item Introducir técnicas de procesamiento secuencial de datos.
 \item Implementar máquinas de estados finitos para codificación y decodificación.
-\item Evaluar el consumo de recursos lógicos y tiempos de propagación en plataformas como FPGAs.
+\item Evaluar el consumo de recursos lógicos y tiempos de propagación en plataformas como FPGA.
 \item Comparar el comportamiento de cifrados más complejos respecto a algoritmos básicos en entornos de bajo nivel (VHDL, Verilog).
 \end{itemize}
 
@@ -64,15 +74,15 @@ En proyectos de diseño digital con arquitectura RTL (Register Transfer Level), 
 \chapter{Antecedentes System Verilog}
 
 \section{Evolución del diseño digital y el surgimiento de SystemVerilog}
-El desarrollo del diseño digital ha experimentado transformaciones significativas desde sus inicios, comenzando con el prototipado físico mediante placas de pruebas (protoboards) hasta llegar a sofisticadas plataformas de simulación y modelado asistido por computadora. Herramientas CAD (Computer-Aided Design) permitieron simular circuitos electrónicos con mayor precisión y eficiencia, aunque su uso inicial requería superar ciertas barreras de complejidad técnica.
+El desarrollo del diseño digital ha experimentado transformaciones significativas desde sus inicios, comenzando con la creación de prototipos físicos mediante placas de pruebas (protoboards) hasta llegar a avanzadas plataformas de simulación y modelado asistido por computadora. Herramientas CAD (Computer-Aided Design) permitieron simular circuitos electrónicos con mayor precisión y eficiencia, aunque su uso inicial requería superar ciertas barreras de complejidad técnica.
 
 Estas herramientas facilitaron la implementación de esquemas eléctricos y permitieron definir señales de entrada coherentes con la lógica del sistema, generando salidas fácilmente interpretables. Simuladores como SPICE se convirtieron en referentes dentro del ámbito académico e industrial, al ofrecer una modelación precisa del comportamiento eléctrico. Una vez validados los resultados, se procedía al diseño del circuito físico mediante herramientas especializadas en tarjetas de circuito impreso (PCB), como el entorno OrCAD, particularmente en su módulo PCB Layout.
 
 Durante esta etapa, el Laboratorio de Computación Adaptable comenzó a implementar modelos de circuitos neuronales electrónicos mediante estas plataformas (Padrón, 1997). Posteriormente, ante el incremento en la complejidad de los modelos de redes neuronales, se incorporaron herramientas como MATLAB y su entorno gráfico SIMULINK, permitiendo una representación matemática directa de sistemas dinámicos. Esta evolución posibilitó una interpretación más eficaz de los resultados, tanto cuantitativa como cualitativamente (Padrón et al., 2000, pp. 338–349).
 
-De forma paralela, la industria del hardware reconfigurable, especialmente a través de las tarjetas FPGA manufacturadas por Xilinx, permitió abordar problemas específicos mediante interfaces programables. Cada tarjeta está diseñada para ofrecer flexibilidad al usuario, quien puede programar sus componentes en lenguajes de descripción de hardware como Verilog o VHDL, e integrar diversas interfaces en función de la disponibilidad física o lógica del sistema. Esta versatilidad convirtió a los kits de desarrollo en herramientas fundamentales para el diseño de soluciones a medida, especialmente en contextos de prototipado rápido y validación funcional.
+De forma paralela, la industria del hardware reconfigurable, especialmente a través de las tarjetas FPGA manufacturadas por Xilinx, permitió abordar problemas específicos mediante interfaces programables. Cada tarjeta está diseñada para ofrecer flexibilidad al usuario, quien puede programar sus componentes en lenguajes de descripción de hardware como Verilog o VHDL, e integrar diversas interfaces en función de la disponibilidad física o lógica del sistema. Esta versatilidad convirtió a los kits de desarrollo en herramientas fundamentales para el diseño de soluciones a medida, especialmente en contextos de creación de prototipos rápido y validación funcional.
 
-Conforme se incrementaron las necesidades de diseño a nivel de sistemas y la verificación se volvió una etapa crítica, surgió SystemVerilog como una extensión y evolución del lenguaje Verilog. SystemVerilog no solo incorporó mejoras en la descripción estructural y comportamental del hardware, sino que integró capacidades orientadas a la verificación funcional, programación orientada a objetos y modelado de sistemas complejos. Esta evolución respondió a la necesidad de unificar el flujo de diseño y verificación bajo un mismo lenguaje, facilitando la implementación de testbenches avanzados, interfaces reutilizables y entornos de verificación compatibles con metodologías modernas como UVM (Universal Verification Methodology).
+Conforme se incrementaron las necesidades de diseño a nivel de sistemas y la verificación se volvió una etapa crítica, surgió SystemVerilog como una extensión y evolución del lenguaje Verilog. SystemVerilog no solo incorporó mejoras en la descripción estructural y comportamental del hardware, sino que integró capacidades orientadas a la verificación funcional, programación orientada a objetos y modelado de sistemas complejos. Esta evolución respondió a la necesidad de unificar el flujo de diseño y verificación bajo un mismo lenguaje, facilitando la implementación de pruebas avanzadas, interfaces reutilizables y entornos de verificación compatibles con metodologías modernas como UVM (Universal Verification Methodology).
 
 En este sentido, el uso de tarjetas FPGA programadas con SystemVerilog permite combinar la precisión del diseño RTL con capacidades avanzadas de verificación, lo cual resulta esencial en entornos de desarrollo donde se busca garantizar funcionalidad, rendimiento y confiabilidad desde las etapas tempranas del proyecto. La historia y evolución de este lenguaje refleja una tendencia hacia la consolidación de herramientas que integren diseño, simulación, verificación y síntesis dentro de un mismo entorno de desarrollo.
 
@@ -93,7 +103,7 @@ Los lenguajes de descripción de hardware (HDL, por sus siglas en inglés) surgi
 
 Los entornos de desarrollo basados en HDL integran herramientas de compilación, simulación y síntesis, lo que permite validar el comportamiento funcional de un diseño antes de su implementación física. En la actualidad, los lenguajes HDL más utilizados son VHDL y Verilog, ambos estandarizados por el IEEE (Institute of Electrical and Electronics Engineers), y ampliamente adoptados en la industria del diseño digital.
 
-VHDL: Descripción, Aplicación y Estructura
+VHDL: Descripción, Aplicación y Estructura.
 VHDL (VHSIC Hardware Description Language) fue desarrollado originalmente para documentar y verificar circuitos integrados de alta velocidad dentro del programa VHSIC del Departamento de Defensa de los EE.UU. Su sintaxis y semántica están basadas en el lenguaje ADA, lo cual le proporciona una estructura sólida, orientada a sistemas críticos y de tiempo real.
 
 VHDL permite modelar un sistema digital a través de diferentes niveles de descripción: comportamiento, transferencia de registros (RTL) y nivel lógico estructural. Esto permite abarcar prácticamente todo el ciclo de desarrollo digital, desde las especificaciones funcionales hasta la generación del prototipo, excluyendo únicamente el trazado físico o layout.
@@ -117,31 +127,32 @@ Sin embargo, estas descripciones se encontraban limitadas al ecosistema particul
 
 Desde el punto de vista sintáctico, los HDL presentan similitudes con los lenguajes de programación de alto nivel (HLL), lo cual facilita su aprendizaje por parte de ingenieros con experiencia previa en desarrollo de software. Por ejemplo, Verilog comparte muchas características con el lenguaje C, mientras que VHDL hereda su estructura y semántica del lenguaje ADA. Estas semejanzas, si bien pueden acelerar la adopción de HDL, pueden también inducir errores conceptuales si se emplean estrategias propias del software en contextos donde se requiere una representación precisa del comportamiento físico del hardware.
 
-Es fundamental que, cuando un modelo HDL esté destinado a la síntesis e implementación física (por ejemplo, en FPGAs o ASICs), el diseñador adopte una mentalidad orientada al hardware, describiendo la lógica con un enfoque estructural o de transferencia de registros (RTL), y no meramente algorítmico. Por otro lado, el uso de estructuras típicas del software puede ser apropiado cuando el objetivo sea únicamente la simulación funcional del sistema, permitiendo optimizar el rendimiento en las etapas de verificación y análisis temporal.
+Es fundamental que, cuando un modelo HDL esté destinado a la síntesis e implementación física (por ejemplo, en FPGA o ASIC), el diseñador adopte una mentalidad orientada al hardware, describiendo la lógica con un enfoque estructural o de transferencia de registros (RTL), y no meramente algorítmico. Por otro lado, el uso de estructuras típicas del software puede ser apropiado cuando el objetivo sea únicamente la simulación funcional del sistema, permitiendo optimizar el rendimiento en las etapas de verificación y análisis temporal.
 
-En resumen, los HDL son lenguajes formales de alto nivel, diseñados específicamente para representar circuitos electrónicos a diversos niveles de abstracción —desde compuertas lógicas básicas hasta sistemas digitales completos— y permiten un modelado flexible, estructurado y preciso del hardware, aprovechando conceptos tanto del diseño electrónico como del desarrollo de software, tal y como se muestran en la Figura ( \ref{fig:imagen1}). 
+En resumen, los HDL son lenguajes formales de alto nivel, diseñados específicamente para representar circuitos electrónicos a diversos niveles de abstracción —desde compuertas lógicas básicas hasta sistemas digitales completos— y permiten un modelado flexible, estructurado y preciso del hardware, aprovechando conceptos tanto del diseño electrónico como del desarrollo de software, tal y como se muestran en la Imagen ( \ref{fig:imagen1}). 
 \begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
     \centering % Centra la imagen
      \includegraphics[width=0.5\textwidth, height=6cm]{imagenes/img1} % Reemplaza con el nombre de tu archivo de imagen
-    \caption{Niveles de abstracción/precisión y estilos de modelado VHDL.}
+    \caption{Niveles de abstracción/precisión y estilos de modelado HDL.}
     \label{fig:imagen1} % Etiqueta para referenciar la figura
 \end{figure} 
 %\clearpage
 
-Los lenguajes de descripción de hardware (HDL) fueron desarrollados inicialmente con el propósito de modelar el comportamiento funcional de los componentes electrónicos, permitiendo su simulación previa a la implementación física. No obstante, también son ampliamente utilizados para la descripción estructural de circuitos digitales, facilitando su posterior síntesis y verificación mediante procesos de simulación validados (\ref{fig:imagen2}).
+Los lenguajes de descripción de hardware (HDL) fueron desarrollados inicialmente con el propósito de modelar el comportamiento funcional de los componentes electrónicos, permitiendo su simulación previa a la implementación física. No obstante, también son ampliamente utilizados para la descripción estructural de circuitos digitales, facilitando su posterior síntesis y verificación mediante procesos de simulación validados Imagen (\ref{fig:imagen2}).
+
 \begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
     \centering % Centra la imagen
      \includegraphics[width=0.8\textwidth, height=6cm]{imagenes/img2} % Reemplaza con el nombre de tu archivo de imagen
-    \caption{Desarrollo en software versus hardware: (a) niveles de abstracción y lenguajes de alto nivel y (b) esquema básico del diseño descendente con HDL.  .}
+    \caption{Desarrollo en software versus hardware: (a) niveles de abstracción y lenguajes de alto nivel y (b) esquema básico del diseño descendente con HDL.}
     \label{fig:imagen2} % Etiqueta para referenciar la figura
 \end{figure} 
 
-A partir de las descripciones iniciales, los enfoques de diseño descendente (top-down) permiten aplicar procesos progresivos de síntesis que conducen gradualmente a niveles más detallados de implementación, hasta alcanzar una descripción física específica y dependiente de la tecnología utilizada. La validación en cada etapa del diseño se lleva a cabo mediante simulaciones y análisis funcionales, permitiendo iteraciones sucesivas de verificación y corrección hasta lograr un comportamiento conforme a los requisitos especificados ( \ref{fig:imagen2}(b)).
+A partir de las descripciones iniciales, los enfoques de diseño descendente (top-down) permiten aplicar procesos progresivos de síntesis que conducen gradualmente a niveles más detallados de implementación, hasta alcanzar una descripción física específica y dependiente de la tecnología utilizada. La validación en cada etapa del diseño se lleva a cabo mediante simulaciones y análisis funcionales, permitiendo iteraciones sucesivas de verificación y corrección hasta lograr un comportamiento conforme a los requisitos especificados Imagen ( \ref{fig:imagen2}(b)).
 
 
-\section{Descripción de la tarjeta de desarollo Altera DE2-115 }
+\section{Descripción de la tarjeta de desarrollo Altera DE2-115 }
 
-La tarjeta Altera DE2-115, desarrollada por Terasic Technologies, es una plataforma de prototipado basada en la FPGA Cyclone IV EP4CE115F29C7N de Altera (ahora Intel), orientada a entornos educativos, de investigación y desarrollo de sistemas digitales avanzados. Esta tarjeta ofrece una arquitectura versátil que permite implementar desde diseños lógicos básicos hasta sistemas digitales complejos, incluyendo sistemas embebidos, controladores personalizados, procesamiento de señales digitales (DSP) y prototipos de SoC (System-on-Chip).
+La tarjeta Altera DE2-115, desarrollada por Terasic Technologies, es una plataforma para creación de prototipos basada en la FPGA Cyclone IV EP4CE115F29C7N de Altera (ahora Intel), orientada a entornos educativos, de investigación y desarrollo de sistemas digitales avanzados. Esta tarjeta ofrece una arquitectura versátil que permite implementar desde diseños lógicos básicos hasta sistemas digitales complejos, incluyendo sistemas embebidos, controladores personalizados, procesamiento de señales digitales (DSP) y prototipos de SoC (System-on-Chip).
 
 Entre sus características principales se destaca la presencia de 114,480 elementos lógicos (LEs), 3.888 Kbits de memoria RAM embebida, y 528 pines de entrada/salida de propósito general (GPIO), lo que proporciona una gran flexibilidad para interactuar con múltiples dispositivos periféricos. La tarjeta también incluye memorias externas como SDRAM de 128 MB, SRAM de 2 MB, y Flash NOR de 2 MB, además de soporte para almacenamiento mediante tarjeta SD.
 
@@ -196,24 +207,24 @@ FPGA: Altera Cyclone IV EP4CE115F29C7N con 114,480 elementos lógicos (LEs)
 \chapter{Diseño de Plataforma para Transmisión Serial de Datos}
 
 \section{Plataforma de Comunicación Serial para el Cifrado y Descifrado }
-La seguridad de la información, especialmente en lo que respecta a la confidencialidad, representa una de las principales preocupaciones en el ámbito de las comunicaciones. Para mitigar los riesgos de acceso no autorizado, es común la implementación de algoritmos criptográficos que aseguren que solo el receptor legítimo pueda interpretar los datos transmitidos.
+La seguridad de la información, especialmente en lo que respecta a la confidencialidad, representa una de las principales preocupaciones en el ámbito de las comunicaciones. Para mitigar los riesgos de acceso no autorizado, es común la implementación de algoritmos de cifrado que aseguren que solo el receptor legítimo pueda interpretar los datos transmitidos.
 
 Uno de los principales objetivos de este trabajo es desarrollar una plataforma basada en FPGA que permita integrar mecanismos de codificación de flujo para proteger la transmisión de datos entre dos dispositivos que se comunican mediante el protocolo UART. En lugar de utilizar UART en su forma tradicional, este protocolo es modificado y ampliado para incorporar una capa de seguridad directamente a nivel de hardware, mejorando así la confidencialidad de la información transmitida.
 
-Para ello, se diseñó una plataforma base que incluye los módulos necesarios para enviar y recibir datos, realizar la codificación y decodificación de los mensajes, y establecer la comunicación segura entre ambos extremos. Esta arquitectura ha sido planteada de forma flexible, permitiendo que el proceso de codificación se defina de manera genérica. De este modo, es posible integrar diferentes algoritmos criptográficos sin necesidad de rediseñar por completo el sistema, lo que facilita su adaptación a distintos niveles de seguridad o aplicaciones específicas.
+Para ello, se diseñó una plataforma base que incluye los módulos necesarios para enviar y recibir datos, realizar la codificación y decodificación de los mensajes, y establecer la comunicación segura entre ambos extremos. Esta arquitectura ha sido planteada de forma flexible, permitiendo que el proceso de codificación se defina de manera genérica. De este modo, es posible integrar diferentes algoritmos de cifrado sin necesidad de rediseñar por completo el sistema, lo que facilita su adaptación a distintos niveles de seguridad o aplicaciones específicas.
 
 Un aspecto fundamental para el desempeño de un codificador de flujo es que su velocidad de operación no afecte la eficiencia de la comunicación. Por esta razón, la plataforma está implementada en una FPGA, lo que permite ampliar y modificar el protocolo de comunicación para incluir una capa de seguridad directamente a nivel hardware. Así, el proceso de cifrado se realiza en tiempo real, garantizando que la protección de los datos no genere retrasos ni impacte negativamente en la velocidad de transmisión.
 
 Se realiza la prueba y validación del desempeño de la plataforma mediante la comparación de su funcionamiento al implementar un protocolo personalizado de comunicacion para incrementar el grado de seguridad.
 
 \section{Protocolo Seguro para Comunicación Serial}
-Como parte del desarrollo de esta tesis, se aborda el diseño de un sistema de comunicación seguro, iniciando con el análisis de las características fundamentales de los sistemas de comunicación digital y los mecanismos para garantizar que la información transmitida sea recibida y correctamente interpretada únicamente por el destinatario autorizado. Durante este proceso analítico se identifican múltiples criterios que definen las propiedades esenciales para un algoritmo criptográfico eficiente, los cuales serán abordados detalladamente en este capítulo.
+Como parte del desarrollo de esta tesis, se aborda el diseño de un sistema de comunicación seguro, iniciando con el análisis de las características fundamentales de los sistemas de comunicación digital y los mecanismos para garantizar que la información transmitida sea recibida y correctamente interpretada únicamente por el destinatario autorizado. Durante este proceso analítico se identifican múltiples criterios que definen las propiedades esenciales para un algoritmo de cifrado eficiente, los cuales serán abordados detalladamente en este capítulo.
 
 En el proceso de establecer los parámetros para una comunicación segura, se busca lograr este objetivo minimizando el impacto sobre los sistemas de comunicación existentes. Cualquier mecanismo implementado para garantizar la seguridad debe ser transparente para el usuario y operar en tiempo real, sin afectar las características esenciales de la comunicación, tales como la calidad y la velocidad de transmisión.
 
-Actualmente, la mayoría de los sistemas de comunicación emplean transmisión de datos serial, generalmente en modo full-duplex, para el intercambio de información. En la búsqueda de sistemas de comunicación seguros, funcionales y eficientes, es necesario analizar y evaluar en tiempo real la ejecución de un algoritmo criptográfico estándar. Posteriormente, será posible implementar y evaluar otros algoritmos conforme a las necesidades del sistema.
+Actualmente, la mayoría de los sistemas de comunicación emplean transmisión de datos serial, generalmente en modo full-duplex, para el intercambio de información. En la búsqueda de sistemas de comunicación seguros, funcionales y eficientes, es necesario analizar y evaluar en tiempo real la ejecución de un algoritmo de cifrado estándar. Posteriormente, será posible implementar y evaluar otros algoritmos conforme a las necesidades del sistema.
 
-A partir de los lineamientos previamente establecidos, se definen las características fundamentales para el diseño de la plataforma de comunicación criptográfica, las cuales son:
+A partir de los lineamientos previamente establecidos, se definen las características fundamentales para el diseño de la plataforma de comunicación cifrada, las cuales son:
 
 
 
@@ -224,14 +235,14 @@ A partir de los lineamientos previamente establecidos, se definen las caracterí
 
 \item Compatibilidad con comunicación serial full-duplex asíncrona: La plataforma debe ser capaz de manejar flujos de datos bidireccionales simultáneos (full-duplex) en modo asíncrono, soportando múltiples velocidades de transmisión comúnmente utilizadas en entornos industriales o embebidos.
 
-\item Flexibilidad criptográfica: Debe ofrecer la posibilidad de cambiar el algoritmo de cifrado de manera sencilla, permitiendo al usuario seleccionar entre distintas opciones según los requerimientos de seguridad del sistema.
+\item Flexibilidad : Debe ofrecer la posibilidad de cambiar el algoritmo de cifrado de manera sencilla, permitiendo al usuario seleccionar entre distintas opciones según los requerimientos de seguridad del sistema.
 
 \item Procesamiento en tiempo real: Las operaciones de cifrado y descifrado deben ejecutarse de forma continua y en tiempo real, sin interrupciones en el flujo de información, garantizando la integridad y la eficiencia de la comunicación.
 \end{enumerate} 
 
 Para alcanzar el primer objetivo —la integración transparente del sistema de seguridad— se diseñaron módulos hardware que pueden ser instalados en ambos extremos de la línea de comunicación. Estos dispositivos pueden colocarse directamente en los puntos finales del canal de transmisión, o bien actuar como una interfaz entre el usuario y el equipo de comunicación. La ubicación óptima dependerá del contexto de uso, de las características del equipo involucrado y del medio físico de transmisión utilizado.
 
-La Figura (\ref{fig:imagen4}) muestra un diagrama de bloques que ilustra cómo puede integrarse el sistema de seguridad dentro de una arquitectura de comunicación serial, permitiendo el cifrado de los datos sin alterar la funcionalidad básica del canal.
+La Imagen (\ref{fig:imagen4}) muestra un diagrama de bloques que ilustra cómo puede integrarse el sistema de seguridad dentro de una arquitectura de comunicación serial, permitiendo el cifrado de los datos sin alterar la funcionalidad básica del canal.
 
 \begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
     \centering % Centra la imagen
@@ -242,7 +253,7 @@ como interfaz entre el usuario y el  equipo de comunicación. }
     \label{fig:imagen4} % Etiqueta para referenciar la figura
 \end{figure} 
 
-El mecanismo encargado del cifrado debe incluir, en términos generales, un módulo central de control responsable de coordinar todo el proceso de cifrado y descifrado. Este módulo gestiona el flujo de datos entre dos interfaces de comunicación serial, actuando como intermediario entre el transmisor y el receptor. Su funcionamiento se basa en controlar la entrada y salida de datos cifrados y descifrados de acuerdo con la lógica definida por el algoritmo criptográfico. La Figura (\ref{fig:imagen5}) ilustra la estructura general del sistema, destacando el papel del controlador central dentro del esquema de comunicación segura.
+El mecanismo encargado del cifrado debe incluir, en términos generales, un módulo central de control responsable de coordinar todo el proceso de cifrado y descifrado. Este módulo gestiona el flujo de datos entre dos interfaces de comunicación serial, actuando como intermediario entre el transmisor y el receptor. Su funcionamiento se basa en controlar la entrada y salida de datos cifrados y descifrados de acuerdo con la lógica definida por el algoritmo de cifrado. La Imagen (\ref{fig:imagen5}) ilustra la estructura general del sistema, destacando el papel del controlador central dentro del esquema de comunicación segura.
 
 \clearpage
 
@@ -255,13 +266,13 @@ El mecanismo encargado del cifrado debe incluir, en términos generales, un mód
 
 Con el objetivo de garantizar que el proceso de cifrado y descifrado se ejecute de forma continua, sin interrumpir ni degradar el flujo original de información, se opta por el uso de algoritmos de cifrado por flujo. Este tipo de algoritmos permite el procesamiento de los datos en tiempo real, bit a bit o byte a byte, lo cual es especialmente adecuado para sistemas de comunicación serial donde la información se transmite de manera secuencial.
 
-\section{Diseño de la Plataforma Criptográfica}
+\section{Diseño de la Plataforma de Cifrado}
 
-Para llevar a cabo el diseño de la plataforma criptográfica, se parte de las especificaciones definidas en la sección anterior. El método comúnmente empleado para el intercambio de información es la transmisión de datos en serie. Por ello, se implementan dos puertos “Universal Asynchronous Receiver/Transmitter” (UART), los cuales permiten la conexión de la plataforma con el medio de comunicación: uno destinado a recibir y enviar datos en su formato original hacia y desde el usuario, y otro encargado de manejar la información cifrada a través del canal de transmisión. Esta configuración facilita la incorporación del proceso de cifrado en cualquier sistema de comunicación digital que utilice transmisión serial full-dúplex asincrónica, requiriendo únicamente el desarrollo de una interfaz adecuada según el punto de integración dentro del sistema.
+Para llevar a cabo el diseño de la plataforma de cifrado, se parte de las especificaciones definidas en la sección anterior. El método comúnmente empleado para el intercambio de información es la transmisión de datos en serie. Por ello, se implementan dos puertos “Universal Asynchronous Receiver/Transmitter” (UART), los cuales permiten la conexión de la plataforma con el medio de comunicación: uno destinado a recibir y enviar datos en su formato original hacia y desde el usuario, y otro encargado de manejar la información cifrada a través del canal de transmisión. Esta configuración facilita la incorporación del proceso de cifrado en cualquier sistema de comunicación digital que utilice transmisión serial full-dúplex asincrónica, requiriendo únicamente el desarrollo de una interfaz adecuada según el punto de integración dentro del sistema.
 
-Por otro lado para poner la plataforma criptográfica en ejecución se decide utilizar un FPGA, aprovechando sus características, incluyendo su operación de alta velocidad, bajo costo, facilidad de empleo y reconfiguración. En trabajo se decidió utilizar una tarjeta de desarrollo con un EP4CE115integrado, de la familia a Cyclone® IVSpartan. Este FPGA es de tamaño medio, con el equivalente a 114,480 mil compuertas lógicas. El integrado tiene gran capacidad de poder integrar la plataforma criptográfica junto con cualquier bloque que se quiera cifrar y evaluar. Esta plataforma de desarrollo funciona a 50 [MHz], que permite configurar el UART para funcionar a una velocidad de 3.125 [Mbps], que es bastante para funcionar en tiempo real como la mayor parte de los sistemas de comunicación.
+Por otro lado para poner la plataforma de cifrado en ejecución se decide utilizar un FPGA, aprovechando sus características, incluyendo su operación de alta velocidad, bajo costo, facilidad de empleo y reconfiguración. En trabajo se decidió utilizar una tarjeta de desarrollo con un EP4CE115integrado, de la familia a Cyclone® IVSpartan. Este FPGA es de tamaño medio, con el equivalente a 114,480 mil compuertas lógicas. El integrado tiene gran capacidad de poder integrar la plataforma de cifrado junto con cualquier bloque que se quiera cifrar y evaluar. Esta plataforma de desarrollo funciona a 50 [MHz], que permite configurar el UART para funcionar a una velocidad de 3.125 [Mbps], que es bastante para funcionar en tiempo real como la mayor parte de los sistemas de comunicación.
 
-Ahora bien para probar la operación total del cifrador, que podría ser integrado en una línea de comunicación, primero se desarrolló el esquema de cifrado que se muestra en la Figura (\ref{fig:imagen6}). Esta implementación consiste de un módulo con una máquina de estados que controle al dispositivo, maneje la operación de los UART y que lleve a cabo los procesos de cifrado y descifrado. 
+Ahora bien para probar la operación total del cifrador, que podría ser integrado en una línea de comunicación, primero se desarrolló el esquema de cifrado que se muestra en la Imagen (\ref{fig:imagen6}). Esta implementación consiste de un módulo con una máquina de estados que controle al dispositivo, maneje la operación de los UART y que lleve a cabo los procesos de cifrado y descifrado. 
 
 \begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
     \centering % Centra la imagen
@@ -270,20 +281,20 @@ Ahora bien para probar la operación total del cifrador, que podría ser integra
     \label{fig:imagen6} % Etiqueta para referenciar la figura
 \end{figure} 
 
-Este dispositivo se emplea para validar el funcionamiento de la plataforma criptográfica, permitiendo la ejecución del proceso de cifrado dentro de un sistema de comunicación. Durante las pruebas experimentales, se utilizaron dos de estos dispositivos conectados entre dos computadoras que se comunicaban mediante un puerto serial RS-232. Los resultados obtenidos a partir de estas pruebas se detallan en el capítulo \#\#\#\#, correspondiente a los resultados.
+Este dispositivo se emplea para validar el funcionamiento de la plataforma de cifrado, permitiendo la ejecución del proceso de cifrado dentro de un sistema de comunicación. Durante las pruebas experimentales, se utilizaron dos de estos dispositivos conectados entre dos computadoras que se comunicaban mediante un puerto serial RS-232. Los resultados obtenidos a partir de estas pruebas se detallan en el capítulo 4, correspondiente a los resultados.
 
-Con este diseño se logra verificar el funcionamiento general de la plataforma criptográfica; sin embargo, no se satisfacen completamente los requisitos establecidos, particularmente en lo referente a la flexibilidad para cambiar el algoritmo de cifrado. Esto se debe a que el módulo criptográfico está integrado dentro de la máquina de estados del bloque de control, lo que implica que incluso un cambio simple en el algoritmo requiere modificaciones estructurales en todo el sistema.
+Con este diseño se logra verificar el funcionamiento general de la plataforma de cifrado; sin embargo, no se satisfacen completamente los requisitos establecidos, particularmente en lo referente a la flexibilidad para cambiar el algoritmo de cifrado. Esto se debe a que el módulo de cifrado está integrado dentro de la máquina de estados del bloque de control, lo que implica que incluso un cambio simple en el algoritmo requiere modificaciones estructurales en todo el sistema.
 
-Para solucionar esta limitación, se propone una reestructuración del diseño, separando el elemento de seguridad del bloque de control. Así, los procesos de cifrado y descifrado se implementan en un módulo independiente, permitiendo que el bloque de control se limite exclusivamente a gestionar la comunicación a través de los UARTs, una vez que los datos han sido procesados por el bloque criptográfico.
+Para solucionar esta limitación, se propone una reestructuración del diseño, separando el elemento de seguridad del bloque de control. Así, los procesos de cifrado y descifrado se implementan en un módulo independiente, permitiendo que el bloque de control se limite exclusivamente a gestionar la comunicación a través de los UARTs, una vez que los datos han sido procesados por el bloque de cifrado.
 
 Se tiene especial cuidado en proporcionar al bloque de cifrado/descifrado una interfaz genérica que le permita interactuar con el bloque de control sin depender del algoritmo utilizado. Para ello, se define un protocolo simple de handshake que permite al bloque de cifrado/descifrado recibir una señal cuando hay datos listos para ser procesados, y notificar al bloque de control una vez finalizado el procesamiento. Este mecanismo asegura que no se pierda información, evitando que se envíen nuevos datos al cifrador antes de que haya finalizado el procesamiento de los datos actuales.
-
-Si bien el alcance de esta tesis se limita a la implementación del algoritmo de cifrado CESAR dentro de la plataforma de comunicación, el diseño apunta a una arquitectura escalable que permita integrar distintos algoritmos criptográficos. De esta manera, cuando se requiera implementar un nuevo dispositivo de cifrado/descifrado, bastará con desarrollar el bloque correspondiente al nuevo algoritmo y conectarlo a la plataforma para obtener un sistema completamente funcional. El dispositivo resultante puede observarse en la Figura (\ref{fig:imagen7}).
+\clearpage
+Si bien el alcance de esta tesis se limita a la implementación del algoritmo de cifrado CESAR dentro de la plataforma de comunicación, el diseño apunta a una arquitectura escalable que permita integrar distintos algoritmos de cifrado. De esta manera, cuando se requiera implementar un nuevo dispositivo de cifrado/descifrado, bastará con desarrollar el bloque correspondiente al nuevo algoritmo y conectarlo a la plataforma para obtener un sistema completamente funcional. El dispositivo resultante puede observarse en la Imagen (\ref{fig:imagen7}).
 
 \begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
     \centering % Centra la imagen
      \includegraphics[width=1\textwidth, height=8cm]{imagenes/img7} % Reemplaza con el nombre de tu archivo de imagen
-    \caption{ Diseño de la Plataforma Criptográfica incorporando el proceso de cifrado/descifrado 
+    \caption{ Diseño de la Plataforma de Cifrado incorporando el proceso de cifrado/descifrado 
 como un bloque independiente.}
     \label{fig:imagen7} % Etiqueta para referenciar la figura
 \end{figure} 
@@ -303,11 +314,11 @@ Para fines demostrativos del proceso de cifrado y con el objetivo de verificar l
 
 
 \section{Principio de Operación de la UART}
-En investigaciones previas se han propuesto mecanismos de seguridad sobre UART, pero en su mayoría dependen de software, lo que limita la eficiencia y vulnerabilidad ante ataques. Otros estudios han demostrado que la implementación de algoritmos criptográficos en FPGA, como AES en modo CTR, es factible y efectiva para mejorar la seguridad sin afectar el rendimiento significativamente.
+En investigaciones previas se han propuesto mecanismos de seguridad sobre UART, pero en su mayoría dependen de software, lo que limita la eficiencia y vulnerabilidad ante ataques. Otros estudios han demostrado que la implementación de algoritmos de cifrado/decifrado en FPGA, como AES en modo CTR, es factible y efectiva para mejorar la seguridad sin afectar el rendimiento significativamente.
 
 \subsection{Mecanismo de transmisión y recepción UART}
 
-Un UART, debido a la forma en que están construidos el transmisor y el receptor, no opera de manera sincronizada; sin embargo, ambos emplean un tiempo de referencia con cierta tolerancia que permite la transferencia serial de cada byte de datos. La transmisión se realiza de forma serial, enviando primero el bit menos significativo (LSB) a una razón de bits determinada (tasa en baud), la cual es conocida tanto por el transmisor como por el receptor. De esta manera, el transmisor puede iniciar el envío de datos en cualquier momento, mientras que el receptor requiere un mecanismo que le permita identificar cuándo ha sido transmitido el primer bit (LSB). Este proceso se logra mediante el envío de una señal de inicio (start bit), activada en nivel bajo durante la duración de un bit, como se muestra en la Figura (\ref{fig:imagen8}).
+Un UART, debido a la forma en que están construidos el transmisor y el receptor, no opera de manera sincronizada; sin embargo, ambos emplean un tiempo de referencia con cierta tolerancia que permite la transferencia serial de cada byte de datos. La transmisión se realiza de forma serial, enviando primero el bit menos significativo (LSB) a una razón de bits determinada (tasa en baud), la cual es conocida tanto por el transmisor como por el receptor. De esta manera, el transmisor puede iniciar el envío de datos en cualquier momento, mientras que el receptor requiere un mecanismo que le permita identificar cuándo ha sido transmitido el primer bit (LSB). Este proceso se logra mediante el envío de una señal de inicio (start bit), activada en nivel bajo durante la duración de un bit, como se muestra en la Imagen (\ref{fig:imagen8}).
 
 \begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
     \centering % Centra la imagen
@@ -315,8 +326,8 @@ Un UART, debido a la forma en que están construidos el transmisor y el receptor
     \caption{ Esquema de tiempo para la transmisión de un byte.}
     \label{fig:imagen8} % Etiqueta para referenciar la figura
 \end{figure} 
-
-El receptor utiliza el flanco de bajada del bit de inicio para activar un circuito de temporización interno. Este tiempo de referencia permite muestrear la señal de entrada serial aproximadamente a la mitad de la duración de cada bit de datos, momento en el que se espera que el valor del bit sea estable. Una vez que se ha leído el último bit de datos (MSB), el receptor verifica que el bit de parada esté en nivel alto, como se espera, lo cual confirma que la operación de recepción se realizó correctamente Figura (\ref{fig:imagen9}).
+\clearpage
+El receptor utiliza el flanco de bajada del bit de inicio para activar un circuito de temporización interno. Este tiempo de referencia permite muestrear la señal de entrada serial aproximadamente a la mitad de la duración de cada bit de datos, momento en el que se espera que el valor del bit sea estable. Una vez que se ha leído el último bit de datos (MSB), el receptor verifica que el bit de parada esté en nivel alto, como se espera, lo cual confirma que la operación de recepción se realizó correctamente Imagen (\ref{fig:imagen9}).
 
 \begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
     \centering % Centra la imagen
@@ -325,14 +336,16 @@ El receptor utiliza el flanco de bajada del bit de inicio para activar un circui
     \label{fig:imagen9} % Etiqueta para referenciar la figura
 \end{figure} 
 
+
 El receptor se vuelve a sincronizar utilizando el flanco de bajada de cada bit de inicio mediante su circuito temporal interno. Para que la transmisión y recepción funcionen correctamente, el tiempo de ambos sistemas solo necesita coincidir dentro de una tolerancia de aproximadamente la mitad del período de un bit en cada 10 períodos de bit. Esta precisión del 5\% es difícil de alcanzar con sistemas digitales convencionales.
 
 Al igual que muchas implementaciones UART, estos macros esperan un tiempo de referencia proporcionado mediante una señal habilitadora, denominada ''en\_16\_x\_baud'', que se aplica a razón de una vez por cada 16 bits transmitidos.
 
+\clearpage
 
 \subsection{Criterios para la terminación de la transmisión UART}
 
-En condiciones normales, una línea serial se mantiene activa en nivel alto, de modo que un nuevo bit de inicio se identifica mediante un flanco de bajada. Sin embargo, bajo una condición de fallo, el transmisor puede mantener continuamente la línea en nivel bajo (por ejemplo, por falta de alimentación). En este caso, el receptor interpretará el nivel bajo como un bit de inicio seguido de bits de datos en cero. Como consecuencia, el bit de parada no será válido y la trama incorrecta será descartada, Figura (\ref{fig:imagen10}).
+En condiciones normales, una línea serial se mantiene activa en nivel alto, de modo que un nuevo bit de inicio se identifica mediante un flanco de bajada. Sin embargo, bajo una condición de fallo, el transmisor puede mantener continuamente la línea en nivel bajo (por ejemplo, por falta de alimentación). En este caso, el receptor interpretará el nivel bajo como un bit de inicio seguido de bits de datos en cero. Como consecuencia, el bit de parada no será válido y la trama incorrecta será descartada, Imagen (\ref{fig:imagen10}).
 
 \begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
     \centering % Centra la imagen
@@ -341,7 +354,7 @@ En condiciones normales, una línea serial se mantiene activa en nivel alto, de 
     \label{fig:imagen10} % Etiqueta para referenciar la figura
 \end{figure} 
 
-El receptor permanecerá a la espera hasta que la línea vuelva a nivel alto y únicamente se volverá a sincronizar con el siguiente flanco de bajada correspondiente al bit de inicio Figura \ref{fig:imagen11}).
+El receptor permanecerá a la espera hasta que la línea vuelva a nivel alto y únicamente se volverá a sincronizar con el siguiente flanco de bajada correspondiente al bit de inicio Imagen \ref{fig:imagen11}).
 
 \begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
     \centering % Centra la imagen
@@ -351,10 +364,10 @@ El receptor permanecerá a la espera hasta que la línea vuelva a nivel alto y �
 \end{figure} 
 
 El macro del transmisor, de forma natural, no realizará ninguna transmisión bajo una condición de fallo. En cambio, el macro del receptor reconoce esta situación y continúa operando según lo descrito previamente.
-
+\clearpage
 \subsection{Tasa de baudios de la UART}
 
-A partir de los macros de transmisión y recepción se generan los tiempos de la señal de referencia ''en\_16\_x\_baud''. Como indica su nombre, esta señal debe aplicarse al macro de la tasa de transmisión, que opera a 16 veces la velocidad de bits deseada Figura (\ref{fig:imagen12}).
+A partir de los macros de transmisión y recepción se generan los tiempos de la señal de referencia ''en\_16\_x\_baud''. Como indica su nombre, esta señal debe aplicarse al macro de la tasa de transmisión, que opera a 16 veces la velocidad de bits deseada Imagen (\ref{fig:imagen12}).
 
 \begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
     \centering % Centra la imagen
@@ -367,9 +380,9 @@ De esta forma, la señal se utiliza como un reloj habilitador dentro de los macr
 
 \subsection{Implementación RTL del Bloque UART\_Tx y UART\_rx }
 El UART receptor está formado por un archivo en Verilog. El nombre del archivo es ''receiver.sv'' que esta implementando en combinación con los modulos de ''binary\_to\_7seg.sv'' y ''transmitter.sv'', los modulos tanto de receiver y transmitter cuentan con su capa de cifrado y descifrado, incluyendo las variantes de rotación de bits y la selecció de rango de esta misma.
-
+\clearpage
 \subsection{Metodología de Verificación del UART mediante Testbench}
-Debido a las capacidades de prototipado que proporciona la herramienta Quartus, resulta posible realizar una validación exhaustiva del protocolo UART mediante el uso de un testbench. Esta metodología permite comprobar de manera precisa el cumplimiento de los tiempos, secuencias de transmisión y recepción, así como la integridad funcional del sistema previo a su síntesis e implementación en el dispositivo FPGA Figura (\ref{fig:imagen20}).
+Debido a las capacidades para crear prototipos que la herramienta Quartus  proporciona, resulta posible realizar una validación exhaustiva del protocolo UART mediante el uso de un testbench. Esta metodología permite comprobar de manera precisa el cumplimiento de los tiempos, secuencias de transmisión y recepción, así como la integridad funcional del sistema previo a su síntesis e implementación en el dispositivo FPGA Imagen (\ref{fig:imagen20}).
 
 \begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
     \centering % Centra la imagen
@@ -381,7 +394,7 @@ Debido a las capacidades de prototipado que proporciona la herramienta Quartus, 
 
 \subsection{Configuración de las Interfaces Seriales con las TarjetasAltera DE2–115 }
 
-En la Figura (\ref{fig:imagen14}) se ilustra la definición de los pines destinados a la comunicación serial, la cual fue realizada dentro del software Quartus. Este procedimiento permite establecer de manera explícita las asignaciones físicas entre los pines de la FPGA y las señales lógicas del diseño, asegurando así la correcta implementación del sistema en el dispositivo reconfigurable. 
+En la Imagen (\ref{fig:imagen14}) se ilustra la definición de los pines destinados a la comunicación serial, la cual fue realizada dentro del software Quartus. Este procedimiento permite establecer de manera explícita las asignaciones físicas entre los pines de la FPGA y las señales lógicas del diseño, asegurando así la correcta implementación del sistema en el dispositivo reconfigurable. 
 
 \begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
     \centering % Centra la imagen
@@ -390,7 +403,7 @@ En la Figura (\ref{fig:imagen14}) se ilustra la definición de los pines destina
     \label{fig:imagen14} % Etiqueta para referenciar la figura
 \end{figure} 
 \clearpage
-En la Figura (\ref{fig:imagen13}) se observa la conexión de los puertos definidos por el usuario, lo cual pone de manifiesto la flexibilidad inherente a las FPGA. Esta característica permite que los pines de entrada y salida no estén restringidos a conectores predeterminados, sino que puedan ser asignados libremente por el diseñador. De esta manera, además de optimizar la arquitectura del sistema, se incrementa la dificultad para que un agente externo pueda identificar los pines específicos donde se lleva a cabo la comunicación (Brown \& Vranesic, 2013).
+En la Imagen (\ref{fig:imagen13}) se observa la conexión de los puertos definidos por el usuario, lo cual pone de manifiesto la flexibilidad inherente a las FPGA. Esta característica permite que los pines de entrada y salida no estén restringidos a conectores predeterminados, sino que puedan ser asignados libremente por el diseñador. De esta manera, además de optimizar la arquitectura del sistema, se incrementa la dificultad para que un agente externo pueda identificar los pines específicos donde se lleva a cabo la comunicación (Brown \& Vranesic, 2013).
 
 \begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
     \centering % Centra la imagen
@@ -401,7 +414,7 @@ En la Figura (\ref{fig:imagen13}) se observa la conexión de los puertos definid
 
 
 \clearpage
-A continuación, en la Figura (\ref{fig:imagen15}), se presenta el esquema de las conexiones empleadas para la validación del sistema. Con el propósito de verificar el correcto funcionamiento de los módulos implementados, se estableció una comunicación entre dos ordenadores conectados en los extremos, lo que permitió comprobar la transmisión y recepción adecuada de los datos.
+A continuación, en la Imagen (\ref{fig:imagen15}), se presenta el esquema de las conexiones empleadas para la validación del sistema. Con el propósito de verificar el correcto funcionamiento de los módulos implementados, se estableció una comunicación entre dos ordenadores conectados en los extremos, lo que permitió comprobar la transmisión y recepción adecuada de los datos.
 
 \begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
     \centering % Centra la imagen
@@ -414,11 +427,11 @@ A continuación, en la Figura (\ref{fig:imagen15}), se presenta el esquema de la
 
 \section{Resultados}
 
-En este último capítulo se presentan los resultados obtenidos durante el desarrollo de las implementaciones propuestas, tanto en relación con los objetivos particulares como con el objetivo general de la presente tesis. Algunos de estos resultados se contrastan con los publicados en los estándares correspondientes, tanto para el algoritmo de cifrado seleccionado y programado, como para el modo de operación implementado. Asimismo, se incluyen resultados derivados de la aplicación desarrollada para la integración de los mecanismos de seguridad, específicamente aquellos vinculados a las pruebas realizadas en la plataforma criptográfica destinada a la comunicación serial segura. Finalmente, para la consulta de los códigos fuente y ciertos detalles específicos de la programación, el lector puede remitirse a los anexos ubicados al final de este capítulo.
+En este último capítulo se presentan los resultados obtenidos durante el desarrollo de las implementaciones propuestas, tanto en relación con los objetivos particulares como con el objetivo general de la presente tesis. Algunos de estos resultados se contrastan con los publicados en los estándares correspondientes, tanto para el algoritmo de cifrado seleccionado y programado, como para el modo de operación implementado. Asimismo, se incluyen resultados derivados de la aplicación desarrollada para la integración de los mecanismos de seguridad, específicamente aquellos vinculados a las pruebas realizadas en la plataforma de cifrado destinada a la comunicación serial segura. Finalmente, para la consulta de los códigos fuente y ciertos detalles específicos de la programación, el lector puede remitirse a los anexos ubicados al final de este capítulo.
 
-Con el fin de validar el mecanismo de ofuscación propuesto como una mejora al cifrado César tradicional, se llevaron a cabo una serie de experimentos tanto en el ámbito de software como en el de hardware. El objetivo principal fue demostrar que la integración de una capa adicional de ofuscación no solo incrementa la complejidad del proceso de descifrado del mensaje encriptado, sino que también preserva la equivalencia funcional entre el prototipo en software y su implementación en hardware.
+Con el fin de validar el mecanismo de ofuscación propuesto como una mejora al cifrado César tradicional, se llevaron a cabo una serie de experimentos tanto en el ámbito de software como en el de hardware. El objetivo principal fue demostrar que la integración de una capa adicional de ofuscación no solo incrementa la complejidad del proceso de descifrado del mensaje previamente cifrado, sino que también preserva la equivalencia funcional entre el prototipo en software y su implementación en hardware.
 
-La primera etapa de la experimentación consistió en el desarrollo de un script en Python que implementaba el cifrado César combinado con la técnica de ofuscación propuesta. Este entorno permitió un prototipado rápido y la verificación de la corrección funcional. Se utilizaron diversos conjuntos de datos de entrada, incluyendo cadenas alfanuméricas y secuencias binarias, los cuales fueron sometidos a pruebas de cifrado y descifrado. Posteriormente, se aplicaron medidas estadísticas para evaluar la distribución de los caracteres del texto cifrado  Figura (\ref{fig:imagen16}, con el objetivo de confirmar que la ofuscación lograba una reducción en los patrones de frecuencia predecibles, típicamente explotables en los cifrados clásicos por sustitución. Los gráficos resultantes evidenciaron un aplanamiento notable en las distribuciones de frecuencia de los caracteres, lo que indica que el cifrado modificado mitiga de manera efectiva una de las principales debilidades del esquema César tradicional.
+La primera etapa de la experimentación consistió en el desarrollo de un script en Python que implementaba el cifrado César combinado con la técnica de ofuscación propuesta. Este entorno permitió la creación de un prototipo rápido y la verificación de la corrección funcional. Se utilizaron diversos conjuntos de datos de entrada, incluyendo cadenas alfanuméricas y secuencias binarias, los cuales fueron sometidos a pruebas de cifrado y descifrado. Posteriormente, se aplicaron medidas estadísticas para evaluar la distribución de los caracteres del texto cifrado  Imagen (\ref{fig:imagen16}), con el objetivo de confirmar que la ofuscación lograba una reducción en los patrones de frecuencia predecibles, típicamente explotables en los cifrados clásicos por sustitución. Los gráficos resultantes evidenciaron un aplanamiento notable en las distribuciones de frecuencia de los caracteres, lo que indica que el cifrado modificado mitiga de manera efectiva una de las principales debilidades del esquema César tradicional.
 
 
 \begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
@@ -430,9 +443,9 @@ La primera etapa de la experimentación consistió en el desarrollo de un script
 
 Tras la validación exitosa en el dominio de software, el algoritmo fue traducido a una descripción de hardware adecuada para su implementación en FPGA. Específicamente, se diseñó un bloque RTL (Register Transfer Level) utilizando VHDL con el fin de replicar las operaciones tanto del cifrado César como de la capa de ofuscación. La elección de RTL aseguró que el diseño permaneciera sintetizable y pudiera desplegarse físicamente en la plataforma FPGA Altera DE2-115. Este proceso de traducción requirió especial atención al temporizado, la utilización de recursos y la gestión de la concurrencia, ya que la ejecución en hardware introduce restricciones que no están presentes en la ejecución secuencial del software.
 
-La simulación del bloque RTL se llevó a cabo antes de la síntesis, garantizando que la salida coincidiera con la implementación de referencia en Python en todos los vectores de prueba. El análisis de formas de onda confirmó la correcta alineación de las rutas de datos, la sincronización del reloj y el comportamiento de la lógica de control. Posteriormente, el diseño fue sintetizado, colocado y ruteado sobre la FPGA. Los reportes de utilización de recursos indicaron que la lógica adicional de ofuscación introdujo únicamente un incremento moderado en el consumo de elementos lógicos, manteniéndose ampliamente dentro de la capacidad del dispositivo Cyclone IV.
+La simulación del bloque RTL se llevó a cabo antes de la síntesis, garantizando que la salida coincidiera con la implementación de referencia en Python en todos los vectores de prueba. El análisis de formas de onda confirmó la correcta alineación de las rutas de datos, la sincronización del reloj y el comportamiento de la lógica de control. Posteriormente, el diseño fue sintetizado, colocado y enrutado sobre la FPGA. Los reportes de utilización de recursos indicaron que la lógica adicional de ofuscación introdujo únicamente un incremento moderado en el consumo de elementos lógicos, manteniéndose ampliamente dentro de la capacidad del dispositivo Cyclone IV.
 \clearpage
-Para validar aún más la efectividad del diseño en hardware, se recolectaron resultados experimentales directamente de la implementación en la FPGA. Secuencias de texto de entrada fueron encriptadas, procesadas a través del mecanismo de ofuscación y posteriormente desencriptadas en tiempo real. Los textos cifrados resultantes fueron nuevamente sometidos a un análisis estadístico de frecuencias (véase Fig. \ref{fig:imagen17}). La comparación entre las distribuciones generadas en software y en hardware confirmó la equivalencia funcional: ambas plataformas alcanzaron niveles similares de dispersión e imprevisibilidad de caracteres.
+Para validar aún más la efectividad del diseño en hardware, se recolectaron resultados experimentales directamente de la implementación en la FPGA. Se cifraron secuencias de texto de texto de entrada , procesadas a través del mecanismo de ofuscación y posteriormente decifradas en tiempo real. Los textos cifrados resultantes fueron nuevamente sometidos a un análisis estadístico de frecuencias Imagen (\ref{fig:imagen17}). La comparación entre las distribuciones generadas en software y en hardware confirmó la equivalencia funcional: ambas plataformas alcanzaron niveles similares de dispersión e imprevisibilidad de caracteres.
 
 \begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
     \centering % Centra la imagen
@@ -441,7 +454,7 @@ Para validar aún más la efectividad del diseño en hardware, se recolectaron r
     \label{fig:imagen17} % Etiqueta para referenciar la figura
 \end{figure} 
 \clearpage
-Con el propósito de evaluar la robustez del método de ofuscación implementado, se diseñó un escenario controlado en el cual se introdujo un agente externo destinado a interceptar la comunicación (man in the middle) establecida entre las FPGA. En este contexto, se asume que dicho agente ha logrado identificar las líneas físicas responsables de la transmisión de información bajo el protocolo UART. Para llevar a cabo la interceptación, se empleó una tarjeta de desarrollo Arduino Uno (véase Figura \ref{fig:imagen18}), configurada de acuerdo con los parámetros definidos por dicho protocolo. Adicionalmente, se realizó un barrido sistemático de los baudios estándar con el fin de determinar si el agente externo sería capaz de recuperar información significativa a partir de los datos cifrados y ofuscados.
+Con el propósito de evaluar la robustez del método de ofuscación implementado, se diseñó un escenario controlado en el cual se introdujo un agente externo destinado a interceptar la comunicación (man in the middle) establecida entre las FPGA. En este contexto, se asume que dicho agente ha logrado identificar las líneas físicas responsables de la transmisión de información bajo el protocolo UART. Para llevar a cabo la interceptación, se empleó una tarjeta de desarrollo Arduino Uno Imagen (\ref{fig:imagen18}), configurada de acuerdo con los parámetros definidos por dicho protocolo. Adicionalmente, se realizó un barrido sistemático de los baudios estándar con el fin de determinar si el agente externo sería capaz de recuperar información significativa a partir de los datos cifrados y ofuscados.
 
 \begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
     \centering % Centra la imagen
@@ -450,12 +463,12 @@ Con el propósito de evaluar la robustez del método de ofuscación implementado
     \label{fig:imagen18} % Etiqueta para referenciar la figura
 \end{figure} 
 
-\clearpage
+
 Los resultados experimentales obtenidos permiten confirmar la efectividad del mecanismo de ofuscación implementado en el sistema de comunicación. Durante las pruebas, se recreó un escenario de ataque del tipo man-in-the-middle, en el cual un agente externo intentó interceptar la comunicación establecida entre las FPGA. Para ello, dicho agente fue configurado con los parámetros estándar del protocolo UART y realizó un barrido completo de las velocidades en baudios con el objetivo de sincronizarse con el flujo de datos transmitidos.
 
 Una vez establecida la sincronización, el agente externo logró capturar correctamente las tramas UART generadas por el sistema. Sin embargo, debido al proceso de cifrado César y a la capa de ofuscación por rotación de bits aplicada en hardware, la información recuperada no presentó ninguna estructura interpretable. En otras palabras, aunque el atacante consiguió acceder físicamente a la línea de transmisión y leer los datos, el contenido obtenido carecía por completo de significado semántico o lingüístico.
 
-Este comportamiento se aprecia claramente en la Figura \ref{fig:imagen19}, donde se muestra la salida obtenida por el dispositivo de escucha. En dicha salida únicamente se observan caracteres aleatorios y sin coherencia, lo cual evidencia que la transformación criptográfica impide la recuperación del mensaje original sin la clave correspondiente. Este resultado es particularmente relevante, ya que demuestra que la ofuscación no solo opera correctamente en condiciones de simulación, sino también bajo condiciones reales de operación y frente a un intento explícito de interceptación.
+Este comportamiento se aprecia claramente en la Imagen \ref{fig:imagen19}, donde se muestra la salida obtenida por el dispositivo de escucha. En dicha salida únicamente se observan caracteres aleatorios y sin coherencia, lo cual evidencia que el cifrado impide la recuperación del mensaje original sin la clave correspondiente. Este resultado es particularmente relevante, ya que demuestra que la ofuscación no solo opera correctamente en condiciones de simulación, sino también bajo condiciones reales de operación y frente a un intento explícito de interceptación.
 
 \begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
     \centering % Centra la imagen

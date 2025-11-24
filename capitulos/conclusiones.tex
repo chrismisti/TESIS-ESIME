@@ -1,14 +1,24 @@
 
 \chapter{Conclusiones}
-
+\captionsetup[figure]{font=scriptsize}
 
 
 \section{Conclusión}
 La implementación del mecanismo de ofuscación sobre la plataforma FPGA DE2-115 permitió demostrar que es posible incrementar significativamente la seguridad de un sistema de comunicación serial sin comprometer su rendimiento operativo. A lo largo del desarrollo del proyecto, se integró un esquema de cifrado tipo César reforzado con una capa adicional de ofuscación basada en rotaciones de bits, lo que derivó en una solución hardware capaz de alterar la estructura estadística del mensaje y dificultar sustancialmente cualquier intento de interceptación o análisis por parte de un agente externo.
 
 Las pruebas realizadas tanto en software como en hardware confirmaron la equivalencia funcional del sistema, así como la coherencia entre los flujos de datos cifrados, ofuscados y posteriormente recuperados. Los experimentos de ataque tipo man-in-the-middle demostraron que, aun cuando un tercero pudiera acceder a las líneas físicas de transmisión UART, la información obtenida se reduce a caracteres sin significado, lo que valida la efectividad del mecanismo propuesto. Este resultado evidencia que la ofuscación incorporada actúa como un refuerzo efectivo frente a ataques de análisis de frecuencia y frente a la pérdida potencial de confidencialidad en enlaces expuestos.
+\clearpage
+Asimismo, la síntesis del diseño en la FPGA mostró que el costo en recursos lógicos fue reducido vease Imagen (\ref{fig:imagen21}), permitiendo que el sistema sea escalable y compatible con arquitecturas de mayor complejidad. Esto confirma que las FPGAs son plataformas idóneas para el desarrollo de mecanismos criptográficos personalizados y orientados a hardware, particularmente cuando se requiere velocidad, seguridad y control total del flujo de datos.
 
-Asimismo, la síntesis del diseño en la FPGA mostró que el costo en recursos lógicos fue reducido, permitiendo que el sistema sea escalable y compatible con arquitecturas de mayor complejidad. Esto confirma que las FPGAs son plataformas idóneas para el desarrollo de mecanismos criptográficos personalizados y orientados a hardware, particularmente cuando se requiere velocidad, seguridad y control total del flujo de datos.
+\begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
+    \centering % Centra la imagen
+     \includegraphics[width=1\textwidth, height=8cm]{imagenes/img21} % Reemplaza con el nombre de tu archivo de imagen
+    \caption{Desarrollo en software versus hardware: (a) niveles de abstracción y lenguajes de alto nivel y (b) esquema básico del diseño descendente con HDL.}
+    \label{fig:imagen21} % Etiqueta para referenciar la figura
+\end{figure} 
+
+
+\clearpage
 
 \section{Futuros Trabajos y Alcances Potenciales}
 

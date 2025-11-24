@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.16)  18 NOV 2025 15:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.16)  24 NOV 2025 03:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -115,31 +115,50 @@ LaTeX Warning: You have requested package `configuracion/upiitatesis',
                but the package provides `upiitatesis'.
 
 Package: upiitatesis 2023/05/09v2 LaTeX package (Revised chapters)
-(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks21
 )
-\lst@mode=\count288
+\caption@tempdima=\dimen150
+\captionmargin=\dimen151
+\caption@leftmargin=\dimen152
+\caption@rightmargin=\dimen153
+\caption@width=\dimen154
+\caption@indent=\dimen155
+\caption@parindent=\dimen156
+\caption@hangindent=\dimen157
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count288
+\c@continuedfloat=\count289
+)
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count290
 \lst@gtempboxa=\box53
 \lst@token=\toks22
-\lst@length=\count289
-\lst@currlwidth=\dimen150
-\lst@column=\count290
-\lst@pos=\count291
-\lst@lostspace=\dimen151
-\lst@width=\dimen152
-\lst@newlines=\count292
-\lst@lineno=\count293
-\lst@maxwidth=\dimen153
+\lst@length=\count291
+\lst@currlwidth=\dimen158
+\lst@column=\count292
+\lst@pos=\count293
+\lst@lostspace=\dimen159
+\lst@width=\dimen160
+\lst@newlines=\count294
+\lst@lineno=\count295
+\lst@maxwidth=\dimen161
 
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
 File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
 )
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
-\c@lstnumber=\count294
-\lst@skipnumbers=\count295
+\c@lstnumber=\count296
+\lst@skipnumbers=\count297
 \lst@framebox=\box54
 )
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
@@ -148,11 +167,11 @@ File: listings.cfg 2024/09/23 1.10c listings configuration
 Package: listings 2024/09/23 1.10c (Carsten Heinz)
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancyvrb.sty
 Package: fancyvrb 2025/07/28 4.6 verbatim text (tvz,hv)
-\FV@CodeLineNo=\count296
+\FV@CodeLineNo=\count298
 \FV@InFile=\read3
 \FV@TabBox=\box55
-\c@FancyVerbLine=\count297
-\FV@StepNumber=\count298
+\c@FancyVerbLine=\count299
+\FV@StepNumber=\count300
 \FV@OutFile=\write3
 )
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
@@ -175,23 +194,23 @@ Package: amstext 2024/11/17 v2.01 AMS text
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks24
-\ex@=\dimen154
+\ex@=\dimen162
 ))
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen155
+\pmbraise@=\dimen163
 )
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count299
+\inf@bad=\count301
 LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count300
-\leftroot@=\count301
+\uproot@=\count302
+\leftroot@=\count303
 LaTeX Info: Redefining \overline on input line 398.
 LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count302
-\DOTSCASE@=\count303
+\classnum@=\count304
+\DOTSCASE@=\count305
 LaTeX Info: Redefining \ldots on input line 495.
 LaTeX Info: Redefining \dots on input line 498.
 LaTeX Info: Redefining \cdots on input line 619.
@@ -201,30 +220,30 @@ LaTeX Info: Redefining \big on input line 721.
 LaTeX Info: Redefining \Big on input line 722.
 LaTeX Info: Redefining \bigg on input line 723.
 LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen156
+\big@size=\dimen164
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count304
+\macc@depth=\count306
 LaTeX Info: Redefining \bmod on input line 904.
 LaTeX Info: Redefining \pmod on input line 909.
 LaTeX Info: Redefining \smash on input line 939.
 LaTeX Info: Redefining \relbar on input line 969.
 LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count305
+\c@MaxMatrixCols=\count307
 \dotsspace@=\muskip17
-\c@parentequation=\count306
-\dspbrk@lvl=\count307
+\c@parentequation=\count308
+\dspbrk@lvl=\count309
 \tag@help=\toks25
-\row@=\count308
-\column@=\count309
-\maxfields@=\count310
+\row@=\count310
+\column@=\count311
+\maxfields@=\count312
 \andhelp@=\toks26
-\eqnshift@=\dimen157
-\alignsep@=\dimen158
-\tagshift@=\dimen159
-\tagwidth@=\dimen160
-\totwidth@=\dimen161
-\lineht@=\dimen162
+\eqnshift@=\dimen165
+\alignsep@=\dimen166
+\tagshift@=\dimen167
+\tagwidth@=\dimen168
+\totwidth@=\dimen169
+\lineht@=\dimen170
 \@envbody=\toks27
 \multlinegap=\skip66
 \multlinetaggap=\skip67
@@ -412,7 +431,7 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 \XKV@toks=\toks29
 \XKV@tempa@toks=\toks30
 )
-\XKV@depth=\count311
+\XKV@depth=\count313
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))) (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\pifont.sty
 Package: pifont 2020/03/25 PSNFSS-v9.3 Pi font support (SPQR) 
@@ -439,38 +458,38 @@ Package: expl3 2025-07-11 L3 programming layer (loader)
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count312
+\l__color_backend_stack_int=\count314
 ))
 Package: xfp 2024-08-16 L3 Floating point unit
 )
-\c@DefaultLines=\count313
-\c@DefaultDepth=\count314
-\DefaultFindent=\dimen163
-\DefaultNindent=\dimen164
-\DefaultSlope=\dimen165
-\DiscardVskip=\dimen166
+\c@DefaultLines=\count315
+\c@DefaultDepth=\count316
+\DefaultFindent=\dimen171
+\DefaultNindent=\dimen172
+\DefaultSlope=\dimen173
+\DiscardVskip=\dimen174
 \L@lettrine=\box58
 \L@lbox=\box59
 \L@tbox=\box60
-\c@L@lines=\count315
-\c@L@depth=\count316
-\L@Pindent=\dimen167
-\L@Findent=\dimen168
-\L@Nindent=\dimen169
-\L@lraise=\dimen170
-\L@first=\dimen171
-\L@next=\dimen172
-\L@slope=\dimen173
-\L@height=\dimen174
-\L@novskip=\dimen175
-\L@target@ht=\dimen176
-\L@target@dp=\dimen177
-\L@target@tht=\dimen178
-\LettrineWidth=\dimen179
-\LettrineHeight=\dimen180
-\LettrineDepth=\dimen181
-\L@finalht=\dimen182
-\L@finaldp=\dimen183
+\c@L@lines=\count317
+\c@L@depth=\count318
+\L@Pindent=\dimen175
+\L@Findent=\dimen176
+\L@Nindent=\dimen177
+\L@lraise=\dimen178
+\L@first=\dimen179
+\L@next=\dimen180
+\L@slope=\dimen181
+\L@height=\dimen182
+\L@novskip=\dimen183
+\L@target@ht=\dimen184
+\L@target@dp=\dimen185
+\L@target@tht=\dimen186
+\LettrineWidth=\dimen187
+\LettrineHeight=\dimen188
+\LettrineDepth=\dimen189
+\L@finalht=\dimen190
+\L@finaldp=\dimen191
 
 Loading lettrine.cfg
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/lettrine\lettrine.cfg)
@@ -478,24 +497,24 @@ Loading lettrine.cfg
 \Llist@everypar=\toks32
 ) (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
 Package: multicol 2025/05/25 v2.0a multicolumn formatting (FMi)
-\c@tracingmulticols=\count317
+\c@tracingmulticols=\count319
 \mult@box=\box61
-\multicol@leftmargin=\dimen184
-\c@unbalance=\count318
-\c@collectmore=\count319
-\doublecol@number=\count320
-\multicoltolerance=\count321
-\multicolpretolerance=\count322
-\full@width=\dimen185
-\page@free=\dimen186
-\premulticols=\dimen187
-\postmulticols=\dimen188
+\multicol@leftmargin=\dimen192
+\c@unbalance=\count320
+\c@collectmore=\count321
+\doublecol@number=\count322
+\multicoltolerance=\count323
+\multicolpretolerance=\count324
+\full@width=\dimen193
+\page@free=\dimen194
+\premulticols=\dimen195
+\postmulticols=\dimen196
 \multicolsep=\skip68
 \multicolbaselineskip=\skip69
 \partial@page=\box62
 \last@line=\box63
 \mc@boxedresult=\box64
-\maxbalancingoverflow=\dimen189
+\maxbalancingoverflow=\dimen197
 \mult@rightbox=\box65
 \mult@grightbox=\box66
 \mult@firstbox=\box67
@@ -536,16 +555,16 @@ Package: multicol 2025/05/25 v2.0a multicolumn formatting (FMi)
 \@tempa=\box102
 \@tempa=\box103
 \@tempa=\box104
-\c@minrows=\count323
-\c@columnbadness=\count324
-\c@finalcolumnbadness=\count325
-\last@try=\dimen190
-\multicolovershoot=\dimen191
-\multicolundershoot=\dimen192
+\c@minrows=\count325
+\c@columnbadness=\count326
+\c@finalcolumnbadness=\count327
+\last@try=\dimen198
+\multicolovershoot=\dimen199
+\multicolundershoot=\dimen256
 \mult@nat@firstbox=\box105
 \colbreak@box=\box106
-\mc@col@check@num=\count326
-\g__mc_curr_col_int=\count327
+\mc@col@check@num=\count328
+\g__mc_curr_col_int=\count329
 )
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/nextpage\nextpage.sty
 Package: nextpage 2009/09/03 v1.1a additional page commands
@@ -594,12 +613,12 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \ttl@box=\box107
 \beforetitleunit=\skip73
 \aftertitleunit=\skip74
-\ttl@plus=\dimen193
-\ttl@minus=\dimen194
+\ttl@plus=\dimen257
+\ttl@minus=\dimen258
 \ttl@toksa=\toks33
-\titlewidth=\dimen195
-\titlewidthlast=\dimen196
-\titlewidthfirst=\dimen197
+\titlewidth=\dimen259
+\titlewidthlast=\dimen260
+\titlewidthfirst=\dimen261
 )
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/fncychap\fncychap.sty
 Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
@@ -620,17 +639,17 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count328
-\Gm@cntv=\count329
-\c@Gm@tempcnt=\count330
-\Gm@bindingoffset=\dimen198
-\Gm@wd@mp=\dimen199
-\Gm@odd@mp=\dimen256
-\Gm@even@mp=\dimen257
-\Gm@layoutwidth=\dimen258
-\Gm@layoutheight=\dimen259
-\Gm@layouthoffset=\dimen260
-\Gm@layoutvoffset=\dimen261
+\Gm@cnth=\count330
+\Gm@cntv=\count331
+\c@Gm@tempcnt=\count332
+\Gm@bindingoffset=\dimen262
+\Gm@wd@mp=\dimen263
+\Gm@odd@mp=\dimen264
+\Gm@even@mp=\dimen265
+\Gm@layoutwidth=\dimen266
+\Gm@layoutheight=\dimen267
+\Gm@layouthoffset=\dimen268
+\Gm@layoutvoffset=\dimen269
 \Gm@dimlist=\toks34
 
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
@@ -680,16 +699,16 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count331
+\c@section@level=\count333
 )
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
 ty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\@linkdim=\dimen262
-\Hy@linkcounter=\count332
-\Hy@pagecounter=\count333
+\@linkdim=\dimen270
+\Hy@linkcounter=\count334
+\Hy@pagecounter=\count335
  (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -697,7 +716,7 @@ Now handling font encoding PD1 ...
 ) (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count334
+\Hy@SavedSpaceFactor=\count336
  (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -711,14 +730,14 @@ Package hyperref Info: Plain pages OFF on input line 4210.
 Package hyperref Info: Backreferencing OFF on input line 4215.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4462.
-\c@Hy@tempcnt=\count335
+\c@Hy@tempcnt=\count337
 
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4801.
-\XeTeXLinkMargin=\dimen263
+\XeTeXLinkMargin=\dimen271
 
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -728,9 +747,9 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count336
-\Field@Width=\dimen264
-\Fld@charsize=\dimen265
+\Fld@menulength=\count338
+\Field@Width=\dimen272
+\Fld@charsize=\dimen273
 Package hyperref Info: Hyper figures OFF on input line 6078.
 Package hyperref Info: Link nesting OFF on input line 6083.
 Package hyperref Info: Hyper index ON on input line 6086.
@@ -743,14 +762,14 @@ Package hyperref Info: PDF/A mode OFF on input line 6108.
 Package hyperref Warning: Option `pdfpagelabels' is turned off
 (hyperref)                because \thepage is undefined.
 
-\c@Item=\count337
-\c@Hfootnote=\count338
+\c@Item=\count339
+\c@Hfootnote=\count340
 )
 Package hyperref Info: Driver: hpdftex.
  (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
 File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
-\Fld@listcount=\count339
-\c@bookmark@seq@number=\count340
+\Fld@listcount=\count341
+\c@bookmark@seq@number=\count342
 
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
 echeck.sty
@@ -771,7 +790,7 @@ Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-pdftex.def
 File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO
 )
-\BKM@id=\count341
+\BKM@id=\count343
 ))
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
@@ -803,41 +822,41 @@ Package: pdfpages 2025/03/12 v0.6f Insert pages of external PDF documents (AM)
 
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
 Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
-\calc@Acount=\count342
-\calc@Bcount=\count343
-\calc@Adimen=\dimen266
-\calc@Bdimen=\dimen267
+\calc@Acount=\count344
+\calc@Bcount=\count345
+\calc@Adimen=\dimen274
+\calc@Bdimen=\dimen275
 \calc@Askip=\skip83
 \calc@Bskip=\skip84
 LaTeX Info: Redefining \setlength on input line 86.
 LaTeX Info: Redefining \addtolength on input line 87.
-\calc@Ccount=\count344
+\calc@Ccount=\count346
 \calc@Cskip=\skip85
 )
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.sty
 Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
-\ESO@tempdima=\dimen268
-\ESO@tempdimb=\dimen269
+\ESO@tempdima=\dimen276
+\ESO@tempdimb=\dimen277
 )
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
-\Gin@req@height=\dimen270
-\Gin@req@width=\dimen271
+\Gin@req@height=\dimen278
+\Gin@req@width=\dimen279
 )
-\AM@pagewidth=\dimen272
-\AM@pageheight=\dimen273
-\AM@fboxrule=\dimen274
+\AM@pagewidth=\dimen280
+\AM@pageheight=\dimen281
+\AM@fboxrule=\dimen282
 
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pppdftex.def
 File: pppdftex.def 2025/03/12 v0.6f Pdfpages driver for pdfTeX (AM)
 )
-\pdfpages@includegraphics@status=\count345
+\pdfpages@includegraphics@status=\count347
 \AM@pagebox=\box108
 \AM@global@opts=\toks35
-\AM@pagecnt=\count346
+\AM@pagecnt=\count348
 \AM@toc@title=\toks36
 \AM@lof@heading=\toks37
-\c@AM@survey=\count347
+\c@AM@survey=\count349
 \AM@templatesizebox=\box109
 ) (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/base\makeidx.sty
 Package: makeidx 2021/10/04 v1.0m Standard LaTeX package
@@ -874,26 +893,26 @@ Already applied: [0000/00/00] Usage of raw or classic option list on input line
 )
 Package tocbasic Info: setting babel extension for `nlo' on input line 187.
 Package tocbasic Info: setting babel extension for `nls' on input line 188.
-\nomlabelwidth=\dimen275
-\nom@tempdim=\dimen276
+\nomlabelwidth=\dimen283
+\nom@tempdim=\dimen284
 \nomitemsep=\skip87
 )
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
 Package: siunitx 2025-07-09 v3.4.14 A comprehensive (SI) units package
-\l__siunitx_number_uncert_offset_int=\count348
-\l__siunitx_number_exponent_fixed_int=\count349
-\l__siunitx_number_min_decimal_int=\count350
-\l__siunitx_number_min_integer_int=\count351
-\l__siunitx_number_round_precision_int=\count352
-\l__siunitx_number_lower_threshold_int=\count353
-\l__siunitx_number_upper_threshold_int=\count354
-\l__siunitx_number_group_first_int=\count355
-\l__siunitx_number_group_size_int=\count356
-\l__siunitx_number_group_minimum_int=\count357
-\l__siunitx_angle_tmp_dim=\dimen277
+\l__siunitx_number_uncert_offset_int=\count350
+\l__siunitx_number_exponent_fixed_int=\count351
+\l__siunitx_number_min_decimal_int=\count352
+\l__siunitx_number_min_integer_int=\count353
+\l__siunitx_number_round_precision_int=\count354
+\l__siunitx_number_lower_threshold_int=\count355
+\l__siunitx_number_upper_threshold_int=\count356
+\l__siunitx_number_group_first_int=\count357
+\l__siunitx_number_group_size_int=\count358
+\l__siunitx_number_group_minimum_int=\count359
+\l__siunitx_angle_tmp_dim=\dimen285
 \l__siunitx_angle_marker_box=\box111
 \l__siunitx_angle_unit_box=\box112
-\l__siunitx_compound_count_int=\count358
+\l__siunitx_compound_count_int=\count360
 
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/translations\translatio
 ns.sty
@@ -901,23 +920,23 @@ Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
  (CN)
 )
 \l__siunitx_table_tmp_box=\box113
-\l__siunitx_table_tmp_dim=\dimen278
-\l__siunitx_table_column_width_dim=\dimen279
+\l__siunitx_table_tmp_dim=\dimen286
+\l__siunitx_table_column_width_dim=\dimen287
 \l__siunitx_table_integer_box=\box114
 \l__siunitx_table_decimal_box=\box115
 \l__siunitx_table_uncert_box=\box116
 \l__siunitx_table_before_box=\box117
 \l__siunitx_table_after_box=\box118
-\l__siunitx_table_before_dim=\dimen280
-\l__siunitx_table_carry_dim=\dimen281
-\l__siunitx_unit_tmp_int=\count359
-\l__siunitx_unit_position_int=\count360
-\l__siunitx_unit_total_int=\count361
+\l__siunitx_table_before_dim=\dimen288
+\l__siunitx_table_carry_dim=\dimen289
+\l__siunitx_unit_tmp_int=\count361
+\l__siunitx_unit_position_int=\count362
+\l__siunitx_unit_total_int=\count363
  (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
 Package: array 2025/06/08 v2.6j Tabular extension package (FMi)
-\col@sep=\dimen282
+\col@sep=\dimen290
 \ar@mcellbox=\box119
-\extrarowheight=\dimen283
+\extrarowheight=\dimen291
 \NC@list=\toks38
 \extratabsurround=\skip88
 \backup@length=\skip89
@@ -931,10 +950,10 @@ Package: afterpage 2023/07/04 v1.08 After-Page Package (DPC)
 Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
 \everycr=\toks40
 \minrowclearance=\skip90
-\rownum=\count362
+\rownum=\count364
 ) (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count363
+\c@float@type=\count365
 \float@exts=\toks41
 \float@box=\box123
 \@float@everytoks=\toks42
@@ -946,29 +965,29 @@ Package: longtable 2024-12-18 v4.23 Multi-page Table package (DPC)
 \LTright=\skip92
 \LTpre=\skip93
 \LTpost=\skip94
-\LTchunksize=\count364
-\LTcapwidth=\dimen284
+\LTchunksize=\count366
+\LTcapwidth=\dimen292
 \LT@head=\box125
 \LT@firsthead=\box126
 \LT@foot=\box127
 \LT@lastfoot=\box128
 \LT@gbox=\box129
-\LT@cols=\count365
-\LT@rows=\count366
-\c@LT@tables=\count367
-\c@LT@chunks=\count368
+\LT@cols=\count367
+\LT@rows=\count368
+\c@LT@tables=\count369
+\c@LT@chunks=\count370
 \LT@p@ftn=\toks43
 )
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@colwidth=\skip95
-\multirow@cntb=\count369
+\multirow@cntb=\count371
 \multirow@dima=\skip96
-\bigstrutjot=\dimen285
+\bigstrutjot=\dimen293
 )
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/graphics\rotating.sty
 Package: rotating 2025/01/14 v2.16e rotated objects in LaTeX
-\c@r@tfl@t=\count370
+\c@r@tfl@t=\count372
 \rotFPtop=\skip97
 \rotFPbot=\skip98
 \rot@float@box=\box130
@@ -978,14 +997,14 @@ Package: rotating 2025/01/14 v2.16e rotated objects in LaTeX
 Package: subfigure 2002/07/30 v2.1.4 subfigure package
 \subfigtopskip=\skip99
 \subfigcapskip=\skip100
-\subfigcaptopadj=\dimen286
+\subfigcaptopadj=\dimen294
 \subfigbottomskip=\skip101
-\subfigcapmargin=\dimen287
+\subfigcapmargin=\dimen295
 \subfiglabelskip=\skip102
-\c@subfigure=\count371
-\c@lofdepth=\count372
-\c@subtable=\count373
-\c@lotdepth=\count374
+\c@subfigure=\count373
+\c@lofdepth=\count374
+\c@subtable=\count375
+\c@lotdepth=\count376
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
@@ -1000,33 +1019,33 @@ Package: subfigure 2002/07/30 v2.1.4 subfigure package
 
 
 Writing index file Principal.idx
-\c@reconocimientos=\count375
-\c@teorema=\count376
-\c@definicion=\count377
-\c@ejemplo=\count378
-\c@axioma=\count379
-\c@caso=\count380
-\c@creditos=\count381
-\c@algoritmo=\count382
-\c@conclusion=\count383
-\c@observacion=\count384
-\c@condicion=\count385
-\c@conjectura=\count386
-\c@corolario=\count387
-\c@criterio=\count388
-\c@ejercicio=\count389
-\c@lema=\count390
-\c@metodo=\count391
-\c@notacion=\count392
-\c@problema=\count393
-\c@proposicion=\count394
-\c@comentario=\count395
-\c@solucion=\count396
-\c@resumen=\count397
+\c@reconocimientos=\count377
+\c@teorema=\count378
+\c@definicion=\count379
+\c@ejemplo=\count380
+\c@axioma=\count381
+\c@caso=\count382
+\c@creditos=\count383
+\c@algoritmo=\count384
+\c@conclusion=\count385
+\c@observacion=\count386
+\c@condicion=\count387
+\c@conjectura=\count388
+\c@corolario=\count389
+\c@criterio=\count390
+\c@ejercicio=\count391
+\c@lema=\count392
+\c@metodo=\count393
+\c@notacion=\count394
+\c@problema=\count395
+\c@proposicion=\count396
+\c@comentario=\count397
+\c@solucion=\count398
+\c@resumen=\count399
 \@nomenclaturefile=\write5
 \openout5 = `Principal.nlo'.
 
-Package nomencl Info: Writing nomenclature file Principal.nlo on input line 439
+Package nomencl Info: Writing nomenclature file Principal.nlo on input line 440
 .
 ) (Principal.aux
 LaTeX Info: Redefining \. on input line 13.
@@ -1067,24 +1086,36 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 107.
 LaTeX Font Info:    ... okay on input line 107.
 LaTeX Info: Redefining \. on input line 107.
 LaTeX Info: Redefining \% on input line 107.
-\c@lstlisting=\count398
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
+Package caption Info: rotating package is loaded.
+Package caption Info: subfigure package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count400
 Package tocbasic Info: setting babel extension for `lol' on input line 107.
-\c@mv@tabular=\count399
-\c@mv@boldtabular=\count400
+\c@mv@tabular=\count401
+\c@mv@boldtabular=\count402
 
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count401
-\scratchdimen=\dimen288
+\scratchcounter=\count403
+\scratchdimen=\dimen296
 \scratchbox=\box131
-\nofMPsegments=\count402
-\nofMParguments=\count403
+\nofMPsegments=\count404
+\nofMParguments=\count405
 \everyMPshowfont=\toks45
-\MPscratchCnt=\count404
-\MPscratchDim=\dimen289
-\MPnumerator=\count405
-\makeMPintoPDFobject=\count406
+\MPscratchCnt=\count406
+\MPscratchDim=\dimen297
+\MPnumerator=\count407
+\makeMPintoPDFobject=\count408
 \everyMPtoPDFconversion=\toks46
 )
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
@@ -1440,38 +1471,15 @@ LaTeX Info: Redefining \% on input line 1.
 
 LaTeX Info: Redefining \. on input line 120.
 LaTeX Info: Redefining \% on input line 120.
-[18] (Principal.lof)
-\tf@lof=\write8
-\openout8 = `Principal.lof'.
-
-
-
-[19
-
-
-
-]
+[18]
 \openout2 = `preliminares/nomenclatura.aux'.
 
  (preliminares/nomenclatura.tex
-
-[20
-
-
-]
 No file Principal.nls.
 )
 \openout2 = `preliminares/introduccion.aux'.
 
  (preliminares/introduccion.tex
-Underfull \hbox (badness 10000) in paragraph at lines 4--11
-
- []
-
-
-Underfull \vbox (badness 5105) has occurred while \output is active []
-
-
 
 [1
 
@@ -1481,30 +1489,40 @@ Underfull \vbox (badness 5105) has occurred while \output is active []
 
 
 
+
+
+
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 8--12
+
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-LaTeX Info: Redefining \. on input line 15.
-LaTeX Info: Redefining \% on input line 15.
-[2]
+LaTeX Info: Redefining \. on input line 16.
+LaTeX Info: Redefining \% on input line 16.
+[2
 
-LaTeX Info: Redefining \. on input line 15.
-LaTeX Info: Redefining \% on input line 15.
+]
+
+LaTeX Info: Redefining \. on input line 16.
+LaTeX Info: Redefining \% on input line 16.
 [3]
 
-LaTeX Info: Redefining \. on input line 22.
-LaTeX Info: Redefining \% on input line 22.
+LaTeX Info: Redefining \. on input line 23.
+LaTeX Info: Redefining \% on input line 23.
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 26--28
+Underfull \hbox (badness 10000) in paragraph at lines 27--29
 
  []
 
 
 
-LaTeX Info: Redefining \. on input line 39.
-LaTeX Info: Redefining \% on input line 39.
+LaTeX Info: Redefining \. on input line 40.
+LaTeX Info: Redefining \% on input line 40.
 [5])
 
 LaTeX Info: Redefining \. on input line 132.
@@ -1515,7 +1533,7 @@ LaTeX Info: Redefining \% on input line 132.
  (capitulos/marcoreferencia.tex
 Cap\'{\i }tulo 1.
 LaTeX Font Info:    Font shape `T1/Montserrat-LF/regular/n' will be
-(Font)              scaled to size 24.88pt on input line 1.
+(Font)              scaled to size 24.88pt on input line 2.
 
 
 [7
@@ -1526,16 +1544,16 @@ LaTeX Font Info:    Font shape `T1/Montserrat-LF/regular/n' will be
 
 ]
 
-LaTeX Info: Redefining \. on input line 28.
-LaTeX Info: Redefining \% on input line 28.
+LaTeX Info: Redefining \. on input line 38.
+LaTeX Info: Redefining \% on input line 38.
 [8]
 
-LaTeX Info: Redefining \. on input line 55.
-LaTeX Info: Redefining \% on input line 55.
+LaTeX Info: Redefining \. on input line 65.
+LaTeX Info: Redefining \% on input line 65.
 [9]
 
-LaTeX Info: Redefining \. on input line 64.
-LaTeX Info: Redefining \% on input line 64.
+LaTeX Info: Redefining \. on input line 74.
+LaTeX Info: Redefining \% on input line 74.
 [10]
 Cap\'{\i }tulo 2.
 
@@ -1545,84 +1563,66 @@ Cap\'{\i }tulo 2.
 
 ]
 
-LaTeX Info: Redefining \. on input line 78.
-LaTeX Info: Redefining \% on input line 78.
+LaTeX Info: Redefining \. on input line 88.
+LaTeX Info: Redefining \% on input line 88.
 [12]
 
-LaTeX Info: Redefining \. on input line 93.
-LaTeX Info: Redefining \% on input line 93.
+LaTeX Info: Redefining \. on input line 103.
+LaTeX Info: Redefining \% on input line 103.
 [13]
 
-LaTeX Info: Redefining \. on input line 107.
-LaTeX Info: Redefining \% on input line 107.
+LaTeX Info: Redefining \. on input line 117.
+LaTeX Info: Redefining \% on input line 117.
 [14]
 
-LaTeX Info: Redefining \. on input line 119.
-LaTeX Info: Redefining \% on input line 119.
+LaTeX Info: Redefining \. on input line 129.
+LaTeX Info: Redefining \% on input line 129.
 [15]
-<imagenes/img1.jpg, id=318, 666.23906pt x 594.72188pt>
+<imagenes/img1.jpg, id=312, 666.23906pt x 594.72188pt>
 File: imagenes/img1.jpg Graphic file (type jpg)
 <use imagenes/img1.jpg>
-Package pdftex.def Info: imagenes/img1.jpg  used on input line 125.
+Package pdftex.def Info: imagenes/img1.jpg  used on input line 135.
 (pdftex.def)             Requested size: 221.78093pt x 170.7135pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 142.
+LaTeX Info: Redefining \% on input line 142.
+[16 <./imagenes/img1.jpg>]
 <imagenes/img2.jpg, id=320, 844.65562pt x 437.38406pt>
 File: imagenes/img2.jpg Graphic file (type jpg)
 <use imagenes/img2.jpg>
-Package pdftex.def Info: imagenes/img2.jpg  used on input line 134.
+Package pdftex.def Info: imagenes/img2.jpg  used on input line 145.
 (pdftex.def)             Requested size: 354.86894pt x 170.71924pt.
 
-Underfull \vbox (badness 3482) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 156.
+LaTeX Info: Redefining \% on input line 156.
+[17 <./imagenes/img2.jpg>]
 
-
-LaTeX Info: Redefining \. on input line 138.
-LaTeX Info: Redefining \% on input line 138.
-[16
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.138 
-       <./imagenes/img1.jpg>]
-
-LaTeX Info: Redefining \. on input line 145.
-LaTeX Info: Redefining \% on input line 145.
-[17
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.145 
-       <./imagenes/img2.jpg>]
-
-LaTeX Info: Redefining \. on input line 163.
-LaTeX Info: Redefining \% on input line 163.
+LaTeX Info: Redefining \. on input line 174.
+LaTeX Info: Redefining \% on input line 174.
 [18]
-<imagenes/img3.jpg, id=336, 1003.75pt x 676.5275pt>
+<imagenes/img3.jpg, id=331, 552.0625pt x 433.62pt>
 File: imagenes/img3.jpg Graphic file (type jpg)
 <use imagenes/img3.jpg>
-Package pdftex.def Info: imagenes/img3.jpg  used on input line 188.
-(pdftex.def)             Requested size: 443.58118pt x 369.89247pt.
+Package pdftex.def Info: imagenes/img3.jpg  used on input line 199.
+(pdftex.def)             Requested size: 443.59648pt x 369.90204pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-LaTeX Info: Redefining \. on input line 196.
-LaTeX Info: Redefining \% on input line 196.
+LaTeX Info: Redefining \. on input line 207.
+LaTeX Info: Redefining \% on input line 207.
 [19]
 
-LaTeX Info: Redefining \. on input line 196.
-LaTeX Info: Redefining \% on input line 196.
-[20
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.196 \chapter
-              {Diseño de Plataforma para Transmisión Serial de Datos} <./imag
-enes/img3.jpg>]
+LaTeX Info: Redefining \. on input line 207.
+LaTeX Info: Redefining \% on input line 207.
+[20 <./imagenes/img3.jpg>]
 Cap\'{\i }tulo 3.
 
 
@@ -1631,188 +1631,134 @@ Cap\'{\i }tulo 3.
 
 ]
 
-LaTeX Info: Redefining \. on input line 215.
-LaTeX Info: Redefining \% on input line 215.
+LaTeX Info: Redefining \. on input line 226.
+LaTeX Info: Redefining \% on input line 226.
 [22]
 
-LaTeX Info: Redefining \. on input line 235.
-LaTeX Info: Redefining \% on input line 235.
+LaTeX Info: Redefining \. on input line 246.
+LaTeX Info: Redefining \% on input line 246.
 [23]
-<imagenes/img4.jpg, id=363, 621.82312pt x 361.35pt>
+<imagenes/img4.jpg, id=358, 621.82312pt x 361.35pt>
 File: imagenes/img4.jpg Graphic file (type jpg)
 <use imagenes/img4.jpg>
-Package pdftex.def Info: imagenes/img4.jpg  used on input line 238.
+Package pdftex.def Info: imagenes/img4.jpg  used on input line 249.
 (pdftex.def)             Requested size: 443.58492pt x 227.62413pt.
 
 
-LaTeX Info: Redefining \. on input line 247.
-LaTeX Info: Redefining \% on input line 247.
-[24
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.247 \clearpage
-                 <./imagenes/img4.jpg>]
-<imagenes/img5.jpg, id=369, 723.20187pt x 125.46875pt>
+LaTeX Info: Redefining \. on input line 258.
+LaTeX Info: Redefining \% on input line 258.
+[24 <./imagenes/img4.jpg>]
+<imagenes/img5.jpg, id=364, 723.20187pt x 125.46875pt>
 File: imagenes/img5.jpg Graphic file (type jpg)
 <use imagenes/img5.jpg>
-Package pdftex.def Info: imagenes/img5.jpg  used on input line 251.
+Package pdftex.def Info: imagenes/img5.jpg  used on input line 262.
 (pdftex.def)             Requested size: 354.86859pt x 85.36163pt.
 
 
-LaTeX Info: Redefining \. on input line 263.
-LaTeX Info: Redefining \% on input line 263.
+LaTeX Info: Redefining \. on input line 274.
+LaTeX Info: Redefining \% on input line 274.
 [25
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.263 
-       <./imagenes/img5.jpg>]
-<imagenes/img6.jpg, id=375, 889.82437pt x 438.13687pt>
+ <./imagenes/img5.jpg>]
+<imagenes/img6.jpg, id=371, 889.82437pt x 438.13687pt>
 File: imagenes/img6.jpg Graphic file (type jpg)
 <use imagenes/img6.jpg>
-Package pdftex.def Info: imagenes/img6.jpg  used on input line 268.
+Package pdftex.def Info: imagenes/img6.jpg  used on input line 279.
 (pdftex.def)             Requested size: 399.20886pt x 227.62523pt.
 
 
-LaTeX Info: Redefining \. on input line 275.
-LaTeX Info: Redefining \% on input line 275.
-[26
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.275 C
-       on este diseño se logra verificar el funcionamiento general de la pl...
- <./imagenes/img6.jpg>]
+LaTeX Info: Redefining \. on input line 287.
+LaTeX Info: Redefining \% on input line 287.
+[26 <./imagenes/img6.jpg>]
+
+LaTeX Info: Redefining \. on input line 291.
+LaTeX Info: Redefining \% on input line 291.
+[27]
 <imagenes/img7.jpg, id=381, 600.74437pt x 315.1775pt>
 File: imagenes/img7.jpg Graphic file (type jpg)
 <use imagenes/img7.jpg>
-Package pdftex.def Info: imagenes/img7.jpg  used on input line 285.
+Package pdftex.def Info: imagenes/img7.jpg  used on input line 296.
 (pdftex.def)             Requested size: 443.59055pt x 227.62495pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-
-LaTeX Info: Redefining \. on input line 292.
-LaTeX Info: Redefining \% on input line 292.
-[27]
-
-LaTeX Info: Redefining \. on input line 292.
-LaTeX Info: Redefining \% on input line 292.
-[28
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.4}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.292 \clearpage
-                 <./imagenes/img7.jpg>]
-LaTeX Font Info:    Font shape `T1/Montserrat-LF/regular/n' will be
-(Font)              scaled to size 12.0pt on input line 300.
 
 
 LaTeX Info: Redefining \. on input line 303.
 LaTeX Info: Redefining \% on input line 303.
+[28
+
+ <./imagenes/img7.jpg>]
+LaTeX Font Info:    Font shape `T1/Montserrat-LF/regular/n' will be
+(Font)              scaled to size 12.0pt on input line 311.
+
+
+LaTeX Info: Redefining \. on input line 314.
+LaTeX Info: Redefining \% on input line 314.
 [29
 
 ]
-<imagenes/img8.jpg, id=397, 438.63875pt x 34.62938pt>
+<imagenes/img8.jpg, id=392, 438.63875pt x 34.62938pt>
 File: imagenes/img8.jpg Graphic file (type jpg)
 <use imagenes/img8.jpg>
-Package pdftex.def Info: imagenes/img8.jpg  used on input line 314.
+Package pdftex.def Info: imagenes/img8.jpg  used on input line 325.
 (pdftex.def)             Requested size: 354.87376pt x 42.67944pt.
 
 
-LaTeX Info: Redefining \. on input line 320.
-LaTeX Info: Redefining \% on input line 320.
-[30
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.5}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.320 
-       <./imagenes/img8.jpg>]
-<imagenes/img9.jpg, id=403, 328.72812pt x 71.26625pt>
+LaTeX Info: Redefining \. on input line 329.
+LaTeX Info: Redefining \% on input line 329.
+[30 <./imagenes/img8.jpg>]
+<imagenes/img9.jpg, id=398, 328.72812pt x 71.26625pt>
 File: imagenes/img9.jpg Graphic file (type jpg)
 <use imagenes/img9.jpg>
-Package pdftex.def Info: imagenes/img9.jpg  used on input line 323.
+Package pdftex.def Info: imagenes/img9.jpg  used on input line 334.
 (pdftex.def)             Requested size: 310.50926pt x 51.21486pt.
+
+
+LaTeX Info: Redefining \. on input line 344.
+LaTeX Info: Redefining \% on input line 344.
+[31
+
+ <./imagenes/img9.jpg>]
 <imagenes/img10.jpg, id=405, 487.8225pt x 51.19125pt>
 File: imagenes/img10.jpg Graphic file (type jpg)
 <use imagenes/img10.jpg>
-Package pdftex.def Info: imagenes/img10.jpg  used on input line 339.
+Package pdftex.def Info: imagenes/img10.jpg  used on input line 352.
 (pdftex.def)             Requested size: 399.22058pt x 42.68164pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-
-LaTeX Info: Redefining \. on input line 345.
-LaTeX Info: Redefining \% on input line 345.
-[31
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.6}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.345 
-       <./imagenes/img9.jpg>]
-<imagenes/img11.jpg, id=411, 510.40688pt x 36.135pt>
+<imagenes/img11.jpg, id=407, 510.40688pt x 36.135pt>
 File: imagenes/img11.jpg Graphic file (type jpg)
 <use imagenes/img11.jpg>
-Package pdftex.def Info: imagenes/img11.jpg  used on input line 348.
+Package pdftex.def Info: imagenes/img11.jpg  used on input line 361.
 (pdftex.def)             Requested size: 354.88362pt x 39.83571pt.
+
+
+LaTeX Info: Redefining \. on input line 367.
+LaTeX Info: Redefining \% on input line 367.
+[32
+
+ <./imagenes/img10.jpg> <./imagenes/img11.jpg>]
 <imagenes/img12.jpg, id=413, 448.17438pt x 61.73062pt>
 File: imagenes/img12.jpg Graphic file (type jpg)
 <use imagenes/img12.jpg>
-Package pdftex.def Info: imagenes/img12.jpg  used on input line 361.
+Package pdftex.def Info: imagenes/img12.jpg  used on input line 374.
 (pdftex.def)             Requested size: 354.8745pt x 39.83618pt.
 
 
-LaTeX Info: Redefining \. on input line 370.
-LaTeX Info: Redefining \% on input line 370.
-[32
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.7}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.370 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.8}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.370 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.9}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.370 
-       <./imagenes/img10.jpg> <./imagenes/img11.jpg> <./imagenes/img12.jpg>]
+LaTeX Info: Redefining \. on input line 383.
+LaTeX Info: Redefining \% on input line 383.
+[33
+
+ <./imagenes/img12.jpg>]
 <imagenes/img20.jpg, id=419, 807.51688pt x 170.6375pt>
 File: imagenes/img20.jpg Graphic file (type jpg)
 <use imagenes/img20.jpg>
-Package pdftex.def Info: imagenes/img20.jpg  used on input line 376.
+Package pdftex.def Info: imagenes/img20.jpg  used on input line 389.
 (pdftex.def)             Requested size: 443.58118pt x 142.27219pt.
 
 
-LaTeX Info: Redefining \. on input line 380.
-LaTeX Info: Redefining \% on input line 380.
-[33
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.10})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.380 \clearpage
-                 <./imagenes/img20.jpg>]
-Overfull \hbox (1.40038pt too wide) in paragraph at lines 382--382
+LaTeX Info: Redefining \. on input line 393.
+LaTeX Info: Redefining \% on input line 393.
+[34
+
+ <./imagenes/img20.jpg>]
+Overfull \hbox (1.40038pt too wide) in paragraph at lines 395--395
 |[]\T1/Montserrat-LF/regular/n/12 Configuraci�n de las In-ter-fa-ces Se-ria-les
  con las Tar-je-ta-sAl-te-ra DE2^^U115
  []
@@ -1820,155 +1766,107 @@ Overfull \hbox (1.40038pt too wide) in paragraph at lines 382--382
 <imagenes/img14.jpg, id=425, 675.52374pt x 452.69125pt>
 File: imagenes/img14.jpg Graphic file (type jpg)
 <use imagenes/img14.jpg>
-Package pdftex.def Info: imagenes/img14.jpg  used on input line 388.
+Package pdftex.def Info: imagenes/img14.jpg  used on input line 401.
 (pdftex.def)             Requested size: 443.58968pt x 284.52696pt.
 
 
-LaTeX Info: Redefining \. on input line 392.
-LaTeX Info: Redefining \% on input line 392.
-[34
+LaTeX Info: Redefining \. on input line 405.
+LaTeX Info: Redefining \% on input line 405.
+[35
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.11})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.392 \clearpage
-                 <./imagenes/img14.jpg>]
+ <./imagenes/img14.jpg>]
 <imagenes/img13.jpg, id=431, 403.5075pt x 537.50812pt>
 File: imagenes/img13.jpg Graphic file (type jpg)
 <use imagenes/img13.jpg>
-Package pdftex.def Info: imagenes/img13.jpg  used on input line 397.
+Package pdftex.def Info: imagenes/img13.jpg  used on input line 410.
 (pdftex.def)             Requested size: 443.58255pt x 284.52527pt.
 
 
-LaTeX Info: Redefining \. on input line 403.
-LaTeX Info: Redefining \% on input line 403.
-[35
+LaTeX Info: Redefining \. on input line 416.
+LaTeX Info: Redefining \% on input line 416.
+[36
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.12})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.403 \clearpage
-                 <./imagenes/img13.jpg>]
-<imagenes/img15.jpg, id=438, 580.1675pt x 110.4125pt>
+ <./imagenes/img13.jpg>]
+<imagenes/img15.jpg, id=437, 580.1675pt x 110.4125pt>
 File: imagenes/img15.jpg Graphic file (type jpg)
 <use imagenes/img15.jpg>
-Package pdftex.def Info: imagenes/img15.jpg  used on input line 408.
+Package pdftex.def Info: imagenes/img15.jpg  used on input line 421.
 (pdftex.def)             Requested size: 443.5788pt x 85.36156pt.
 
 
-LaTeX Info: Redefining \. on input line 413.
-LaTeX Info: Redefining \% on input line 413.
-[36
+LaTeX Info: Redefining \. on input line 426.
+LaTeX Info: Redefining \% on input line 426.
+[37
 
+ <./imagenes/img15.jpg>]
 
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.13})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.413 \chapter
-              {RESULTADOS} <./imagenes/img15.jpg>]
+[38
+
+]
 Cap\'{\i }tulo 4.
 
 
-[37
-
+[39
 
 ]
-<imagenes/img16.jpg, id=448, 749.80125pt x 306.39468pt>
+<imagenes/img16.jpg, id=452, 749.80125pt x 306.39468pt>
 File: imagenes/img16.jpg Graphic file (type jpg)
 <use imagenes/img16.jpg>
-Package pdftex.def Info: imagenes/img16.jpg  used on input line 426.
+Package pdftex.def Info: imagenes/img16.jpg  used on input line 439.
 (pdftex.def)             Requested size: 443.58022pt x 170.71494pt.
 
+Underfull \vbox (badness 1629) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 432.
-LaTeX Info: Redefining \% on input line 432.
-[38
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.432 
-       <./imagenes/img16.jpg>]
 
-LaTeX Info: Redefining \. on input line 434.
-LaTeX Info: Redefining \% on input line 434.
-[39]
-<imagenes/img17.jpg, id=458, 722.7pt x 303.38344pt>
+
+LaTeX Info: Redefining \. on input line 445.
+LaTeX Info: Redefining \% on input line 445.
+[40 <./imagenes/img16.jpg>]
+
+LaTeX Info: Redefining \. on input line 447.
+LaTeX Info: Redefining \% on input line 447.
+[41]
+<imagenes/img17.jpg, id=462, 722.7pt x 303.38344pt>
 File: imagenes/img17.jpg Graphic file (type jpg)
 <use imagenes/img17.jpg>
-Package pdftex.def Info: imagenes/img17.jpg  used on input line 439.
+Package pdftex.def Info: imagenes/img17.jpg  used on input line 452.
 (pdftex.def)             Requested size: 443.58118pt x 170.71756pt.
 
 
-LaTeX Info: Redefining \. on input line 443.
-LaTeX Info: Redefining \% on input line 443.
-[40
+LaTeX Info: Redefining \. on input line 456.
+LaTeX Info: Redefining \% on input line 456.
+[42
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.443 \clearpage
-                 <./imagenes/img17.jpg>]
-<imagenes/img18.png, id=464, 559.59062pt x 229.85875pt>
+ <./imagenes/img17.jpg>]
+<imagenes/img18.png, id=468, 559.59062pt x 229.85875pt>
 File: imagenes/img18.png Graphic file (type png)
 <use imagenes/img18.png>
-Package pdftex.def Info: imagenes/img18.png  used on input line 448.
+Package pdftex.def Info: imagenes/img18.png  used on input line 461.
 (pdftex.def)             Requested size: 443.59163pt x 170.72412pt.
 
 
-LaTeX Info: Redefining \. on input line 453.
-LaTeX Info: Redefining \% on input line 453.
-[41
+LaTeX Info: Redefining \. on input line 470.
+LaTeX Info: Redefining \% on input line 470.
+[43
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.453 \clearpage
-                 <./imagenes/img18.png>]
-<imagenes/img19.jpg, id=472, 532.48938pt x 56.71187pt>
+ <./imagenes/img18.png>]
+<imagenes/img19.jpg, id=476, 532.48938pt x 56.71187pt>
 File: imagenes/img19.jpg Graphic file (type jpg)
 <use imagenes/img19.jpg>
-Package pdftex.def Info: imagenes/img19.jpg  used on input line 462.
+Package pdftex.def Info: imagenes/img19.jpg  used on input line 475.
 (pdftex.def)             Requested size: 443.5911pt x 71.1328pt.
-
-Underfull \vbox (badness 2600) has occurred while \output is active []
-
-
-
-LaTeX Info: Redefining \. on input line 472.
-LaTeX Info: Redefining \% on input line 472.
-[42
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4.4}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.472 
-       <./imagenes/img19.jpg>])
+)
 
 LaTeX Info: Redefining \. on input line 146.
 LaTeX Info: Redefining \% on input line 146.
-[43]
-
-[44
-
-
-
-]
+[44 <./imagenes/img19.jpg>]
 No file Principal.bbl.
 
 
 [45
+
+
+
 
 
 ]
@@ -2384,9 +2282,6 @@ pdfTeX warning (ext4): destination with the same identifier (name{section.2.1})
                    \relax 
 l.6 \section{Conclusión}
                          
-Underfull \vbox (badness 1127) has occurred while \output is active []
-
-
 
 [71
 
@@ -2395,22 +2290,39 @@ Underfull \vbox (badness 1127) has occurred while \output is active []
 
 
 ]
+<imagenes/img21.jpg, id=1136, 963.6pt x 333.49594pt>
+File: imagenes/img21.jpg Graphic file (type jpg)
+<use imagenes/img21.jpg>
+Package pdftex.def Info: imagenes/img21.jpg  used on input line 15.
+(pdftex.def)             Requested size: 443.57016pt x 227.62914pt.
+
+
+LaTeX Info: Redefining \. on input line 21.
+LaTeX Info: Redefining \% on input line 21.
+[72
+
+ <./imagenes/img21.jpg>]
 pdfTeX warning (ext4): destination with the same identifier (name{section.2.2})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.13 ...n{Futuros Trabajos y Alcances Potenciales}
+l.23 ...n{Futuros Trabajos y Alcances Potenciales}
                                                   
 
-LaTeX Info: Redefining \. on input line 41.
-LaTeX Info: Redefining \% on input line 41.
-[72]
-
+LaTeX Info: Redefining \. on input line 51.
+LaTeX Info: Redefining \% on input line 51.
 [73
 
+]
+
+[74
 
 ]
-Overfull \hbox (26.52708pt too wide) in paragraph at lines 57--58
+
+[75
+
+]
+Overfull \hbox (26.52708pt too wide) in paragraph at lines 67--68
 []\T1/cmr/m/n/10.95 Terasic Tech-no-lo-gies. (s.f.). DE2-115 User Ma-nual. Re-c
 u-pe-ra-do de https://www.terasic.com.tw 
  []
@@ -2419,7 +2331,7 @@ u-pe-ra-do de https://www.terasic.com.tw
 
 LaTeX Info: Redefining \. on input line 194.
 LaTeX Info: Redefining \% on input line 194.
-[74]
+[76]
 No file Principal.ind.
 (Principal.aux
 LaTeX Info: Redefining \. on input line 13.
@@ -2435,10 +2347,10 @@ L3 programming layer <2025-07-11>
 
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/babel-spanish\romanidx.
 sty
-\es@converted=\count407
-\es@processed=\count408
-\es@indexfile=\write9
-\openout9 = `Principal.eix'.
+\es@converted=\count409
+\es@processed=\count410
+\es@indexfile=\write8
+\openout8 = `Principal.eix'.
 
  (Principal.idx)
 *****************
@@ -2451,15 +2363,15 @@ el .ind directamente de Principal.idx
 *****************
 ) ) 
 Here is how much of TeX's memory you used:
- 25673 strings out of 468149
- 481490 string characters out of 5431082
- 1090787 words of memory out of 5000000
- 53078 multiletter control sequences out of 15000+600000
- 759353 words of font info for 98 fonts, out of 8000000 for 9000
+ 27022 strings out of 468149
+ 508220 string characters out of 5431082
+ 1107073 words of memory out of 5000000
+ 54419 multiletter control sequences out of 15000+600000
+ 760129 words of font info for 99 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 125i,13n,121p,1238b,2654s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 125i,13n,121p,1238b,2658s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-pdfTeX warning (dest): name{section*.20} has been referenced but does not exist
+pdfTeX warning (dest): name{section*.40} has been referenced but does not exist
 , replaced by a fixed one
 
  <C:\Users\chris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti10
@@ -2467,25 +2379,28 @@ pdfTeX warning (dest): name{section*.20} has been referenced but does not exist
 ecti1095.pk> <C:\Users\chris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
 pi600\ecbx2488.pk> <C:\Users\chris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappe
 n/ec/dpi600\tcrm1095.pk> <C:\Users\chris\AppData\Local\MiKTeX\fonts/pk/ljfour/j
-knappen/ec/dpi600\ecbi1095.pk> <C:\Users\chris\AppData\Local\MiKTeX\fonts/pk/lj
-four/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\chris\AppData\Local\MiKTeX\fonts
-/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\chris\AppData\Local\MiKTeX
-\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\chris\AppData\Local\
-MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\chris\AppData\
-Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\chris\Ap
-pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\ch
-ris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Us
-ers\chris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1095.pk><
-C:/Users/chris/AppData/Local/Programs/MiKTeX/fonts/type1/public/montserrat/Mont
-serrat-Bold.pfb><C:/Users/chris/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/montserrat/Montserrat-Regular.pfb><C:/Users/chris/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/chris/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/chris/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/chris/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/fourier/fourier-orns.pfb>
-Output written on Principal.pdf (94 pages, 2731539 bytes).
+knappen/ec/dpi600\ecrm0800.pk> <C:\Users\chris\AppData\Local\MiKTeX\fonts/pk/lj
+four/jknappen/ec/dpi600\ecbx0800.pk> <C:\Users\chris\AppData\Local\MiKTeX\fonts
+/pk/ljfour/jknappen/ec/dpi600\ecbi1095.pk> <C:\Users\chris\AppData\Local\MiKTeX
+\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\chris\AppData\Local\
+MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\chris\AppData\
+Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\chris\Ap
+pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\ch
+ris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Us
+ers\chris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> 
+<C:\Users\chris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti120
+0.pk> <C:\Users\chris\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\e
+ccc1095.pk><C:/Users/chris/AppData/Local/Programs/MiKTeX/fonts/type1/public/mon
+tserrat/Montserrat-Bold.pfb><C:/Users/chris/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/montserrat/Montserrat-Regular.pfb><C:/Users/chris/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/chris/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/chri
+s/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/U
+sers/chris/AppData/Local/Programs/MiKTeX/fonts/type1/public/fourier/fourier-orn
+s.pfb>
+Output written on Principal.pdf (94 pages, 2818577 bytes).
 PDF statistics:
- 1857 PDF objects out of 2073 (max. 8388607)
+ 1951 PDF objects out of 2073 (max. 8388607)
  711 named destinations out of 1000 (max. 500000)
- 519 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 524 words of extra memory for PDF output out of 10000 (max. 10000000)
 
