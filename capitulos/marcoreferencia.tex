@@ -15,7 +15,7 @@ Para contextualizar adecuadamente el presente trabajo de tesis dentro del marco 
 
 A través de esta revisión se busca comprender las bases que fundamentan el diseño de soluciones de cifrado y decifrado en plataformas reconfigurables, como las FPGA, y su relevancia en escenarios donde la protección de la información es crítica. Este marco teórico sienta las bases para el desarrollo metodológico y experimental abordado en los siguientes capítulos.
 
-\section{Fundamentos de cifrado y decifrado clasico}
+\section{Fundamentos de cifrado y descifrado clasico}
 El cifrado es la ciencia y arte de proteger la información mediante técnicas que transforman datos legibles (texto plano) en datos ininteligibles (texto cifrado), de modo que sólo las personas autorizadas puedan acceder a su contenido (Stallings, 2017). A lo largo de la historia, el cifrado ha evolucionado desde métodos simples de sustitución y transposición hasta complejos algoritmos basados en teoría matemática, álgebra moderna y teoría de números.
 
 Los métodos clásicos, aunque hoy son inseguros frente a los ataques modernos, permiten comprender los conceptos fundamentales sobre el uso de claves, cifrado simétrico y análisis. Uno de los algoritmos más representativos es el cifrado César, también conocido como cifrado por desplazamiento.
@@ -445,7 +445,7 @@ Tras la validación exitosa en el dominio de software, el algoritmo fue traducid
 
 La simulación del bloque RTL se llevó a cabo antes de la síntesis, garantizando que la salida coincidiera con la implementación de referencia en Python en todos los vectores de prueba. El análisis de formas de onda confirmó la correcta alineación de las rutas de datos, la sincronización del reloj y el comportamiento de la lógica de control. Posteriormente, el diseño fue sintetizado, colocado y enrutado sobre la FPGA. Los reportes de utilización de recursos indicaron que la lógica adicional de ofuscación introdujo únicamente un incremento moderado en el consumo de elementos lógicos, manteniéndose ampliamente dentro de la capacidad del dispositivo Cyclone IV.
 \clearpage
-Para validar aún más la efectividad del diseño en hardware, se recolectaron resultados experimentales directamente de la implementación en la FPGA. Se cifraron secuencias de texto de texto de entrada , procesadas a través del mecanismo de ofuscación y posteriormente decifradas en tiempo real. Los textos cifrados resultantes fueron nuevamente sometidos a un análisis estadístico de frecuencias Imagen (\ref{fig:imagen17}). La comparación entre las distribuciones generadas en software y en hardware confirmó la equivalencia funcional: ambas plataformas alcanzaron niveles similares de dispersión e imprevisibilidad de caracteres.
+Para validar aún más la efectividad del diseño en hardware, se recolectaron resultados experimentales directamente de la implementación en la FPGA. Se cifraron secuencias de texto de entrada , procesadas a través del mecanismo de ofuscación y posteriormente decifradas en tiempo real. Los textos cifrados resultantes fueron nuevamente sometidos a un análisis estadístico de frecuencias Imagen (\ref{fig:imagen17}). La comparación entre las distribuciones generadas en software y en hardware confirmó la equivalencia funcional: ambas plataformas alcanzaron niveles similares de dispersión e imprevisibilidad de caracteres.
 
 \begin{figure}[h!] % [h!] Fuerza a LaTeX a poner la figura aquí
     \centering % Centra la imagen
